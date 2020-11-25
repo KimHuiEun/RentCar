@@ -47,7 +47,7 @@ namespace RentCar
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("KoPub돋움체_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("KoPubDotum_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(57, 270);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 17);
@@ -58,7 +58,7 @@ namespace RentCar
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("KoPub돋움체_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("KoPubDotum_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(39, 323);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
@@ -68,7 +68,7 @@ namespace RentCar
             // tbLogin
             // 
             this.tbLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbLogin.Font = new System.Drawing.Font("KoPub돋움체_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbLogin.Font = new System.Drawing.Font("KoPubDotum_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbLogin.Location = new System.Drawing.Point(234, 377);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(85, 27);
@@ -80,7 +80,7 @@ namespace RentCar
             // tbCreateId
             // 
             this.tbCreateId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbCreateId.Font = new System.Drawing.Font("KoPub돋움체_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbCreateId.Font = new System.Drawing.Font("KoPubDotum_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbCreateId.Location = new System.Drawing.Point(144, 377);
             this.tbCreateId.Name = "tbCreateId";
             this.tbCreateId.Size = new System.Drawing.Size(75, 27);
@@ -103,7 +103,7 @@ namespace RentCar
             // 
             // tbLoginId
             // 
-            this.tbLoginId.Font = new System.Drawing.Font("KoPub돋움체_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbLoginId.Font = new System.Drawing.Font("KoPubDotum_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbLoginId.Location = new System.Drawing.Point(118, 267);
             this.tbLoginId.Name = "tbLoginId";
             this.tbLoginId.Size = new System.Drawing.Size(155, 24);
@@ -112,9 +112,10 @@ namespace RentCar
             // 
             // tbLoginPw
             // 
-            this.tbLoginPw.Font = new System.Drawing.Font("KoPub돋움체_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbLoginPw.Font = new System.Drawing.Font("KoPubDotum_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbLoginPw.Location = new System.Drawing.Point(118, 320);
             this.tbLoginPw.Name = "tbLoginPw";
+            this.tbLoginPw.PasswordChar = '★';
             this.tbLoginPw.Size = new System.Drawing.Size(155, 24);
             this.tbLoginPw.TabIndex = 8;
             this.tbLoginPw.MouseHover += new System.EventHandler(this.tbLoginPw_MouseHover);

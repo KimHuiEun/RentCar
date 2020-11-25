@@ -70,23 +70,23 @@
     <Compile Include="MyPage\AccountInfo.Designer.cs">
       <DependentUpon>AccountInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyPage\Admin_Mypage.cs">
+    <Compile Include="MyPage\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyPage\Admin_Mypage.Designer.cs">
-      <DependentUpon>Admin_Mypage.cs</DependentUpon>
+    <Compile Include="MyPage\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyPage\Customer_Mypage.cs">
+    <Compile Include="MyPage\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyPage\Customer_Mypage.Designer.cs">
-      <DependentUpon>Customer_Mypage.cs</DependentUpon>
+    <Compile Include="MyPage\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyPage\Manager_Mypage.cs">
+    <Compile Include="MyPage\Manager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyPage\Manager_Mypage.Designer.cs">
-      <DependentUpon>Manager_Mypage.cs</DependentUpon>
+    <Compile Include="MyPage\Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
     <Compile Include="Account.cs">
       <SubType>Form</SubType>
@@ -105,14 +105,14 @@
     <EmbeddedResource Include="MyPage\AccountInfo.resx">
       <DependentUpon>AccountInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyPage\Admin_Mypage.resx">
-      <DependentUpon>Admin_Mypage.cs</DependentUpon>
+    <EmbeddedResource Include="MyPage\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyPage\Customer_Mypage.resx">
-      <DependentUpon>Customer_Mypage.cs</DependentUpon>
+    <EmbeddedResource Include="MyPage\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyPage\Manager_Mypage.resx">
-      <DependentUpon>Manager_Mypage.cs</DependentUpon>
+    <EmbeddedResource Include="MyPage\Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.cs</DependentUpon>

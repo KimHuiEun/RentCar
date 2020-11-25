@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Mypage
 {
-    public partial class Admin_Mypage : Form
+    public partial class Admin : Form
     {
-        public Admin_Mypage()
+        public Admin()
         {
             InitializeComponent();
         }

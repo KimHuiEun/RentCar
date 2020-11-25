@@ -1,7 +1,7 @@
 ﻿
 namespace Mypage
 {
-    partial class Customer_Mypage
+    partial class Customer
     {
         /// <summary>
         /// Required designer variable.
@@ -89,7 +89,7 @@ namespace Mypage
             this.label1.TabIndex = 5;
             this.label1.Text = "님 안녕하세요 JoCar입니다~";
             // 
-            // Customer_Mypage
+            // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,8 +99,8 @@ namespace Mypage
             this.Controls.Add(this.lastReservForm);
             this.Controls.Add(this.AccountInfo);
             this.Controls.Add(this.callCarRent);
-            this.Name = "Customer_Mypage";
-            this.Text = "Customer_Mypage";
+            this.Name = "Customer";
+            this.Text = "Customer";
             this.ResumeLayout(false);
             this.PerformLayout();
 
