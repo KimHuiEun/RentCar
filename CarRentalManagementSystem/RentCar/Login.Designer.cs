@@ -115,7 +115,7 @@ namespace RentCar
             this.tbLoginPw.Font = new System.Drawing.Font("KoPubDotum_Pro Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbLoginPw.Location = new System.Drawing.Point(118, 320);
             this.tbLoginPw.Name = "tbLoginPw";
-            this.tbLoginPw.PasswordChar = '★';
+            this.tbLoginPw.PasswordChar = '*';
             this.tbLoginPw.Size = new System.Drawing.Size(155, 24);
             this.tbLoginPw.TabIndex = 8;
             this.tbLoginPw.MouseHover += new System.EventHandler(this.tbLoginPw_MouseHover);

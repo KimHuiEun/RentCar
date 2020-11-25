@@ -21,7 +21,9 @@ namespace RentCar
 
         private void back_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            Login showform = new Login();
+            showform.Show();
         }
         
         private void OK_Click(object sender, EventArgs e)

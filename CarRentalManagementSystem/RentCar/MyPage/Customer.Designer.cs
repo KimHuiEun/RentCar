@@ -38,9 +38,9 @@ namespace Mypage
             // 
             // callCarRent
             // 
-            this.callCarRent.Location = new System.Drawing.Point(48, 232);
+            this.callCarRent.Location = new System.Drawing.Point(168, 239);
             this.callCarRent.Name = "callCarRent";
-            this.callCarRent.Size = new System.Drawing.Size(150, 70);
+            this.callCarRent.Size = new System.Drawing.Size(420, 70);
             this.callCarRent.TabIndex = 1;
             this.callCarRent.Text = "예약 가능 차량 조회";
             this.callCarRent.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@ namespace Mypage
             // 
             // AccountInfo
             // 
-            this.AccountInfo.Location = new System.Drawing.Point(48, 143);
+            this.AccountInfo.Location = new System.Drawing.Point(168, 150);
             this.AccountInfo.Name = "AccountInfo";
-            this.AccountInfo.Size = new System.Drawing.Size(150, 70);
+            this.AccountInfo.Size = new System.Drawing.Size(420, 70);
             this.AccountInfo.TabIndex = 2;
             this.AccountInfo.Text = "내 정보 수정";
             this.AccountInfo.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@ namespace Mypage
             // 
             // lastReservForm
             // 
-            this.lastReservForm.Location = new System.Drawing.Point(48, 317);
+            this.lastReservForm.Location = new System.Drawing.Point(168, 324);
             this.lastReservForm.Name = "lastReservForm";
-            this.lastReservForm.Size = new System.Drawing.Size(150, 70);
+            this.lastReservForm.Size = new System.Drawing.Size(420, 70);
             this.lastReservForm.TabIndex = 3;
             this.lastReservForm.Text = "예약 확인";
             this.lastReservForm.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@ namespace Mypage
             this.CName.AutoSize = true;
             this.CName.Font = new System.Drawing.Font("Consolas", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CName.Location = new System.Drawing.Point(94, 45);
+            this.CName.Location = new System.Drawing.Point(61, 50);
             this.CName.Name = "CName";
             this.CName.Size = new System.Drawing.Size(118, 51);
             this.CName.TabIndex = 4;
@@ -83,7 +83,7 @@ namespace Mypage
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(218, 45);
+            this.label1.Location = new System.Drawing.Point(185, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(529, 51);
             this.label1.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace Mypage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(776, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CName);
             this.Controls.Add(this.lastReservForm);

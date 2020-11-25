@@ -16,5 +16,15 @@ namespace Mypage
         {
             InitializeComponent();
         }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            //db상에 저장된 내역 삭제 쿼리 필요함.
+        }
     }
 }

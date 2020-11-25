@@ -16,5 +16,20 @@ namespace Mypage
         {
             InitializeComponent();
         }
+
+        private void btnshowSales_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
