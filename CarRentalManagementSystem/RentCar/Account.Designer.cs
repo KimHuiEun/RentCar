@@ -83,7 +83,6 @@ namespace RentCar
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(329, 31);
             this.tbName.TabIndex = 2;
-            this.tbName.Text = "이름을 입력하세요";
             // 
             // tbEmail
             // 
@@ -92,7 +91,6 @@ namespace RentCar
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(329, 31);
             this.tbEmail.TabIndex = 3;
-            this.tbEmail.Text = "이메일을 입력하세요";
             // 
             // tbPhoneNumber
             // 
@@ -101,7 +99,6 @@ namespace RentCar
             this.tbPhoneNumber.Name = "tbPhoneNumber";
             this.tbPhoneNumber.Size = new System.Drawing.Size(329, 31);
             this.tbPhoneNumber.TabIndex = 4;
-            this.tbPhoneNumber.Text = "전화번호를 입력하세요";
             // 
             // label3
             // 
@@ -170,7 +167,6 @@ namespace RentCar
             this.tbLicense.Name = "tbLicense";
             this.tbLicense.Size = new System.Drawing.Size(270, 31);
             this.tbLicense.TabIndex = 11;
-            this.tbLicense.Text = "이름을 입력하세요";
             // 
             // Year
             // 
@@ -296,7 +292,6 @@ namespace RentCar
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(329, 31);
             this.tbId.TabIndex = 17;
-            this.tbId.Text = "ID를 입력하세요";
             // 
             // label9
             // 
@@ -313,9 +308,9 @@ namespace RentCar
             this.tbPassword.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(144, 395);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(329, 31);
             this.tbPassword.TabIndex = 19;
-            this.tbPassword.Text = "Password를 입력하세요";
             // 
             // label10
             // 
@@ -332,9 +327,9 @@ namespace RentCar
             this.tbPasswordConfirm.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPasswordConfirm.Location = new System.Drawing.Point(144, 463);
             this.tbPasswordConfirm.Name = "tbPasswordConfirm";
+            this.tbPasswordConfirm.PasswordChar = '*';
             this.tbPasswordConfirm.Size = new System.Drawing.Size(329, 31);
             this.tbPasswordConfirm.TabIndex = 21;
-            this.tbPasswordConfirm.Text = "Password를 한 번 더 입력하세요";
             // 
             // Account
             // 

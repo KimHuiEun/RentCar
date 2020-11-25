@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace Mypage
 {
-    public partial class ReservedRestn : Form
+    public partial class Admin : Form
     {
-        public ReservedRestn()
+        public Admin()
         {
             InitializeComponent();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnshowSales_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnManage_Click(object sender, EventArgs e)
         {
-            //db상에 저장된 내역 삭제 쿼리 필요함.
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
