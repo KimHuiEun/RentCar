@@ -46,8 +46,5 @@ namespace RentCar
         {
             MessageBox.Show("----");
         }
-
-
-
     }
 }
