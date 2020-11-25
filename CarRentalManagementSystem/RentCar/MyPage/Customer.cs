@@ -11,9 +11,9 @@ using RentCar;
 
 namespace Mypage
 {
-    public partial class Customer_Mypage : Form
+    public partial class Customer : Form
     {
-        public Customer_Mypage()
+        public Customer()
         {
             InitializeComponent();
 

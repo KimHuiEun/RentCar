@@ -116,6 +116,8 @@ namespace RentCar
             this.tbLoginPw.Location = new System.Drawing.Point(118, 320);
             this.tbLoginPw.Name = "tbLoginPw";
             this.tbLoginPw.Size = new System.Drawing.Size(155, 27);
+            this.tbLoginPw.PasswordChar = '*';
+            this.tbLoginPw.Size = new System.Drawing.Size(155, 24);
             this.tbLoginPw.TabIndex = 8;
             this.tbLoginPw.MouseHover += new System.EventHandler(this.tbLoginPw_MouseHover);
             // 

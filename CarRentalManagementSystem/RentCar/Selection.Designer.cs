@@ -47,13 +47,13 @@ namespace RentCar
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.CarA = new System.Windows.Forms.Label();
             this.btnCar1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.Car2 = new System.Windows.Forms.Label();
+            this.Car3 = new System.Windows.Forms.Label();
+            this.Car4 = new System.Windows.Forms.Label();
+            this.Car5 = new System.Windows.Forms.Label();
+            this.Car6 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -266,14 +266,14 @@ namespace RentCar
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
             // 
-            // label8
+            // CarA
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(422, 281);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 15);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "A, 20,000원";
+            this.CarA.AutoSize = true;
+            this.CarA.Location = new System.Drawing.Point(422, 281);
+            this.CarA.Name = "CarA";
+            this.CarA.Size = new System.Drawing.Size(86, 15);
+            this.CarA.TabIndex = 16;
+            this.CarA.Text = "A, 20,000원";
             // 
             // btnCar1
             // 
@@ -284,52 +284,51 @@ namespace RentCar
             this.btnCar1.TabIndex = 17;
             this.btnCar1.Text = "정보";
             this.btnCar1.UseVisualStyleBackColor = true;
-            this.btnCar1.Click += new System.EventHandler(this.btnCar1_Click);
             // 
-            // label9
+            // Car2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(784, 281);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 15);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "B, 30,000원";
+            this.Car2.AutoSize = true;
+            this.Car2.Location = new System.Drawing.Point(784, 281);
+            this.Car2.Name = "Car2";
+            this.Car2.Size = new System.Drawing.Size(87, 15);
+            this.Car2.TabIndex = 19;
+            this.Car2.Text = "B, 30,000원";
             // 
-            // label10
+            // Car3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1144, 281);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 15);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "C, 40,000원";
+            this.Car3.AutoSize = true;
+            this.Car3.Location = new System.Drawing.Point(1144, 281);
+            this.Car3.Name = "Car3";
+            this.Car3.Size = new System.Drawing.Size(87, 15);
+            this.Car3.TabIndex = 22;
+            this.Car3.Text = "C, 40,000원";
             // 
-            // label11
+            // Car4
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(422, 632);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 15);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "D, 50,000원";
+            this.Car4.AutoSize = true;
+            this.Car4.Location = new System.Drawing.Point(422, 632);
+            this.Car4.Name = "Car4";
+            this.Car4.Size = new System.Drawing.Size(87, 15);
+            this.Car4.TabIndex = 25;
+            this.Car4.Text = "D, 50,000원";
             // 
-            // label12
+            // Car5
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(784, 632);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 15);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "E, 60,000원";
+            this.Car5.AutoSize = true;
+            this.Car5.Location = new System.Drawing.Point(784, 632);
+            this.Car5.Name = "Car5";
+            this.Car5.Size = new System.Drawing.Size(86, 15);
+            this.Car5.TabIndex = 28;
+            this.Car5.Text = "E, 60,000원";
             // 
-            // label13
+            // Car6
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1144, 632);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(85, 15);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "F, 70,000원";
+            this.Car6.AutoSize = true;
+            this.Car6.Location = new System.Drawing.Point(1144, 632);
+            this.Car6.Name = "Car6";
+            this.Car6.Size = new System.Drawing.Size(85, 15);
+            this.Car6.TabIndex = 31;
+            this.Car6.Text = "F, 70,000원";
             // 
             // btnBack
             // 
@@ -368,7 +367,6 @@ namespace RentCar
             this.btnCar2.TabIndex = 43;
             this.btnCar2.Text = "정보";
             this.btnCar2.UseVisualStyleBackColor = true;
-            this.btnCar2.Click += new System.EventHandler(this.btnCar2_Click);
             // 
             // btnCar3
             // 
@@ -379,7 +377,6 @@ namespace RentCar
             this.btnCar3.TabIndex = 44;
             this.btnCar3.Text = "정보";
             this.btnCar3.UseVisualStyleBackColor = true;
-            this.btnCar3.Click += new System.EventHandler(this.btnCar3_Click);
             // 
             // btnCar4
             // 
@@ -390,7 +387,6 @@ namespace RentCar
             this.btnCar4.TabIndex = 45;
             this.btnCar4.Text = "정보";
             this.btnCar4.UseVisualStyleBackColor = true;
-            this.btnCar4.Click += new System.EventHandler(this.btnCar4_Click);
             // 
             // btnCar5
             // 
@@ -401,7 +397,6 @@ namespace RentCar
             this.btnCar5.TabIndex = 46;
             this.btnCar5.Text = "정보";
             this.btnCar5.UseVisualStyleBackColor = true;
-            this.btnCar5.Click += new System.EventHandler(this.btnCar5_Click);
             // 
             // btnCar6
             // 
@@ -412,7 +407,6 @@ namespace RentCar
             this.btnCar6.TabIndex = 47;
             this.btnCar6.Text = "정보";
             this.btnCar6.UseVisualStyleBackColor = true;
-            this.btnCar6.Click += new System.EventHandler(this.btnCar6_Click);
             // 
             // cbMonth1
             // 
@@ -573,6 +567,7 @@ namespace RentCar
             this.radioCar1.TabIndex = 57;
             this.radioCar1.TabStop = true;
             this.radioCar1.UseVisualStyleBackColor = true;
+            this.radioCar1.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.CarA);
             // 
             // radioCar2
             // 
@@ -656,13 +651,13 @@ namespace RentCar
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Car6);
+            this.Controls.Add(this.Car5);
+            this.Controls.Add(this.Car4);
+            this.Controls.Add(this.Car3);
+            this.Controls.Add(this.Car2);
             this.Controls.Add(this.btnCar1);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.CarA);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
@@ -713,13 +708,13 @@ namespace RentCar
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label CarA;
         private System.Windows.Forms.Button btnCar1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label Car2;
+        private System.Windows.Forms.Label Car3;
+        private System.Windows.Forms.Label Car4;
+        private System.Windows.Forms.Label Car5;
+        private System.Windows.Forms.Label Car6;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label label14;

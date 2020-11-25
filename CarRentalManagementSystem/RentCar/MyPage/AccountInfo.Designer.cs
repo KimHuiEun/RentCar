@@ -31,11 +31,11 @@ namespace Mypage
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountInfo));
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbPwdconfirm = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbShowUserId = new System.Windows.Forms.TextBox();
             this.OKtochange = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.Day = new System.Windows.Forms.ComboBox();
@@ -67,14 +67,14 @@ namespace Mypage
             this.label10.TabIndex = 45;
             this.label10.Text = "Password";
             // 
-            // textBox3
+            // tbPwdconfirm
             // 
-            this.textBox3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(153, 213);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(329, 31);
-            this.textBox3.TabIndex = 44;
-            this.textBox3.Text = "Password를 한 번 더 입력하세요";
+            this.tbPwdconfirm.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPwdconfirm.Location = new System.Drawing.Point(153, 213);
+            this.tbPwdconfirm.Name = "tbPwdconfirm";
+            this.tbPwdconfirm.PasswordChar = '*';
+            this.tbPwdconfirm.Size = new System.Drawing.Size(329, 31);
+            this.tbPwdconfirm.TabIndex = 44;
             // 
             // label9
             // 
@@ -86,14 +86,14 @@ namespace Mypage
             this.label9.TabIndex = 43;
             this.label9.Text = "Password";
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(153, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(329, 31);
-            this.textBox2.TabIndex = 42;
-            this.textBox2.Text = "Password를 입력하세요";
+            this.tbPassword.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.Location = new System.Drawing.Point(153, 153);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(329, 31);
+            this.tbPassword.TabIndex = 42;
             // 
             // label8
             // 
@@ -105,15 +105,14 @@ namespace Mypage
             this.label8.TabIndex = 41;
             this.label8.Text = "ID";
             // 
-            // textBox1
+            // tbShowUserId
             // 
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(153, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(329, 31);
-            this.textBox1.TabIndex = 40;
-            this.textBox1.Text = "ID를 입력하세요";
+            this.tbShowUserId.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbShowUserId.Location = new System.Drawing.Point(153, 93);
+            this.tbShowUserId.Name = "tbShowUserId";
+            this.tbShowUserId.ReadOnly = true;
+            this.tbShowUserId.Size = new System.Drawing.Size(329, 31);
+            this.tbShowUserId.TabIndex = 40;
             // 
             // OKtochange
             // 
@@ -124,6 +123,7 @@ namespace Mypage
             this.OKtochange.TabIndex = 39;
             this.OKtochange.Text = "변경";
             this.OKtochange.UseVisualStyleBackColor = true;
+            this.OKtochange.Click += new System.EventHandler(this.OKtochange_Click);
             // 
             // back
             // 
@@ -134,6 +134,7 @@ namespace Mypage
             this.back.TabIndex = 38;
             this.back.Text = "이전";
             this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // Day
             // 
@@ -227,7 +228,6 @@ namespace Mypage
             this.tblicense.Name = "tblicense";
             this.tblicense.Size = new System.Drawing.Size(270, 31);
             this.tblicense.TabIndex = 34;
-            this.tblicense.Text = "이름을 입력하세요";
             // 
             // label7
             // 
@@ -296,7 +296,6 @@ namespace Mypage
             this.tbphoneNumber.Name = "tbphoneNumber";
             this.tbphoneNumber.Size = new System.Drawing.Size(329, 31);
             this.tbphoneNumber.TabIndex = 27;
-            this.tbphoneNumber.Text = "전화번호를 입력하세요";
             // 
             // tbemail
             // 
@@ -305,7 +304,6 @@ namespace Mypage
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(329, 31);
             this.tbemail.TabIndex = 26;
-            this.tbemail.Text = "이메일을 입력하세요";
             // 
             // tbName
             // 
@@ -314,7 +312,6 @@ namespace Mypage
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(329, 31);
             this.tbName.TabIndex = 25;
-            this.tbName.Text = "이름을 입력하세요";
             // 
             // label2
             // 
@@ -355,7 +352,7 @@ namespace Mypage
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbShowUserId);
             this.Controls.Add(this.OKtochange);
             this.Controls.Add(this.back);
             this.Controls.Add(this.Day);
@@ -373,8 +370,8 @@ namespace Mypage
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbPwdconfirm);
             this.Name = "AccountInfo";
             this.Text = "AccountInfo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -386,11 +383,11 @@ namespace Mypage
         #endregion
 
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbPwdconfirm;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbShowUserId;
         private System.Windows.Forms.Button OKtochange;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.ComboBox Day;

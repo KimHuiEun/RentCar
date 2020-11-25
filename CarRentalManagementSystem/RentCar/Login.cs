@@ -43,7 +43,7 @@ namespace RentCar
                 if (val2 == "password123")
                 {
                     MessageBox.Show("관리자님, 안녕하세요!");
-                    Admin_Mypage showform = new Admin_Mypage();
+                    Admin showform = new Admin();
                     showform.Show();
                     this.Hide();
                 }
@@ -56,7 +56,7 @@ namespace RentCar
             else
             {
                 MessageBox.Show(val1 + "님, 안녕하세요!");
-                Customer_Mypage showform = new Customer_Mypage();
+                Customer showform = new Customer();
                 showform.Show();
                 this.Hide();
             }
@@ -76,8 +76,8 @@ namespace RentCar
 
         private void tbCreateId_Click(object sender, EventArgs e)
         {
-            Account creat = new Account();
-            creat.Show();
+            Account showform = new Account();
+            showform.Show();
         }
     }
 }
