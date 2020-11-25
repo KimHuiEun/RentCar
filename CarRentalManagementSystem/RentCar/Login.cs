@@ -30,7 +30,7 @@ namespace RentCar
                     MessageBox.Show("매니저님, 안녕하세요!");
                     Manager_Mypage showform = new Manager_Mypage();
                     showform.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -44,7 +44,7 @@ namespace RentCar
                     MessageBox.Show("관리자님, 안녕하세요!");
                     Admin showform = new Admin();
                     showform.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -57,7 +57,7 @@ namespace RentCar
                 MessageBox.Show(val1 + "님, 안녕하세요!");
                 Customer showform = new Customer();
                 showform.Show();
-                this.Close();
+                this.Hide();
             }
         }
 

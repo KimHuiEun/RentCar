@@ -116,6 +116,7 @@ namespace Mypage
             // 
             this.textBox1.Location = new System.Drawing.Point(163, 102);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(238, 25);
             this.textBox1.TabIndex = 7;
             // 
@@ -123,6 +124,7 @@ namespace Mypage
             // 
             this.textBox2.Location = new System.Drawing.Point(163, 135);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(238, 25);
             this.textBox2.TabIndex = 8;
             // 
@@ -130,6 +132,7 @@ namespace Mypage
             // 
             this.textBox3.Location = new System.Drawing.Point(163, 174);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(238, 25);
             this.textBox3.TabIndex = 9;
             // 
@@ -137,6 +140,7 @@ namespace Mypage
             // 
             this.textBox4.Location = new System.Drawing.Point(163, 209);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(238, 25);
             this.textBox4.TabIndex = 10;
             // 
@@ -144,6 +148,7 @@ namespace Mypage
             // 
             this.textBox5.Location = new System.Drawing.Point(163, 240);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(238, 25);
             this.textBox5.TabIndex = 11;
             // 
@@ -151,6 +156,7 @@ namespace Mypage
             // 
             this.textBox6.Location = new System.Drawing.Point(163, 272);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(238, 25);
             this.textBox6.TabIndex = 12;
             // 
