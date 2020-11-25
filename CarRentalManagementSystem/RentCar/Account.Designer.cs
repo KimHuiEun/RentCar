@@ -321,7 +321,7 @@ namespace RentCar
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 448);
+            this.label10.Location = new System.Drawing.Point(17, 450);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 46);
             this.label10.TabIndex = 22;
@@ -336,7 +336,7 @@ namespace RentCar
             this.tbPasswordConfirm.TabIndex = 21;
             this.tbPasswordConfirm.Text = "Password를 한 번 더 입력하세요";
             // 
-            // NewAccount
+            // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -364,7 +364,7 @@ namespace RentCar
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "NewAccount";
+            this.Name = "Account";
             this.Text = "NewAccount";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

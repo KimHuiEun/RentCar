@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EFLibrary;
 
 namespace RentCar
 {
@@ -60,6 +61,7 @@ namespace RentCar
         {
             tbName.Text = tbEmail.Text = tbPhoneNumber.Text = tbId.Text = tbPassword.Text = tbPasswordConfirm.Text = tbLicense.Text = Year.Text = Month.Text = Day.Text = "";
         }
+
         //this.Hide();
     }
 
