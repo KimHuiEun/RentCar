@@ -36,11 +36,11 @@ namespace RentCar
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cbLocation = new System.Windows.Forms.ComboBox();
+            this.cbSize = new System.Windows.Forms.ComboBox();
+            this.cbYear1 = new System.Windows.Forms.ComboBox();
+            this.tbCarName = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -54,8 +54,8 @@ namespace RentCar
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.checkCar1 = new System.Windows.Forms.CheckBox();
             this.checkCar2 = new System.Windows.Forms.CheckBox();
@@ -68,12 +68,12 @@ namespace RentCar
             this.btnCar4 = new System.Windows.Forms.Button();
             this.btnCar5 = new System.Windows.Forms.Button();
             this.btnCar6 = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cbMonth1 = new System.Windows.Forms.ComboBox();
+            this.cbDay1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cbDay2 = new System.Windows.Forms.ComboBox();
+            this.cbMonth2 = new System.Windows.Forms.ComboBox();
+            this.cbYear2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -85,7 +85,7 @@ namespace RentCar
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(262, 1);
+            this.label1.Location = new System.Drawing.Point(242, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(2, 640);
             this.label1.TabIndex = 0;
@@ -140,58 +140,65 @@ namespace RentCar
             this.label6.TabIndex = 5;
             this.label6.Text = "차량명검색";
             // 
-            // comboBox1
+            // cbLocation
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbLocation.FormattingEnabled = true;
+            this.cbLocation.Items.AddRange(new object[] {
             "서울",
             "인천",
             "부산"});
-            this.comboBox1.Location = new System.Drawing.Point(84, 126);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(106, 20);
-            this.comboBox1.TabIndex = 6;
+            this.cbLocation.Location = new System.Drawing.Point(84, 126);
+            this.cbLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbLocation.Name = "cbLocation";
+            this.cbLocation.Size = new System.Drawing.Size(136, 20);
+            this.cbLocation.TabIndex = 6;
             // 
-            // comboBox2
+            // cbSize
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(84, 175);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(106, 20);
-            this.comboBox2.TabIndex = 7;
+            this.cbSize.FormattingEnabled = true;
+            this.cbSize.Items.AddRange(new object[] {
+            "경형",
+            "소형",
+            "준중형",
+            "중형",
+            "준대형",
+            "대형"});
+            this.cbSize.Location = new System.Drawing.Point(84, 175);
+            this.cbSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbSize.Name = "cbSize";
+            this.cbSize.Size = new System.Drawing.Size(136, 20);
+            this.cbSize.TabIndex = 7;
             // 
-            // comboBox3
+            // cbYear1
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbYear1.FormattingEnabled = true;
+            this.cbYear1.Items.AddRange(new object[] {
             "2020",
             "2021",
             "2022"});
-            this.comboBox3.Location = new System.Drawing.Point(84, 225);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(52, 20);
-            this.comboBox3.TabIndex = 8;
+            this.cbYear1.Location = new System.Drawing.Point(84, 225);
+            this.cbYear1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbYear1.Name = "cbYear1";
+            this.cbYear1.Size = new System.Drawing.Size(52, 20);
+            this.cbYear1.TabIndex = 8;
             // 
-            // textBox1
+            // tbCarName
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 417);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 21);
-            this.textBox1.TabIndex = 10;
+            this.tbCarName.Location = new System.Drawing.Point(84, 417);
+            this.tbCarName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbCarName.Name = "tbCarName";
+            this.tbCarName.Size = new System.Drawing.Size(106, 21);
+            this.tbCarName.TabIndex = 10;
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(196, 417);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 18);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "🔍";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(196, 417);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(24, 18);
+            this.btnSearch.TabIndex = 11;
+            this.btnSearch.Text = "🔍";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -324,32 +331,32 @@ namespace RentCar
             this.label13.TabIndex = 31;
             this.label13.Text = "F, 70,000원";
             // 
-            // button14
+            // btnBack
             // 
-            this.button14.Location = new System.Drawing.Point(958, 576);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(103, 30);
-            this.button14.TabIndex = 34;
-            this.button14.Text = "이전";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnBack.Location = new System.Drawing.Point(958, 585);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(103, 30);
+            this.btnBack.TabIndex = 34;
+            this.btnBack.Text = "이전";
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // btnOK
             // 
-            this.button15.Location = new System.Drawing.Point(1071, 576);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(103, 30);
-            this.button15.TabIndex = 35;
-            this.button15.Text = "확인";
-            this.button15.UseVisualStyleBackColor = true;
+            this.btnOK.Location = new System.Drawing.Point(1071, 585);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(103, 30);
+            this.btnOK.TabIndex = 35;
+            this.btnOK.Text = "확인";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Location = new System.Drawing.Point(240, 554);
+            this.label14.Location = new System.Drawing.Point(243, 564);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(945, 2);
+            this.label14.Size = new System.Drawing.Size(930, 2);
             this.label14.TabIndex = 36;
             // 
             // checkCar1
@@ -467,10 +474,10 @@ namespace RentCar
             this.btnCar6.UseVisualStyleBackColor = true;
             this.btnCar6.Click += new System.EventHandler(this.btnCar6_Click);
             // 
-            // comboBox5
+            // cbMonth1
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cbMonth1.FormattingEnabled = true;
+            this.cbMonth1.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -483,16 +490,16 @@ namespace RentCar
             "10",
             "11",
             "12"});
-            this.comboBox5.Location = new System.Drawing.Point(142, 225);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(36, 20);
-            this.comboBox5.TabIndex = 48;
+            this.cbMonth1.Location = new System.Drawing.Point(142, 225);
+            this.cbMonth1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbMonth1.Name = "cbMonth1";
+            this.cbMonth1.Size = new System.Drawing.Size(36, 20);
+            this.cbMonth1.TabIndex = 48;
             // 
-            // comboBox6
+            // cbDay1
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.cbDay1.FormattingEnabled = true;
+            this.cbDay1.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -524,11 +531,11 @@ namespace RentCar
             "29",
             "30",
             "31"});
-            this.comboBox6.Location = new System.Drawing.Point(184, 225);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(36, 20);
-            this.comboBox6.TabIndex = 49;
+            this.cbDay1.Location = new System.Drawing.Point(184, 225);
+            this.cbDay1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbDay1.Name = "cbDay1";
+            this.cbDay1.Size = new System.Drawing.Size(36, 20);
+            this.cbDay1.TabIndex = 49;
             // 
             // label7
             // 
@@ -540,10 +547,10 @@ namespace RentCar
             this.label7.TabIndex = 53;
             this.label7.Text = "차량예약";
             // 
-            // comboBox4
+            // cbDay2
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbDay2.FormattingEnabled = true;
+            this.cbDay2.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -575,16 +582,16 @@ namespace RentCar
             "29",
             "30",
             "31"});
-            this.comboBox4.Location = new System.Drawing.Point(184, 277);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(36, 20);
-            this.comboBox4.TabIndex = 56;
+            this.cbDay2.Location = new System.Drawing.Point(184, 277);
+            this.cbDay2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbDay2.Name = "cbDay2";
+            this.cbDay2.Size = new System.Drawing.Size(36, 20);
+            this.cbDay2.TabIndex = 56;
             // 
-            // comboBox7
+            // cbMonth2
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.cbMonth2.FormattingEnabled = true;
+            this.cbMonth2.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -597,24 +604,24 @@ namespace RentCar
             "10",
             "11",
             "12"});
-            this.comboBox7.Location = new System.Drawing.Point(142, 277);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(36, 20);
-            this.comboBox7.TabIndex = 55;
+            this.cbMonth2.Location = new System.Drawing.Point(142, 277);
+            this.cbMonth2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbMonth2.Name = "cbMonth2";
+            this.cbMonth2.Size = new System.Drawing.Size(36, 20);
+            this.cbMonth2.TabIndex = 55;
             // 
-            // comboBox8
+            // cbYear2
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.cbYear2.FormattingEnabled = true;
+            this.cbYear2.Items.AddRange(new object[] {
             "2020",
             "2021",
             "2022"});
-            this.comboBox8.Location = new System.Drawing.Point(84, 277);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(52, 20);
-            this.comboBox8.TabIndex = 54;
+            this.cbYear2.Location = new System.Drawing.Point(84, 277);
+            this.cbYear2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbYear2.Name = "cbYear2";
+            this.cbYear2.Size = new System.Drawing.Size(52, 20);
+            this.cbYear2.TabIndex = 54;
             // 
             // CarRentform
             // 
@@ -623,12 +630,12 @@ namespace RentCar
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1191, 643);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox8);
+            this.Controls.Add(this.cbDay2);
+            this.Controls.Add(this.cbMonth2);
+            this.Controls.Add(this.cbYear2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cbDay1);
+            this.Controls.Add(this.cbMonth1);
             this.Controls.Add(this.btnCar6);
             this.Controls.Add(this.btnCar5);
             this.Controls.Add(this.btnCar4);
@@ -641,8 +648,8 @@ namespace RentCar
             this.Controls.Add(this.checkCar2);
             this.Controls.Add(this.checkCar1);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -656,11 +663,11 @@ namespace RentCar
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.tbCarName);
+            this.Controls.Add(this.cbYear1);
+            this.Controls.Add(this.cbSize);
+            this.Controls.Add(this.cbLocation);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -669,8 +676,7 @@ namespace RentCar
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CarRentform";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.CarRentform_Load);
+            this.Text = "Selection";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -690,11 +696,11 @@ namespace RentCar
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbLocation;
+        private System.Windows.Forms.ComboBox cbSize;
+        private System.Windows.Forms.ComboBox cbYear1;
+        private System.Windows.Forms.TextBox tbCarName;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -708,8 +714,8 @@ namespace RentCar
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox checkCar1;
         private System.Windows.Forms.CheckBox checkCar2;
@@ -722,12 +728,12 @@ namespace RentCar
         private System.Windows.Forms.Button btnCar4;
         private System.Windows.Forms.Button btnCar5;
         private System.Windows.Forms.Button btnCar6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cbMonth1;
+        private System.Windows.Forms.ComboBox cbDay1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cbDay2;
+        private System.Windows.Forms.ComboBox cbMonth2;
+        private System.Windows.Forms.ComboBox cbYear2;
     }
 }
 

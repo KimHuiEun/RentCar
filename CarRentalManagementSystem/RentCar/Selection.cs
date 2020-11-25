@@ -47,9 +47,7 @@ namespace RentCar
             MessageBox.Show("----");
         }
 
-        private void CarRentform_Load(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }
