@@ -284,7 +284,6 @@ namespace RentCar
             this.btnCar1.TabIndex = 17;
             this.btnCar1.Text = "정보";
             this.btnCar1.UseVisualStyleBackColor = true;
-            this.btnCar1.Click += new System.EventHandler(this.btnCar1_Click);
             // 
             // label9
             // 
@@ -368,7 +367,6 @@ namespace RentCar
             this.btnCar2.TabIndex = 43;
             this.btnCar2.Text = "정보";
             this.btnCar2.UseVisualStyleBackColor = true;
-            this.btnCar2.Click += new System.EventHandler(this.btnCar2_Click);
             // 
             // btnCar3
             // 
@@ -379,7 +377,6 @@ namespace RentCar
             this.btnCar3.TabIndex = 44;
             this.btnCar3.Text = "정보";
             this.btnCar3.UseVisualStyleBackColor = true;
-            this.btnCar3.Click += new System.EventHandler(this.btnCar3_Click);
             // 
             // btnCar4
             // 
@@ -390,7 +387,6 @@ namespace RentCar
             this.btnCar4.TabIndex = 45;
             this.btnCar4.Text = "정보";
             this.btnCar4.UseVisualStyleBackColor = true;
-            this.btnCar4.Click += new System.EventHandler(this.btnCar4_Click);
             // 
             // btnCar5
             // 
@@ -401,7 +397,6 @@ namespace RentCar
             this.btnCar5.TabIndex = 46;
             this.btnCar5.Text = "정보";
             this.btnCar5.UseVisualStyleBackColor = true;
-            this.btnCar5.Click += new System.EventHandler(this.btnCar5_Click);
             // 
             // btnCar6
             // 
@@ -412,7 +407,6 @@ namespace RentCar
             this.btnCar6.TabIndex = 47;
             this.btnCar6.Text = "정보";
             this.btnCar6.UseVisualStyleBackColor = true;
-            this.btnCar6.Click += new System.EventHandler(this.btnCar6_Click);
             // 
             // cbMonth1
             // 

@@ -18,34 +18,5 @@ namespace RentCar
             InitializeComponent();
         }
 
-        private void btnCar1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("----");
-        }
-
-        private void btnCar2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("----");
-        }
-
-        private void btnCar3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("----");
-        }
-
-        private void btnCar4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("----");
-        }
-
-        private void btnCar5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("----");
-        }
-
-        private void btnCar6_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("----");
-        }
     }
 }

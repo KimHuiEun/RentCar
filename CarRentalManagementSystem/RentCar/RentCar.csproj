@@ -67,12 +67,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyPage\AccountInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MyPage\AccountInfo.Designer.cs">
-      <DependentUpon>AccountInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyPage\Admin_Mypage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,9 +98,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyPage\AccountInfo.resx">
-      <DependentUpon>AccountInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyPage\Admin_Mypage.resx">
       <DependentUpon>Admin_Mypage.cs</DependentUpon>
