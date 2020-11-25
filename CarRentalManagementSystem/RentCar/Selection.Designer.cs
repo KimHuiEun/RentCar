@@ -567,7 +567,6 @@ namespace RentCar
             this.radioCar1.TabIndex = 57;
             this.radioCar1.TabStop = true;
             this.radioCar1.UseVisualStyleBackColor = true;
-            this.radioCar1.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.CarA);
             // 
             // radioCar2
             // 
