@@ -1,5 +1,5 @@
 ﻿
-namespace CarRent
+namespace RentCar
 {
     partial class CarRentform
     {

@@ -75,7 +75,7 @@ namespace RentCar
 
         private void tbCreateId_Click(object sender, EventArgs e)
         {
-            NewAccount creat = new NewAccount();
+            Account creat = new Account();
             creat.Show();
         }
     }

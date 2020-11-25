@@ -1,7 +1,7 @@
 ﻿
 namespace RentCar
 {
-    partial class NewAccount
+    partial class Account
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,7 +29,7 @@ namespace RentCar
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewAccount));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();

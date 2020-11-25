@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace RentCar
 {
-    public partial class NewAccount : Form
+    public partial class Account : Form
     {
   
-        public NewAccount()
+        public Account()
         {
             InitializeComponent();
         }
