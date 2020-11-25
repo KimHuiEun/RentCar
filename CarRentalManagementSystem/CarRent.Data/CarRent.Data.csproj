@@ -60,11 +60,11 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Dao.cs" />
     <Compile Include="Dao\AdminDao.cs" />
     <Compile Include="Dao\BaseDao.cs" />
     <Compile Include="Dao\CarDao.cs" />
     <Compile Include="Dao\CarTypeDao.cs" />
-    <Compile Include="Dao.cs" />
     <Compile Include="Dao\RentDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
     <Compile Include="EFLibrary\BaseDao.cs" />
