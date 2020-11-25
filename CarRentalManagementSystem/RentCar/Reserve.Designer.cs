@@ -70,7 +70,7 @@ namespace Mypage
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(73, 212);
+            this.label3.Location = new System.Drawing.Point(73, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 15);
             this.label3.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace Mypage
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 177);
+            this.label4.Location = new System.Drawing.Point(73, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 15);
             this.label4.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace Mypage
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(73, 243);
+            this.label6.Location = new System.Drawing.Point(73, 239);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 15);
             this.label6.TabIndex = 5;
@@ -106,7 +106,7 @@ namespace Mypage
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(73, 275);
+            this.label7.Location = new System.Drawing.Point(73, 271);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 15);
             this.label7.TabIndex = 6;
@@ -130,7 +130,7 @@ namespace Mypage
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(163, 174);
+            this.textBox3.Location = new System.Drawing.Point(163, 170);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(238, 25);
@@ -138,7 +138,7 @@ namespace Mypage
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(163, 209);
+            this.textBox4.Location = new System.Drawing.Point(163, 205);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(238, 25);
@@ -146,7 +146,7 @@ namespace Mypage
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(163, 240);
+            this.textBox5.Location = new System.Drawing.Point(163, 236);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(238, 25);
@@ -154,7 +154,7 @@ namespace Mypage
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(163, 272);
+            this.textBox6.Location = new System.Drawing.Point(163, 268);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(238, 25);
