@@ -1,7 +1,7 @@
 ﻿
-namespace RentCar
+namespace Mypage
 {
-    partial class Account
+    partial class ReservedRestn
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,10 @@ namespace RentCar
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Account
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Account";
-            this.Text = "Account";
-            this.ResumeLayout(false);
-
+            this.Text = "ReservedRestn";
         }
 
         #endregion

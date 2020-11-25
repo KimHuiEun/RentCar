@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentCar
+namespace Mypage
 {
-    public partial class Manager : Form
+    public partial class Manager_Mypage : Form
     {
-        public Manager()
+        public Manager_Mypage()
         {
             InitializeComponent();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }

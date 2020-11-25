@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentCar
+namespace Mypage
 {
-    public partial class Payment : Form
+    public partial class ReservedRestn : Form
     {
-        public Payment()
+        public ReservedRestn()
         {
             InitializeComponent();
         }

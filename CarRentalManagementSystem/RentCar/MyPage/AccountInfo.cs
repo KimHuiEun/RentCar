@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentCar
+namespace Mypage
 {
-    public partial class Account : Form
+    public partial class AccountInfo : Form
     {
-        public Account()
+        public AccountInfo()
         {
             InitializeComponent();
         }
-
     }
 }
