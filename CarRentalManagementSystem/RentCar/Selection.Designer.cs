@@ -74,12 +74,14 @@ namespace RentCar
             this.radioCar4 = new System.Windows.Forms.RadioButton();
             this.radioCar5 = new System.Windows.Forms.RadioButton();
             this.radioCar6 = new System.Windows.Forms.RadioButton();
+            this.rdCar1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.rdCar1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -269,7 +271,7 @@ namespace RentCar
             // CarA
             // 
             this.CarA.AutoSize = true;
-            this.CarA.Location = new System.Drawing.Point(422, 281);
+            this.CarA.Location = new System.Drawing.Point(34, 3);
             this.CarA.Name = "CarA";
             this.CarA.Size = new System.Drawing.Size(86, 15);
             this.CarA.TabIndex = 16;
@@ -560,7 +562,7 @@ namespace RentCar
             // radioCar1
             // 
             this.radioCar1.AutoSize = true;
-            this.radioCar1.Location = new System.Drawing.Point(399, 281);
+            this.radioCar1.Location = new System.Drawing.Point(11, 3);
             this.radioCar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioCar1.Name = "radioCar1";
             this.radioCar1.Size = new System.Drawing.Size(17, 16);
@@ -623,6 +625,17 @@ namespace RentCar
             this.radioCar6.TabStop = true;
             this.radioCar6.UseVisualStyleBackColor = true;
             // 
+            // rdCar1
+            // 
+            this.rdCar1.Controls.Add(this.radioCar1);
+            this.rdCar1.Controls.Add(this.CarA);
+            this.rdCar1.Location = new System.Drawing.Point(388, 278);
+            this.rdCar1.Name = "rdCar1";
+            this.rdCar1.Size = new System.Drawing.Size(120, 25);
+            this.rdCar1.TabIndex = 63;
+            this.rdCar1.TabStop = false;
+            this.rdCar1.Text = "groupBox1";
+            // 
             // CarRentform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -630,12 +643,12 @@ namespace RentCar
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1361, 804);
+            this.Controls.Add(this.rdCar1);
             this.Controls.Add(this.radioCar6);
             this.Controls.Add(this.radioCar5);
             this.Controls.Add(this.radioCar4);
             this.Controls.Add(this.radioCar3);
             this.Controls.Add(this.radioCar2);
-            this.Controls.Add(this.radioCar1);
             this.Controls.Add(this.cbDay2);
             this.Controls.Add(this.cbMonth2);
             this.Controls.Add(this.cbYear2);
@@ -656,7 +669,6 @@ namespace RentCar
             this.Controls.Add(this.Car3);
             this.Controls.Add(this.Car2);
             this.Controls.Add(this.btnCar1);
-            this.Controls.Add(this.CarA);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
@@ -683,6 +695,8 @@ namespace RentCar
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.rdCar1.ResumeLayout(false);
+            this.rdCar1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,6 +748,7 @@ namespace RentCar
         private System.Windows.Forms.RadioButton radioCar4;
         private System.Windows.Forms.RadioButton radioCar5;
         private System.Windows.Forms.RadioButton radioCar6;
+        private System.Windows.Forms.GroupBox rdCar1;
     }
 }
 
