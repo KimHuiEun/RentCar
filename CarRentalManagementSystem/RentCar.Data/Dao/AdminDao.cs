@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EFLibrary;
 
-namespace CarRent.Data
+namespace RentCar.Data
 {
     class AdminDao
     {

@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using EFLibrary;
 
-namespace CarRent.Data
-{
+namespace RentCar.Data
+{ 
     public class UserDao : SingleKeyDao<User, int>
     {
         protected override Expression<Func<User, bool>> IsKey(int key)
@@ -20,6 +20,14 @@ namespace CarRent.Data
             get
             {
                 return x => x.UserId;
+            }
+        }
+
+        public User GetByName(string loginId)
+        {
+            using (var context = new RentCarEntities())
+            {
+                return context.User.FirstOrDefault(x => x.LoginId == loginId);
             }
         }
     }

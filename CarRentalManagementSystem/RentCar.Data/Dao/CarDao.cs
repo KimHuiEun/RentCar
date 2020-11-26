@@ -4,16 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EFLibrary;
+using System.Linq.Expressions;
 
-namespace CarRent.Data
+namespace RentCar.Data
 {
     public class CarDao : SingleKeyDao<Car, int>
     {
-        internal CarDao()
+        protected override Expression<Func<Car,bool>> IsKey(int key)
         {
+            return x => x.CarId == key;
         }
 
-        protected override Car ReadEntity(SqlDataReader reader)
+        protected override Expression<Func<Car,int>> KeySelector
+        {
+            get
+            {
+                return x => x.CarId;
+            }
+        }
+        /*protected override Car ReadEntity(SqlDataReader reader)
         {
             Car car = new Car();
             car.CarId = reader.GetInt32(0);
@@ -92,7 +101,7 @@ namespace CarRent.Data
 
             command.ExecuteNonQuery();
 
-            command.Connection.Close();
+            command.Connection.Close();*/
         }
     }
 }

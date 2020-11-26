@@ -7,7 +7,7 @@ using EFLibrary;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
 
-namespace CarRent.Data
+namespace RentCar.Data
 {
     public class CarTypeDao : SingleKeyDao<CarType, int>
     {

@@ -47,20 +47,10 @@ namespace RentCar
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.CarA = new System.Windows.Forms.Label();
-            this.btnCar1 = new System.Windows.Forms.Button();
-            this.Car2 = new System.Windows.Forms.Label();
-            this.Car3 = new System.Windows.Forms.Label();
-            this.Car4 = new System.Windows.Forms.Label();
-            this.Car5 = new System.Windows.Forms.Label();
-            this.Car6 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnCar2 = new System.Windows.Forms.Button();
-            this.btnCar3 = new System.Windows.Forms.Button();
             this.btnCar4 = new System.Windows.Forms.Button();
-            this.btnCar5 = new System.Windows.Forms.Button();
             this.btnCar6 = new System.Windows.Forms.Button();
             this.cbMonth1 = new System.Windows.Forms.ComboBox();
             this.cbDay1 = new System.Windows.Forms.ComboBox();
@@ -68,20 +58,17 @@ namespace RentCar
             this.cbDay2 = new System.Windows.Forms.ComboBox();
             this.cbMonth2 = new System.Windows.Forms.ComboBox();
             this.cbYear2 = new System.Windows.Forms.ComboBox();
-            this.radioCar1 = new System.Windows.Forms.RadioButton();
-            this.radioCar2 = new System.Windows.Forms.RadioButton();
-            this.radioCar3 = new System.Windows.Forms.RadioButton();
-            this.radioCar4 = new System.Windows.Forms.RadioButton();
-            this.radioCar5 = new System.Windows.Forms.RadioButton();
-            this.radioCar6 = new System.Windows.Forms.RadioButton();
-            this.rdCar1 = new System.Windows.Forms.GroupBox();
+            this.btnCar1 = new System.Windows.Forms.Button();
+            this.btnCar2 = new System.Windows.Forms.Button();
+            this.btnCar3 = new System.Windows.Forms.Button();
+            this.btnCar5 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.rdCar1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -205,7 +192,7 @@ namespace RentCar
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(312, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(312, 22);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(321, 269);
@@ -216,7 +203,7 @@ namespace RentCar
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(661, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(661, 22);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(326, 269);
@@ -227,7 +214,7 @@ namespace RentCar
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1016, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(1016, 22);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(322, 269);
@@ -238,7 +225,7 @@ namespace RentCar
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(312, 348);
+            this.pictureBox4.Location = new System.Drawing.Point(312, 380);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(321, 272);
@@ -249,7 +236,7 @@ namespace RentCar
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(661, 348);
+            this.pictureBox5.Location = new System.Drawing.Point(661, 380);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(326, 272);
@@ -260,7 +247,7 @@ namespace RentCar
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1016, 348);
+            this.pictureBox6.Location = new System.Drawing.Point(1016, 380);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(322, 272);
@@ -268,73 +255,9 @@ namespace RentCar
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
             // 
-            // CarA
-            // 
-            this.CarA.AutoSize = true;
-            this.CarA.Location = new System.Drawing.Point(34, 3);
-            this.CarA.Name = "CarA";
-            this.CarA.Size = new System.Drawing.Size(86, 15);
-            this.CarA.TabIndex = 16;
-            this.CarA.Text = "A, 20,000원";
-            // 
-            // btnCar1
-            // 
-            this.btnCar1.Location = new System.Drawing.Point(410, 306);
-            this.btnCar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCar1.Name = "btnCar1";
-            this.btnCar1.Size = new System.Drawing.Size(98, 35);
-            this.btnCar1.TabIndex = 17;
-            this.btnCar1.Text = "정보";
-            this.btnCar1.UseVisualStyleBackColor = true;
-            // 
-            // Car2
-            // 
-            this.Car2.AutoSize = true;
-            this.Car2.Location = new System.Drawing.Point(784, 281);
-            this.Car2.Name = "Car2";
-            this.Car2.Size = new System.Drawing.Size(87, 15);
-            this.Car2.TabIndex = 19;
-            this.Car2.Text = "B, 30,000원";
-            // 
-            // Car3
-            // 
-            this.Car3.AutoSize = true;
-            this.Car3.Location = new System.Drawing.Point(1144, 281);
-            this.Car3.Name = "Car3";
-            this.Car3.Size = new System.Drawing.Size(87, 15);
-            this.Car3.TabIndex = 22;
-            this.Car3.Text = "C, 40,000원";
-            // 
-            // Car4
-            // 
-            this.Car4.AutoSize = true;
-            this.Car4.Location = new System.Drawing.Point(422, 632);
-            this.Car4.Name = "Car4";
-            this.Car4.Size = new System.Drawing.Size(87, 15);
-            this.Car4.TabIndex = 25;
-            this.Car4.Text = "D, 50,000원";
-            // 
-            // Car5
-            // 
-            this.Car5.AutoSize = true;
-            this.Car5.Location = new System.Drawing.Point(784, 632);
-            this.Car5.Name = "Car5";
-            this.Car5.Size = new System.Drawing.Size(86, 15);
-            this.Car5.TabIndex = 28;
-            this.Car5.Text = "E, 60,000원";
-            // 
-            // Car6
-            // 
-            this.Car6.AutoSize = true;
-            this.Car6.Location = new System.Drawing.Point(1144, 632);
-            this.Car6.Name = "Car6";
-            this.Car6.Size = new System.Drawing.Size(85, 15);
-            this.Car6.TabIndex = 31;
-            this.Car6.Text = "F, 70,000원";
-            // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(1095, 731);
+            this.btnBack.Location = new System.Drawing.Point(1094, 750);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(118, 38);
@@ -344,7 +267,7 @@ namespace RentCar
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(1224, 731);
+            this.btnOK.Location = new System.Drawing.Point(1223, 750);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(118, 38);
@@ -355,34 +278,14 @@ namespace RentCar
             // label14
             // 
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Location = new System.Drawing.Point(278, 705);
+            this.label14.Location = new System.Drawing.Point(277, 724);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(1063, 2);
             this.label14.TabIndex = 36;
             // 
-            // btnCar2
-            // 
-            this.btnCar2.Location = new System.Drawing.Point(760, 306);
-            this.btnCar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCar2.Name = "btnCar2";
-            this.btnCar2.Size = new System.Drawing.Size(98, 35);
-            this.btnCar2.TabIndex = 43;
-            this.btnCar2.Text = "정보";
-            this.btnCar2.UseVisualStyleBackColor = true;
-            // 
-            // btnCar3
-            // 
-            this.btnCar3.Location = new System.Drawing.Point(1120, 306);
-            this.btnCar3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCar3.Name = "btnCar3";
-            this.btnCar3.Size = new System.Drawing.Size(98, 35);
-            this.btnCar3.TabIndex = 44;
-            this.btnCar3.Text = "정보";
-            this.btnCar3.UseVisualStyleBackColor = true;
-            // 
             // btnCar4
             // 
-            this.btnCar4.Location = new System.Drawing.Point(410, 655);
+            this.btnCar4.Location = new System.Drawing.Point(410, 687);
             this.btnCar4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCar4.Name = "btnCar4";
             this.btnCar4.Size = new System.Drawing.Size(98, 35);
@@ -390,19 +293,9 @@ namespace RentCar
             this.btnCar4.Text = "정보";
             this.btnCar4.UseVisualStyleBackColor = true;
             // 
-            // btnCar5
-            // 
-            this.btnCar5.Location = new System.Drawing.Point(760, 655);
-            this.btnCar5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCar5.Name = "btnCar5";
-            this.btnCar5.Size = new System.Drawing.Size(98, 35);
-            this.btnCar5.TabIndex = 46;
-            this.btnCar5.Text = "정보";
-            this.btnCar5.UseVisualStyleBackColor = true;
-            // 
             // btnCar6
             // 
-            this.btnCar6.Location = new System.Drawing.Point(1120, 655);
+            this.btnCar6.Location = new System.Drawing.Point(1120, 687);
             this.btnCar6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCar6.Name = "btnCar6";
             this.btnCar6.Size = new System.Drawing.Size(98, 35);
@@ -559,82 +452,56 @@ namespace RentCar
             this.cbYear2.Size = new System.Drawing.Size(59, 23);
             this.cbYear2.TabIndex = 54;
             // 
-            // radioCar1
+            // btnCar1
             // 
-            this.radioCar1.AutoSize = true;
-            this.radioCar1.Location = new System.Drawing.Point(11, 3);
-            this.radioCar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioCar1.Name = "radioCar1";
-            this.radioCar1.Size = new System.Drawing.Size(17, 16);
-            this.radioCar1.TabIndex = 57;
-            this.radioCar1.TabStop = true;
-            this.radioCar1.UseVisualStyleBackColor = true;
+            this.btnCar1.Location = new System.Drawing.Point(410, 324);
+            this.btnCar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCar1.Name = "btnCar1";
+            this.btnCar1.Size = new System.Drawing.Size(98, 35);
+            this.btnCar1.TabIndex = 17;
+            this.btnCar1.Text = "정보";
+            this.btnCar1.UseVisualStyleBackColor = true;
             // 
-            // radioCar2
+            // btnCar2
             // 
-            this.radioCar2.AutoSize = true;
-            this.radioCar2.Location = new System.Drawing.Point(761, 281);
-            this.radioCar2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioCar2.Name = "radioCar2";
-            this.radioCar2.Size = new System.Drawing.Size(17, 16);
-            this.radioCar2.TabIndex = 58;
-            this.radioCar2.TabStop = true;
-            this.radioCar2.UseVisualStyleBackColor = true;
+            this.btnCar2.Location = new System.Drawing.Point(760, 324);
+            this.btnCar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCar2.Name = "btnCar2";
+            this.btnCar2.Size = new System.Drawing.Size(98, 35);
+            this.btnCar2.TabIndex = 43;
+            this.btnCar2.Text = "정보";
+            this.btnCar2.UseVisualStyleBackColor = true;
             // 
-            // radioCar3
+            // btnCar3
             // 
-            this.radioCar3.AutoSize = true;
-            this.radioCar3.Location = new System.Drawing.Point(1121, 280);
-            this.radioCar3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioCar3.Name = "radioCar3";
-            this.radioCar3.Size = new System.Drawing.Size(17, 16);
-            this.radioCar3.TabIndex = 59;
-            this.radioCar3.TabStop = true;
-            this.radioCar3.UseVisualStyleBackColor = true;
+            this.btnCar3.Location = new System.Drawing.Point(1120, 324);
+            this.btnCar3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCar3.Name = "btnCar3";
+            this.btnCar3.Size = new System.Drawing.Size(98, 35);
+            this.btnCar3.TabIndex = 44;
+            this.btnCar3.Text = "정보";
+            this.btnCar3.UseVisualStyleBackColor = true;
             // 
-            // radioCar4
+            // btnCar5
             // 
-            this.radioCar4.AutoSize = true;
-            this.radioCar4.Location = new System.Drawing.Point(399, 631);
-            this.radioCar4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioCar4.Name = "radioCar4";
-            this.radioCar4.Size = new System.Drawing.Size(17, 16);
-            this.radioCar4.TabIndex = 60;
-            this.radioCar4.TabStop = true;
-            this.radioCar4.UseVisualStyleBackColor = true;
+            this.btnCar5.Location = new System.Drawing.Point(760, 687);
+            this.btnCar5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCar5.Name = "btnCar5";
+            this.btnCar5.Size = new System.Drawing.Size(98, 35);
+            this.btnCar5.TabIndex = 46;
+            this.btnCar5.Text = "정보";
+            this.btnCar5.UseVisualStyleBackColor = true;
             // 
-            // radioCar5
+            // radioButton1
             // 
-            this.radioCar5.AutoSize = true;
-            this.radioCar5.Location = new System.Drawing.Point(761, 631);
-            this.radioCar5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioCar5.Name = "radioCar5";
-            this.radioCar5.Size = new System.Drawing.Size(17, 16);
-            this.radioCar5.TabIndex = 61;
-            this.radioCar5.TabStop = true;
-            this.radioCar5.UseVisualStyleBackColor = true;
-            // 
-            // radioCar6
-            // 
-            this.radioCar6.AutoSize = true;
-            this.radioCar6.Location = new System.Drawing.Point(1121, 631);
-            this.radioCar6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioCar6.Name = "radioCar6";
-            this.radioCar6.Size = new System.Drawing.Size(17, 16);
-            this.radioCar6.TabIndex = 62;
-            this.radioCar6.TabStop = true;
-            this.radioCar6.UseVisualStyleBackColor = true;
-            // 
-            // rdCar1
-            // 
-            this.rdCar1.Controls.Add(this.radioCar1);
-            this.rdCar1.Controls.Add(this.CarA);
-            this.rdCar1.Location = new System.Drawing.Point(388, 278);
-            this.rdCar1.Name = "rdCar1";
-            this.rdCar1.Size = new System.Drawing.Size(120, 25);
-            this.rdCar1.TabIndex = 63;
-            this.rdCar1.TabStop = false;
-            this.rdCar1.Text = "groupBox1";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(400, 300);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(128, 19);
+            this.radioButton1.TabIndex = 57;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "차 리스트 내역";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // CarRentform
             // 
@@ -643,12 +510,7 @@ namespace RentCar
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1361, 804);
-            this.Controls.Add(this.rdCar1);
-            this.Controls.Add(this.radioCar6);
-            this.Controls.Add(this.radioCar5);
-            this.Controls.Add(this.radioCar4);
-            this.Controls.Add(this.radioCar3);
-            this.Controls.Add(this.radioCar2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.cbDay2);
             this.Controls.Add(this.cbMonth2);
             this.Controls.Add(this.cbYear2);
@@ -663,11 +525,6 @@ namespace RentCar
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.Car6);
-            this.Controls.Add(this.Car5);
-            this.Controls.Add(this.Car4);
-            this.Controls.Add(this.Car3);
-            this.Controls.Add(this.Car2);
             this.Controls.Add(this.btnCar1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox3);
@@ -695,8 +552,6 @@ namespace RentCar
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.rdCar1.ResumeLayout(false);
-            this.rdCar1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -721,20 +576,10 @@ namespace RentCar
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label CarA;
-        private System.Windows.Forms.Button btnCar1;
-        private System.Windows.Forms.Label Car2;
-        private System.Windows.Forms.Label Car3;
-        private System.Windows.Forms.Label Car4;
-        private System.Windows.Forms.Label Car5;
-        private System.Windows.Forms.Label Car6;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnCar2;
-        private System.Windows.Forms.Button btnCar3;
         private System.Windows.Forms.Button btnCar4;
-        private System.Windows.Forms.Button btnCar5;
         private System.Windows.Forms.Button btnCar6;
         private System.Windows.Forms.ComboBox cbMonth1;
         private System.Windows.Forms.ComboBox cbDay1;
@@ -742,13 +587,11 @@ namespace RentCar
         private System.Windows.Forms.ComboBox cbDay2;
         private System.Windows.Forms.ComboBox cbMonth2;
         private System.Windows.Forms.ComboBox cbYear2;
-        private System.Windows.Forms.RadioButton radioCar1;
-        private System.Windows.Forms.RadioButton radioCar2;
-        private System.Windows.Forms.RadioButton radioCar3;
-        private System.Windows.Forms.RadioButton radioCar4;
-        private System.Windows.Forms.RadioButton radioCar5;
-        private System.Windows.Forms.RadioButton radioCar6;
-        private System.Windows.Forms.GroupBox rdCar1;
+        private System.Windows.Forms.Button btnCar1;
+        private System.Windows.Forms.Button btnCar2;
+        private System.Windows.Forms.Button btnCar3;
+        private System.Windows.Forms.Button btnCar5;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
