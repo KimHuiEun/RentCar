@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EFLibrary;
+using RentCar.Data;
 
 namespace RentCar
 {
@@ -29,10 +30,11 @@ namespace RentCar
                 {
                     if (user.LoginPw == tbLoginPw.Text)
                     {
-                        MessageBox.Show(tbLoginId + "님, 안녕하세요!");
+                        MessageBox.Show(tbLoginId.Text + "님, 안녕하세요!");
                         Customer showform = new Customer();
-                        showform.Show();
-                        this.Hide();
+                        //showform.Show();
+                        //this.Hide();
+                        this.Close();
                     }
                     else
                         MessageBox.Show("잘못된 비밀번호입니다.");
@@ -45,8 +47,7 @@ namespace RentCar
 
             
 
-            //if()
-            this.Close();
+           
            
         }
 

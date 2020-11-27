@@ -78,7 +78,7 @@ namespace RentCar
             this.tbLogin.TabIndex = 4;
             this.tbLogin.Text = "확인";
             this.tbLogin.UseVisualStyleBackColor = true;
-            this.tbLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            this.tbLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // tbLoginId
             // 

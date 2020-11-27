@@ -9,11 +9,12 @@ using System.Linq.Expressions;
 
 namespace RentCar.Data
 {
-    public class CarTypeDao : SingleKeyDao<CarType, int>
+    public class CarTypeDao //: SingleKeyDao<CarType, int>
     {
         internal CarTypeDao()
         {
         }
+        /*
         protected override CarType ReadEntity(SqlDataReader reader)
         {
             CarType carType = new CarType();
@@ -73,7 +74,7 @@ namespace RentCar.Data
         protected override Expression<Func<CarType, bool>> IsKey(int key)
         {
             throw new NotImplementedException();
-        }
+        }*/
     }
     }
-}
+

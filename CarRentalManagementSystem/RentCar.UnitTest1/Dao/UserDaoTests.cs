@@ -16,11 +16,11 @@ namespace RentCar.Data.Tests
         {
             Assert.Fail();
 
-            //교수님 예시
+            /*교수님 예시
             DbContextCreator.Context = () => new RentCarEntities();
 
             User user = Dao.User.GetByName("Thomas");
-            Assert.InNotNull(user);
+            Assert.InNotNull(user);*/
         }
     }
 }

@@ -18,7 +18,9 @@ namespace RentCar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             DbContextCreator.Context = () => new RentCarEntities();
+
             Application.Run(new Main());
         }
     }
