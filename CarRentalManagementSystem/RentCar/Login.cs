@@ -19,7 +19,7 @@ namespace RentCar
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {/*
             if (tbLoginId.Text != string.Empty && tbLoginPw.Text != string.Empty)
             {
@@ -51,7 +51,7 @@ namespace RentCar
             this.Close();
         }
 
-        private void tbLoginId_MouseHover(object sender, EventArgs e)
+        private void TbLoginId_MouseHover(object sender, EventArgs e)
         {
 
             this.toolTip1.IsBalloon = true;
@@ -60,7 +60,7 @@ namespace RentCar
             //ToDoList : 한글 못 쓰도록.
         }
 
-        private void tbLoginPw_MouseHover(object sender, EventArgs e)
+        private void TbLoginPw_MouseHover(object sender, EventArgs e)
         {
             this.toolTip2.IsBalloon = true;
             this.toolTip2.SetToolTip(this.tbLoginPw, "영문자와 숫자로 되어있는 Pw 입력");
