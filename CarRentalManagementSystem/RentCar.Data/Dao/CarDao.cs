@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EFLibrary;
 using System.Linq.Expressions;
 
+
 namespace RentCar.Data
 {
     public class CarDao : SingleKeyDao<Car, int>
@@ -102,6 +103,6 @@ namespace RentCar.Data
             command.ExecuteNonQuery();
 
             command.Connection.Close();*/
-        }
+        
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EFLibrary;
 
 namespace RentCar.Data.Tests
 {
@@ -20,7 +21,7 @@ namespace RentCar.Data.Tests
             DbContextCreator.Context = () => new RentCarEntities();
 
             User user = Dao.User.GetByName("Thomas");
-            Assert.InNotNull(user);
+            Assert.IsNotNull(user);
         }
     }
 }
