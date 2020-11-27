@@ -78,7 +78,7 @@ namespace RentCar
             this.tbLogin.TabIndex = 4;
             this.tbLogin.Text = "확인";
             this.tbLogin.UseVisualStyleBackColor = true;
-            this.tbLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            this.tbLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // tbLoginId
             // 
@@ -87,7 +87,7 @@ namespace RentCar
             this.tbLoginId.Name = "tbLoginId";
             this.tbLoginId.Size = new System.Drawing.Size(155, 27);
             this.tbLoginId.TabIndex = 7;
-            this.tbLoginId.MouseHover += new System.EventHandler(this.TbLoginId_MouseHover);
+            this.tbLoginId.MouseHover += new System.EventHandler(this.tbLoginId_MouseHover);
             // 
             // tbLoginPw
             // 
@@ -97,7 +97,7 @@ namespace RentCar
             this.tbLoginPw.PasswordChar = '*';
             this.tbLoginPw.Size = new System.Drawing.Size(155, 27);
             this.tbLoginPw.TabIndex = 8;
-            this.tbLoginPw.MouseHover += new System.EventHandler(this.TbLoginPw_MouseHover);
+            this.tbLoginPw.MouseHover += new System.EventHandler(this.tbLoginPw_MouseHover);
             // 
             // Login
             // 

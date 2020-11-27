@@ -40,8 +40,8 @@ namespace RentCar
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.RentDate = new System.Windows.Forms.DateTimePicker();
+            this.ReturnDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -158,20 +158,20 @@ namespace RentCar
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // dateTimePicker1
+            // RentDate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 232);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 18;
+            this.RentDate.CalendarFont = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RentDate.Location = new System.Drawing.Point(122, 232);
+            this.RentDate.Name = "RentDate";
+            this.RentDate.Size = new System.Drawing.Size(200, 25);
+            this.RentDate.TabIndex = 18;
             // 
-            // dateTimePicker2
+            // ReturnDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(122, 276);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker2.TabIndex = 19;
+            this.ReturnDate.Location = new System.Drawing.Point(122, 276);
+            this.ReturnDate.Name = "ReturnDate";
+            this.ReturnDate.Size = new System.Drawing.Size(200, 25);
+            this.ReturnDate.TabIndex = 19;
             // 
             // label5
             // 
@@ -189,8 +189,8 @@ namespace RentCar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.ReturnDate);
+            this.Controls.Add(this.RentDate);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -221,8 +221,8 @@ namespace RentCar
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker RentDate;
+        private System.Windows.Forms.DateTimePicker ReturnDate;
         private System.Windows.Forms.Label label5;
     }
 }
