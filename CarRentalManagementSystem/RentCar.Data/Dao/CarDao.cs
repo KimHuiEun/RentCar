@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EFLibrary;
+﻿using EFLibrary;
+using System;
 using System.Linq.Expressions;
-using System.Data.SqlClient;
 
 namespace RentCar.Data
 {

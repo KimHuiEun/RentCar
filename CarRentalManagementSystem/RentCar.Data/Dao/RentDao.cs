@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
+﻿using EFLibrary;
+using System;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using EFLibrary;
 
 namespace RentCar.Data
 {
     public class RentDao : SingleKeyDao<Rent, int>
     {
-        protected override Expression<Func<Rent, bool>> IsKey(int key)
+        protected override Expression<Func<Rent, bool>> IsKey(int key1)
         {
-            return x => x.RentId == key;
+            return x => x.RentId == key1;
         }
 
         protected override Expression<Func<Rent, int>> KeySelector

@@ -71,6 +71,7 @@
     <Compile Include="EFLibrary\DbContextCreator.cs" />
     <Compile Include="EFLibrary\DualKeyDao.cs" />
     <Compile Include="EFLibrary\SingleKeyDao.cs" />
+    <Compile Include="EFLibrary\TripleKeyDao.cs" />
     <Compile Include="Event.cs">
       <DependentUpon>RentCar.tt</DependentUpon>
     </Compile>
