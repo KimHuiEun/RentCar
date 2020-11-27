@@ -36,6 +36,22 @@ namespace RentCar
             Login showform = new Login();
             //login.MdiParent = this;   //ToDoList : 부모폼 설정 (창을 안 벗어나도록)
             showform.ShowDialog(); // 로그인 창이 뜰 때 메인 폼이 선택 되지 않도록 함.
+
+            // Set the new form's desktop location so it  
+            // appears below and to the right of the current form.
+           
+            // Keep the current form active by calling the Activate
+            // method.
+            this.Activate();
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            CbLocation.Visible = true;
+            Cbsize.Visible = true;
+            ReturnDate.Visible = true;
+            RentDate.Visible = true;
+            btnSrchData.Visible = true;
         }
 
         //
