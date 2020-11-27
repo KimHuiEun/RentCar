@@ -32,9 +32,9 @@ namespace RentCar
                     {
                         MessageBox.Show(tbLoginId.Text + "님, 안녕하세요!");
                         Customer showform = new Customer();
-                        //showform.Show();
                         //this.Hide();
                         this.Close();
+                        showform.Show();
                     }
                     else
                         MessageBox.Show("잘못된 비밀번호입니다.");
