@@ -34,14 +34,12 @@ namespace RentCar
             this.label2 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbPhoneNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbLicense = new System.Windows.Forms.TextBox();
             this.back = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@ namespace RentCar
             this.label10 = new System.Windows.Forms.Label();
             this.tbPasswordConfirm = new System.Windows.Forms.TextBox();
             this.IssuedDate = new System.Windows.Forms.DateTimePicker();
+            this.tbPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.tbLicense = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,14 +89,6 @@ namespace RentCar
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(329, 31);
             this.tbEmail.TabIndex = 3;
-            // 
-            // tbPhoneNumber
-            // 
-            this.tbPhoneNumber.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPhoneNumber.Location = new System.Drawing.Point(144, 258);
-            this.tbPhoneNumber.Name = "tbPhoneNumber";
-            this.tbPhoneNumber.Size = new System.Drawing.Size(329, 31);
-            this.tbPhoneNumber.TabIndex = 4;
             // 
             // label3
             // 
@@ -158,21 +150,13 @@ namespace RentCar
             this.label7.TabIndex = 10;
             this.label7.Text = "발급일자";
             // 
-            // tbLicense
-            // 
-            this.tbLicense.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLicense.Location = new System.Drawing.Point(704, 395);
-            this.tbLicense.Name = "tbLicense";
-            this.tbLicense.Size = new System.Drawing.Size(270, 31);
-            this.tbLicense.TabIndex = 11;
-            // 
             // back
             // 
             this.back.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back.Location = new System.Drawing.Point(742, 506);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(107, 52);
-            this.back.TabIndex = 15;
+            this.back.TabIndex = 22;
             this.back.Text = "이전";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
@@ -183,7 +167,7 @@ namespace RentCar
             this.OK.Location = new System.Drawing.Point(864, 506);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(110, 52);
-            this.OK.TabIndex = 16;
+            this.OK.TabIndex = 23;
             this.OK.Text = "확인";
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
@@ -204,7 +188,7 @@ namespace RentCar
             this.tbId.Location = new System.Drawing.Point(144, 327);
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(329, 31);
-            this.tbId.TabIndex = 17;
+            this.tbId.TabIndex = 11;
             // 
             // label9
             // 
@@ -223,7 +207,7 @@ namespace RentCar
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(329, 31);
-            this.tbPassword.TabIndex = 19;
+            this.tbPassword.TabIndex = 15;
             // 
             // label10
             // 
@@ -242,7 +226,7 @@ namespace RentCar
             this.tbPasswordConfirm.Name = "tbPasswordConfirm";
             this.tbPasswordConfirm.PasswordChar = '*';
             this.tbPasswordConfirm.Size = new System.Drawing.Size(329, 31);
-            this.tbPasswordConfirm.TabIndex = 21;
+            this.tbPasswordConfirm.TabIndex = 16;
             // 
             // IssuedDate
             // 
@@ -251,13 +235,31 @@ namespace RentCar
             this.IssuedDate.Location = new System.Drawing.Point(704, 444);
             this.IssuedDate.Name = "IssuedDate";
             this.IssuedDate.Size = new System.Drawing.Size(270, 25);
-            this.IssuedDate.TabIndex = 23;
+            this.IssuedDate.TabIndex = 19;
+            // 
+            // tbPhoneNumber
+            // 
+            this.tbPhoneNumber.Location = new System.Drawing.Point(144, 263);
+            this.tbPhoneNumber.Mask = "000-9000-0000";
+            this.tbPhoneNumber.Name = "tbPhoneNumber";
+            this.tbPhoneNumber.Size = new System.Drawing.Size(329, 25);
+            this.tbPhoneNumber.TabIndex = 4;
+            // 
+            // tbLicense
+            // 
+            this.tbLicense.Location = new System.Drawing.Point(704, 397);
+            this.tbLicense.Mask = "00-00-000000-00";
+            this.tbLicense.Name = "tbLicense";
+            this.tbLicense.Size = new System.Drawing.Size(270, 25);
+            this.tbLicense.TabIndex = 17;
             // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 578);
+            this.Controls.Add(this.tbLicense);
+            this.Controls.Add(this.tbPhoneNumber);
             this.Controls.Add(this.IssuedDate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tbPasswordConfirm);
@@ -267,14 +269,12 @@ namespace RentCar
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.tbLicense);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbPhoneNumber);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label2);
@@ -293,14 +293,12 @@ namespace RentCar
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.TextBox tbPhoneNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbLicense;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Label label8;
@@ -310,6 +308,8 @@ namespace RentCar
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbPasswordConfirm;
         private System.Windows.Forms.DateTimePicker IssuedDate;
+        private System.Windows.Forms.MaskedTextBox tbPhoneNumber;
+        private System.Windows.Forms.MaskedTextBox tbLicense;
     }
 }
 
