@@ -15,7 +15,7 @@ namespace RentCar
 {
     public partial class Account : Form
     {
-  
+
         public Account()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace RentCar
         private void back_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("회원가입을 취소하시겠습니까?", "회원가입취소", MessageBoxButtons.YesNo);
-            
+
             if (dialogResult == DialogResult.Yes)
             {
                 this.Close();
@@ -34,19 +34,11 @@ namespace RentCar
                 this.Show();
             }
         }
-        
+
         private void OK_Click(object sender, EventArgs e)
         {
-
             if (tbName.Text != "" || tbEmail.Text != "" || tbPhoneNumber.Text != "" || tbId.Text != "" || tbPassword.Text != "" || tbPasswordConfirm.Text != "" || tbLicense.Text != "")
             {
-                if (tbPassword.Text != tbPasswordConfirm.Text)
-                    MessageBox.Show("비밀번호를 다시 확인해주세요");
-                else
-                {
-                    MessageBox.Show("회원가입이 완료되었습니다.");
-                    Close();
-                }
                 if (tbPassword.Text != tbPasswordConfirm.Text)
                     MessageBox.Show("비밀번호를 다시 확인해주세요");
                 else
@@ -62,30 +54,22 @@ namespace RentCar
                     user.LoginPwConfirm = tbPasswordConfirm.Text;
                     Dao.User.Insert(user);
 
-                    MessageBox.Show("회원가입이 완료되었습니다.");
-                    this.Clear();
-                }
 
+                    MessageBox.Show("회원가입이 완료되었습니다.");
+                    Close();
+                }
             }
             else
             {
                 MessageBox.Show("모든 칸에 입력해주세요");
                 this.Show();
             }
-            
+
+
+
         }
 
-        private void Clear()
-        {
-            tbName.Text = tbEmail.Text = tbPhoneNumber.Text = tbId.Text = tbPassword.Text = tbPasswordConfirm.Text = tbLicense.Text = "";
-        }
-        //private void Clear()
-        //{
-        //    tbName.Text = tbEmail.Text = tbPhoneNumber.Text = tbId.Text = tbPassword.Text = tbPasswordConfirm.Text = tbLicense.Text = Year.Text = Month.Text = Day.Text = "";
-        //}
-
-        //this.Hide();
     }
 
+
 }
-    

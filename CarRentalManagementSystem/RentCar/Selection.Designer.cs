@@ -414,17 +414,17 @@ namespace RentCar
             // 
             // RentDate
             // 
-            this.RentDate.Location = new System.Drawing.Point(81, 277);
+            /*this.RentDate.Location = new System.Drawing.Point(81, 277);
             this.RentDate.Name = "RentDate";
             this.RentDate.Size = new System.Drawing.Size(190, 25);
-            this.RentDate.TabIndex = 58;
+            this.RentDate.TabIndex = 58;*/
             // 
             // ReturnDate
             // 
-            this.ReturnDate.Location = new System.Drawing.Point(81, 342);
+            /*this.ReturnDate.Location = new System.Drawing.Point(81, 342);
             this.ReturnDate.Name = "ReturnDate";
             this.ReturnDate.Size = new System.Drawing.Size(190, 25);
-            this.ReturnDate.TabIndex = 59;
+            this.ReturnDate.TabIndex = 59;*/
             // 
             // CarRentform
             // 

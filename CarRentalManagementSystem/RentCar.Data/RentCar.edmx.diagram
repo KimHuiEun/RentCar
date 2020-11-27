@@ -5,13 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e33f17e7321e46cfb0826ff4435311fa" Name="Diagram1">
-        <EntityTypeShape EntityType="RentCarModel.Admin" Width="1.5" PointX="3" PointY="3.125" />
-        <EntityTypeShape EntityType="RentCarModel.Car" Width="1.5" PointX="0.75" PointY="1.875" />
-        <EntityTypeShape EntityType="RentCarModel.CarType" Width="1.5" PointX="1.5" PointY="16" />
-        <EntityTypeShape EntityType="RentCarModel.Event" Width="1.5" PointX="3" PointY="12.625" />
-        <EntityTypeShape EntityType="RentCarModel.Rent" Width="1.5" PointX="6" PointY="5.625" />
-        <EntityTypeShape EntityType="RentCarModel.Search" Width="1.5" PointX="3" PointY="6" />
-        <EntityTypeShape EntityType="RentCarModel.User" Width="1.5" PointX="0.75" PointY="5.25" />
+        <EntityTypeShape EntityType="RentCarModel.Admin" Width="1.5" PointX="7.5" PointY="0.5" />
+        <EntityTypeShape EntityType="RentCarModel.Car" Width="1.5" PointX="4" PointY="0.5" />
+        <EntityTypeShape EntityType="RentCarModel.CarType" Width="1.5" PointX="6.125" PointY="3.875" />
+        <EntityTypeShape EntityType="RentCarModel.Event" Width="1.5" PointX="2.375" PointY="4.5" />
+        <EntityTypeShape EntityType="RentCarModel.Rent" Width="1.5" PointX="8.25" PointY="3.375" />
+        <EntityTypeShape EntityType="RentCarModel.Search" Width="1.5" PointX="4.25" PointY="3.5" />
+        <EntityTypeShape EntityType="RentCarModel.User" Width="1.5" PointX="0.5" PointY="1.5" />
         <AssociationConnector Association="RentCarModel.FK_Admin_Car" />
         <AssociationConnector Association="RentCarModel.FK_Admin_User" />
         <AssociationConnector Association="RentCarModel.FK_Car_CarType" />
