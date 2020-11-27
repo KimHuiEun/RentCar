@@ -43,6 +43,7 @@ namespace RentCar
             this.RentDate = new System.Windows.Forms.DateTimePicker();
             this.ReturnDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnSrchData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +72,7 @@ namespace RentCar
             // BtnAdminLogin
             // 
             this.BtnAdminLogin.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdminLogin.Location = new System.Drawing.Point(614, 396);
+            this.BtnAdminLogin.Location = new System.Drawing.Point(614, 385);
             this.BtnAdminLogin.Name = "BtnAdminLogin";
             this.BtnAdminLogin.Size = new System.Drawing.Size(151, 42);
             this.BtnAdminLogin.TabIndex = 2;
@@ -183,11 +184,22 @@ namespace RentCar
             this.label5.TabIndex = 20;
             this.label5.Text = "RentCar Page";
             // 
+            // btnSrchData
+            // 
+            this.btnSrchData.Location = new System.Drawing.Point(225, 332);
+            this.btnSrchData.Name = "btnSrchData";
+            this.btnSrchData.Size = new System.Drawing.Size(96, 38);
+            this.btnSrchData.TabIndex = 21;
+            this.btnSrchData.Text = "검색";
+            this.btnSrchData.UseVisualStyleBackColor = true;
+            this.btnSrchData.Click += new System.EventHandler(this.btnSrchData_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSrchData);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ReturnDate);
             this.Controls.Add(this.RentDate);
@@ -203,6 +215,7 @@ namespace RentCar
             this.Controls.Add(this.BtnLogin);
             this.Name = "Main";
             this.Text = "RentCar";
+            this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,5 +237,6 @@ namespace RentCar
         private System.Windows.Forms.DateTimePicker RentDate;
         private System.Windows.Forms.DateTimePicker ReturnDate;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnSrchData;
     }
 }

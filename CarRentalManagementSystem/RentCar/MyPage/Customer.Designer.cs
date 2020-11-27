@@ -29,28 +29,18 @@ namespace Mypage
         /// </summary>
         private void InitializeComponent()
         {
-            this.callCarRent = new System.Windows.Forms.Button();
             this.AccountInfo = new System.Windows.Forms.Button();
             this.lastReservForm = new System.Windows.Forms.Button();
             this.CName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLgout = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // callCarRent
-            // 
-            this.callCarRent.Location = new System.Drawing.Point(168, 239);
-            this.callCarRent.Name = "callCarRent";
-            this.callCarRent.Size = new System.Drawing.Size(420, 70);
-            this.callCarRent.TabIndex = 1;
-            this.callCarRent.Text = "예약 가능 차량 조회";
-            this.callCarRent.UseVisualStyleBackColor = true;
-            this.callCarRent.Click += new System.EventHandler(this.callCarRent_Click);
             // 
             // AccountInfo
             // 
-            this.AccountInfo.Location = new System.Drawing.Point(168, 150);
+            this.AccountInfo.Location = new System.Drawing.Point(19, 76);
             this.AccountInfo.Name = "AccountInfo";
-            this.AccountInfo.Size = new System.Drawing.Size(420, 70);
+            this.AccountInfo.Size = new System.Drawing.Size(317, 70);
             this.AccountInfo.TabIndex = 2;
             this.AccountInfo.Text = "내 정보 수정";
             this.AccountInfo.UseVisualStyleBackColor = true;
@@ -58,9 +48,9 @@ namespace Mypage
             // 
             // lastReservForm
             // 
-            this.lastReservForm.Location = new System.Drawing.Point(168, 324);
+            this.lastReservForm.Location = new System.Drawing.Point(19, 175);
             this.lastReservForm.Name = "lastReservForm";
-            this.lastReservForm.Size = new System.Drawing.Size(420, 70);
+            this.lastReservForm.Size = new System.Drawing.Size(317, 70);
             this.lastReservForm.TabIndex = 3;
             this.lastReservForm.Text = "예약 확인";
             this.lastReservForm.UseVisualStyleBackColor = true;
@@ -69,11 +59,11 @@ namespace Mypage
             // CName
             // 
             this.CName.AutoSize = true;
-            this.CName.Font = new System.Drawing.Font("Consolas", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CName.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CName.Location = new System.Drawing.Point(61, 50);
+            this.CName.Location = new System.Drawing.Point(12, 9);
             this.CName.Name = "CName";
-            this.CName.Size = new System.Drawing.Size(118, 51);
+            this.CName.Size = new System.Drawing.Size(93, 40);
             this.CName.TabIndex = 4;
             this.CName.Text = "Name";
             this.CName.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -81,24 +71,33 @@ namespace Mypage
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(185, 50);
+            this.label1.Location = new System.Drawing.Point(111, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(529, 51);
+            this.label1.Size = new System.Drawing.Size(225, 40);
             this.label1.TabIndex = 5;
-            this.label1.Text = "님 안녕하세요 JoCar입니다~";
+            this.label1.Text = "님의 My Page";
+            // 
+            // btnLgout
+            // 
+            this.btnLgout.Location = new System.Drawing.Point(19, 409);
+            this.btnLgout.Name = "btnLgout";
+            this.btnLgout.Size = new System.Drawing.Size(317, 70);
+            this.btnLgout.TabIndex = 6;
+            this.btnLgout.Text = "로그아웃";
+            this.btnLgout.UseVisualStyleBackColor = true;
             // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 450);
+            this.ClientSize = new System.Drawing.Size(358, 503);
+            this.Controls.Add(this.btnLgout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CName);
             this.Controls.Add(this.lastReservForm);
             this.Controls.Add(this.AccountInfo);
-            this.Controls.Add(this.callCarRent);
             this.Name = "Customer";
             this.Text = "Customer";
             this.ResumeLayout(false);
@@ -107,11 +106,10 @@ namespace Mypage
         }
 
         #endregion
-
-        private System.Windows.Forms.Button callCarRent;
         private System.Windows.Forms.Button AccountInfo;
         private System.Windows.Forms.Button lastReservForm;
         private System.Windows.Forms.Label CName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLgout;
     }
 }

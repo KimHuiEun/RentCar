@@ -31,10 +31,18 @@ namespace RentCar
                     if (user.LoginPw == tbLoginPw.Text)
                     {
                         MessageBox.Show(tbLoginId.Text + "님, 안녕하세요!");
-                        Customer showform = new Customer();
-                        //this.Hide();
-                        this.Close();
-                        showform.Show();
+                        if (tbLogin.Text == "admin")
+                        {
+                            Manager_Mypage showform = new Manager_Mypage();
+                            showform.ShowDialog();
+                        }
+
+                        else
+                        {
+                            Customer showform = new Customer();
+                            this.Close();
+                            showform.ShowDialog();
+                        }
                     }
                     else
                         MessageBox.Show("잘못된 비밀번호입니다.");
