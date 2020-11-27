@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentCar.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,18 +24,18 @@ namespace RentCar
         //
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //중복 창이 띄어져있는지 체크
-            if (Application.OpenForms["Login"] is Login login)
-            {
-                //Login 폼이 열려 있을 경우
-                login.Focus();
-                return;
-            }
-            //Login 폼이 열려 있지 않은 경우
-            //Login창 Form의 new 생성
-            login = new Login();
+            ////중복 창이 띄어져있는지 체크
+            //if (Application.OpenForms["Login"] is Login login)
+            //{
+            //    //Login 폼이 열려 있을 경우
+            //    login.Focus();
+            //    return;
+            //}
+            ////Login 폼이 열려 있지 않은 경우
+            ////Login창 Form의 new 생성
+            Login showform = new Login();
             //login.MdiParent = this;   //ToDoList : 부모폼 설정 (창을 안 벗어나도록)
-            login.Show();
+            showform.ShowDialog(); // 로그인 창이 뜰 때 메인 폼이 선택 되지 않도록 함.
         }
 
         //
@@ -43,19 +44,30 @@ namespace RentCar
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             Account showform = new Account();
-            showform.Show();
+            showform.ShowDialog(); // 회원 가입 창 눌렀을 때 메인 폼 선택 안되게 변경.
         }
 
         private void BtnAdminLogin_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["Login"] is Login login)
-            {
-                login.Focus();
-                return;
-            }
+            //if (Application.OpenForms["Login"] is Login login)
+            //{
+            //    login.Focus();
+            //    return;
+            //}
 
-            login = new Login();
-            login.Show();
+            Login showform = new Login();
+            showform.ShowDialog(); // 메인 폼을 클릭되지 않도록 변경
+        }
+
+        private void btnSrchData_Click(object sender, EventArgs e)
+        {
+            CarRentform showform = new CarRentform();
+            showform.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
