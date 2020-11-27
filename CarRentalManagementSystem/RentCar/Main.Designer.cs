@@ -33,10 +33,10 @@ namespace RentCar
             this.BtnLogin = new System.Windows.Forms.Button();
             this.BtnCreate = new System.Windows.Forms.Button();
             this.BtnAdminLogin = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BoxLocation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BoxCarsize = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -79,18 +79,18 @@ namespace RentCar
             this.BtnAdminLogin.UseVisualStyleBackColor = true;
             this.BtnAdminLogin.Click += new System.EventHandler(this.BtnAdminLogin_Click);
             // 
-            // comboBox1
+            // BoxLocation
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.BoxLocation.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxLocation.FormattingEnabled = true;
+            this.BoxLocation.Items.AddRange(new object[] {
             "지점1",
             "지점2",
             "지점3"});
-            this.comboBox1.Location = new System.Drawing.Point(122, 123);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 35);
-            this.comboBox1.TabIndex = 3;
+            this.BoxLocation.Location = new System.Drawing.Point(122, 123);
+            this.BoxLocation.Name = "BoxLocation";
+            this.BoxLocation.Size = new System.Drawing.Size(199, 35);
+            this.BoxLocation.TabIndex = 3;
             // 
             // label1
             // 
@@ -112,21 +112,21 @@ namespace RentCar
             this.label2.TabIndex = 6;
             this.label2.Text = "차 크기";
             // 
-            // comboBox2
+            // BoxCarsize
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.BoxCarsize.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxCarsize.FormattingEnabled = true;
+            this.BoxCarsize.Items.AddRange(new object[] {
             "경형",
             "소형",
             "준중형",
             "중형",
             "준대형",
             "대형"});
-            this.comboBox2.Location = new System.Drawing.Point(122, 178);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 35);
-            this.comboBox2.TabIndex = 5;
+            this.BoxCarsize.Location = new System.Drawing.Point(122, 178);
+            this.BoxCarsize.Name = "BoxCarsize";
+            this.BoxCarsize.Size = new System.Drawing.Size(199, 35);
+            this.BoxCarsize.TabIndex = 5;
             // 
             // label3
             // 
@@ -195,9 +195,9 @@ namespace RentCar
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.BoxCarsize);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.BoxLocation);
             this.Controls.Add(this.BtnAdminLogin);
             this.Controls.Add(this.BtnCreate);
             this.Controls.Add(this.BtnLogin);
@@ -214,10 +214,10 @@ namespace RentCar
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Button BtnCreate;
         private System.Windows.Forms.Button BtnAdminLogin;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox BoxLocation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox BoxCarsize;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;

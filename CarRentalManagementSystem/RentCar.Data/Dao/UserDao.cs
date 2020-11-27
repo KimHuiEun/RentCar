@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -23,11 +25,13 @@ namespace RentCar.Data
             }
         }
 
+         
+
         public User GetByName(string loginId)
         {
             using (var context = new RentCarEntities())
             {
-                return context.User.FirstOrDefault(x => x.LoginId == loginId);
+                return context.Users.FirstOrDefault(x => x.LoginId == loginId);
             }
         }
     }

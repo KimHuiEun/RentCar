@@ -132,10 +132,10 @@ namespace RentCar
             "서울",
             "인천",
             "부산"});
-            this.cbLocation.Location = new System.Drawing.Point(96, 158);
+            this.cbLocation.Location = new System.Drawing.Point(81, 157);
             this.cbLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLocation.Name = "cbLocation";
-            this.cbLocation.Size = new System.Drawing.Size(155, 23);
+            this.cbLocation.Size = new System.Drawing.Size(190, 23);
             this.cbLocation.TabIndex = 6;
             // 
             // cbSize
@@ -148,10 +148,10 @@ namespace RentCar
             "중형",
             "준대형",
             "대형"});
-            this.cbSize.Location = new System.Drawing.Point(96, 219);
+            this.cbSize.Location = new System.Drawing.Point(81, 218);
             this.cbSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSize.Name = "cbSize";
-            this.cbSize.Size = new System.Drawing.Size(155, 23);
+            this.cbSize.Size = new System.Drawing.Size(190, 23);
             this.cbSize.TabIndex = 7;
             // 
             // tbCarName
@@ -349,16 +349,16 @@ namespace RentCar
             // 
             // RentDate
             // 
-            this.RentDate.Location = new System.Drawing.Point(96, 277);
+            this.RentDate.Location = new System.Drawing.Point(81, 277);
             this.RentDate.Name = "RentDate";
-            this.RentDate.Size = new System.Drawing.Size(175, 25);
+            this.RentDate.Size = new System.Drawing.Size(190, 25);
             this.RentDate.TabIndex = 58;
             // 
             // ReturnDate
             // 
-            this.ReturnDate.Location = new System.Drawing.Point(96, 342);
+            this.ReturnDate.Location = new System.Drawing.Point(81, 342);
             this.ReturnDate.Name = "ReturnDate";
-            this.ReturnDate.Size = new System.Drawing.Size(175, 25);
+            this.ReturnDate.Size = new System.Drawing.Size(190, 25);
             this.ReturnDate.TabIndex = 59;
             // 
             // CarRentform

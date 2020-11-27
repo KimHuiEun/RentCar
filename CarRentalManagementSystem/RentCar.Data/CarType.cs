@@ -17,8 +17,8 @@ namespace RentCar.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CarType()
         {
-            this.Car = new HashSet<Car>();
-            this.Search = new HashSet<Search>();
+            this.Cars = new HashSet<Car>();
+            this.Searches = new HashSet<Search>();
         }
     
         public int CarTypeId { get; set; }
@@ -27,8 +27,8 @@ namespace RentCar.Data
         public bool IsAuto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Car> Car { get; set; }
+        public virtual ICollection<Car> Cars { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Search> Search { get; set; }
+        public virtual ICollection<Search> Searches { get; set; }
     }
 }

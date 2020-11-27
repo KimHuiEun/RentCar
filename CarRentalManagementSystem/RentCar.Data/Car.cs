@@ -17,8 +17,8 @@ namespace RentCar.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Car()
         {
-            this.Admin = new HashSet<Admin>();
-            this.Rent = new HashSet<Rent>();
+            this.Admins = new HashSet<Admin>();
+            this.Rents = new HashSet<Rent>();
         }
     
         public int CarId { get; set; }
@@ -27,9 +27,9 @@ namespace RentCar.Data
         public int CarTypeId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Admin> Admin { get; set; }
+        public virtual ICollection<Admin> Admins { get; set; }
         public virtual CarType CarType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rent> Rent { get; set; }
+        public virtual ICollection<Rent> Rents { get; set; }
     }
 }

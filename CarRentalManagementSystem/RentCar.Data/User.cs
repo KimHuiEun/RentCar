@@ -17,10 +17,10 @@ namespace RentCar.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Admin = new HashSet<Admin>();
-            this.Event = new HashSet<Event>();
-            this.Rent = new HashSet<Rent>();
-            this.Search = new HashSet<Search>();
+            this.Admins = new HashSet<Admin>();
+            this.Events = new HashSet<Event>();
+            this.Rents = new HashSet<Rent>();
+            this.Searches = new HashSet<Search>();
         }
     
         public int UserId { get; set; }
@@ -30,18 +30,16 @@ namespace RentCar.Data
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string License { get; set; }
-        public int Year { get; set; }
-        public int Month { get; set; }
-        public int Day { get; set; }
+        public string IssueDate { get; set; }
         public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Admin> Admin { get; set; }
+        public virtual ICollection<Admin> Admins { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Event> Event { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rent> Rent { get; set; }
+        public virtual ICollection<Rent> Rents { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Search> Search { get; set; }
+        public virtual ICollection<Search> Searches { get; set; }
     }
 }

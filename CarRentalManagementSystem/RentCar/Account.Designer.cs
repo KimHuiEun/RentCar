@@ -246,6 +246,8 @@ namespace RentCar
             // 
             // IssuedDate
             // 
+            this.IssuedDate.CustomFormat = "yyyy-MM-dd";
+            this.IssuedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.IssuedDate.Location = new System.Drawing.Point(704, 444);
             this.IssuedDate.Name = "IssuedDate";
             this.IssuedDate.Size = new System.Drawing.Size(270, 25);
