@@ -38,7 +38,6 @@ namespace RentCar
             this.label6 = new System.Windows.Forms.Label();
             this.cbLocation = new System.Windows.Forms.ComboBox();
             this.cbSize = new System.Windows.Forms.ComboBox();
-            this.cbYear1 = new System.Windows.Forms.ComboBox();
             this.tbCarName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,17 +51,14 @@ namespace RentCar
             this.label14 = new System.Windows.Forms.Label();
             this.btnCar4 = new System.Windows.Forms.Button();
             this.btnCar6 = new System.Windows.Forms.Button();
-            this.cbMonth1 = new System.Windows.Forms.ComboBox();
-            this.cbDay1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbDay2 = new System.Windows.Forms.ComboBox();
-            this.cbMonth2 = new System.Windows.Forms.ComboBox();
-            this.cbYear2 = new System.Windows.Forms.ComboBox();
             this.btnCar1 = new System.Windows.Forms.Button();
             this.btnCar2 = new System.Windows.Forms.Button();
             this.btnCar3 = new System.Windows.Forms.Button();
             this.btnCar5 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.RentDate = new System.Windows.Forms.DateTimePicker();
+            this.ReturnDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -157,19 +153,6 @@ namespace RentCar
             this.cbSize.Name = "cbSize";
             this.cbSize.Size = new System.Drawing.Size(155, 23);
             this.cbSize.TabIndex = 7;
-            // 
-            // cbYear1
-            // 
-            this.cbYear1.FormattingEnabled = true;
-            this.cbYear1.Items.AddRange(new object[] {
-            "2020",
-            "2021",
-            "2022"});
-            this.cbYear1.Location = new System.Drawing.Point(96, 281);
-            this.cbYear1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbYear1.Name = "cbYear1";
-            this.cbYear1.Size = new System.Drawing.Size(59, 23);
-            this.cbYear1.TabIndex = 8;
             // 
             // tbCarName
             // 
@@ -303,69 +286,6 @@ namespace RentCar
             this.btnCar6.Text = "정보";
             this.btnCar6.UseVisualStyleBackColor = true;
             // 
-            // cbMonth1
-            // 
-            this.cbMonth1.FormattingEnabled = true;
-            this.cbMonth1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cbMonth1.Location = new System.Drawing.Point(162, 281);
-            this.cbMonth1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbMonth1.Name = "cbMonth1";
-            this.cbMonth1.Size = new System.Drawing.Size(41, 23);
-            this.cbMonth1.TabIndex = 48;
-            // 
-            // cbDay1
-            // 
-            this.cbDay1.FormattingEnabled = true;
-            this.cbDay1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cbDay1.Location = new System.Drawing.Point(210, 281);
-            this.cbDay1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbDay1.Name = "cbDay1";
-            this.cbDay1.Size = new System.Drawing.Size(41, 23);
-            this.cbDay1.TabIndex = 49;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -375,82 +295,6 @@ namespace RentCar
             this.label7.Size = new System.Drawing.Size(103, 32);
             this.label7.TabIndex = 53;
             this.label7.Text = "차량예약";
-            // 
-            // cbDay2
-            // 
-            this.cbDay2.FormattingEnabled = true;
-            this.cbDay2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cbDay2.Location = new System.Drawing.Point(210, 346);
-            this.cbDay2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbDay2.Name = "cbDay2";
-            this.cbDay2.Size = new System.Drawing.Size(41, 23);
-            this.cbDay2.TabIndex = 56;
-            // 
-            // cbMonth2
-            // 
-            this.cbMonth2.FormattingEnabled = true;
-            this.cbMonth2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cbMonth2.Location = new System.Drawing.Point(162, 346);
-            this.cbMonth2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbMonth2.Name = "cbMonth2";
-            this.cbMonth2.Size = new System.Drawing.Size(41, 23);
-            this.cbMonth2.TabIndex = 55;
-            // 
-            // cbYear2
-            // 
-            this.cbYear2.FormattingEnabled = true;
-            this.cbYear2.Items.AddRange(new object[] {
-            "2020",
-            "2021",
-            "2022"});
-            this.cbYear2.Location = new System.Drawing.Point(96, 346);
-            this.cbYear2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbYear2.Name = "cbYear2";
-            this.cbYear2.Size = new System.Drawing.Size(59, 23);
-            this.cbYear2.TabIndex = 54;
             // 
             // btnCar1
             // 
@@ -503,6 +347,20 @@ namespace RentCar
             this.radioButton1.Text = "차 리스트 내역";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // RentDate
+            // 
+            this.RentDate.Location = new System.Drawing.Point(96, 277);
+            this.RentDate.Name = "RentDate";
+            this.RentDate.Size = new System.Drawing.Size(175, 25);
+            this.RentDate.TabIndex = 58;
+            // 
+            // ReturnDate
+            // 
+            this.ReturnDate.Location = new System.Drawing.Point(96, 342);
+            this.ReturnDate.Name = "ReturnDate";
+            this.ReturnDate.Size = new System.Drawing.Size(175, 25);
+            this.ReturnDate.TabIndex = 59;
+            // 
             // CarRentform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -510,13 +368,10 @@ namespace RentCar
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1361, 804);
+            this.Controls.Add(this.ReturnDate);
+            this.Controls.Add(this.RentDate);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.cbDay2);
-            this.Controls.Add(this.cbMonth2);
-            this.Controls.Add(this.cbYear2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbDay1);
-            this.Controls.Add(this.cbMonth1);
             this.Controls.Add(this.btnCar6);
             this.Controls.Add(this.btnCar5);
             this.Controls.Add(this.btnCar4);
@@ -534,7 +389,6 @@ namespace RentCar
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbCarName);
-            this.Controls.Add(this.cbYear1);
             this.Controls.Add(this.cbSize);
             this.Controls.Add(this.cbLocation);
             this.Controls.Add(this.label6);
@@ -567,7 +421,6 @@ namespace RentCar
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbLocation;
         private System.Windows.Forms.ComboBox cbSize;
-        private System.Windows.Forms.ComboBox cbYear1;
         private System.Windows.Forms.TextBox tbCarName;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -581,17 +434,14 @@ namespace RentCar
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnCar4;
         private System.Windows.Forms.Button btnCar6;
-        private System.Windows.Forms.ComboBox cbMonth1;
-        private System.Windows.Forms.ComboBox cbDay1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbDay2;
-        private System.Windows.Forms.ComboBox cbMonth2;
-        private System.Windows.Forms.ComboBox cbYear2;
         private System.Windows.Forms.Button btnCar1;
         private System.Windows.Forms.Button btnCar2;
         private System.Windows.Forms.Button btnCar3;
         private System.Windows.Forms.Button btnCar5;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DateTimePicker RentDate;
+        private System.Windows.Forms.DateTimePicker ReturnDate;
     }
 }
 

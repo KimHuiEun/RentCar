@@ -31,7 +31,7 @@ namespace RentCar
         {
                        //DB연결(오픈)
 
-            if (tbName.Text != "" || tbEmail.Text != "" || tbPhoneNumber.Text != "" || tbId.Text != "" || tbPassword.Text != "" || tbPasswordConfirm.Text != "" || tbLicense.Text != "" || Year.Text != "" || Month.Text != "" || Day.Text != "")
+            if (tbName.Text != "" || tbEmail.Text != "" || tbPhoneNumber.Text != "" || tbId.Text != "" || tbPassword.Text != "" || tbPasswordConfirm.Text != "" || tbLicense.Text != "")
             {
                
 
@@ -61,7 +61,7 @@ namespace RentCar
 
         private void Clear()
         {
-            tbName.Text = tbEmail.Text = tbPhoneNumber.Text = tbId.Text = tbPassword.Text = tbPasswordConfirm.Text = tbLicense.Text = Year.Text = Month.Text = Day.Text = "";
+            tbName.Text = tbEmail.Text = tbPhoneNumber.Text = tbId.Text = tbPassword.Text = tbPasswordConfirm.Text = tbLicense.Text = "";
         }
 
         //this.Hide();

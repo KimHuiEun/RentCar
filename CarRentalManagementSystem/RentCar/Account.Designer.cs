@@ -42,9 +42,6 @@ namespace RentCar
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tbLicense = new System.Windows.Forms.TextBox();
-            this.Year = new System.Windows.Forms.ComboBox();
-            this.Month = new System.Windows.Forms.ComboBox();
-            this.Day = new System.Windows.Forms.ComboBox();
             this.back = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,6 +50,7 @@ namespace RentCar
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tbPasswordConfirm = new System.Windows.Forms.TextBox();
+            this.IssuedDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,91 +166,6 @@ namespace RentCar
             this.tbLicense.Size = new System.Drawing.Size(270, 31);
             this.tbLicense.TabIndex = 11;
             // 
-            // Year
-            // 
-            this.Year.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Year.FormattingEnabled = true;
-            this.Year.Items.AddRange(new object[] {
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "...."});
-            this.Year.Location = new System.Drawing.Point(704, 443);
-            this.Year.Name = "Year";
-            this.Year.Size = new System.Drawing.Size(88, 31);
-            this.Year.TabIndex = 12;
-            // 
-            // Month
-            // 
-            this.Month.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Month.FormattingEnabled = true;
-            this.Month.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.Month.Location = new System.Drawing.Point(798, 443);
-            this.Month.Name = "Month";
-            this.Month.Size = new System.Drawing.Size(88, 31);
-            this.Month.TabIndex = 13;
-            // 
-            // Day
-            // 
-            this.Day.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Day.FormattingEnabled = true;
-            this.Day.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.Day.Location = new System.Drawing.Point(892, 443);
-            this.Day.Name = "Day";
-            this.Day.Size = new System.Drawing.Size(82, 31);
-            this.Day.TabIndex = 14;
-            // 
             // back
             // 
             this.back.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -325,17 +238,25 @@ namespace RentCar
             // tbPasswordConfirm
             // 
             this.tbPasswordConfirm.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPasswordConfirm.Location = new System.Drawing.Point(144, 463);
+            this.tbPasswordConfirm.Location = new System.Drawing.Point(144, 462);
             this.tbPasswordConfirm.Name = "tbPasswordConfirm";
             this.tbPasswordConfirm.PasswordChar = '*';
             this.tbPasswordConfirm.Size = new System.Drawing.Size(329, 31);
             this.tbPasswordConfirm.TabIndex = 21;
+            // 
+            // IssuedDate
+            // 
+            this.IssuedDate.Location = new System.Drawing.Point(704, 444);
+            this.IssuedDate.Name = "IssuedDate";
+            this.IssuedDate.Size = new System.Drawing.Size(270, 25);
+            this.IssuedDate.TabIndex = 23;
             // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 578);
+            this.Controls.Add(this.IssuedDate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tbPasswordConfirm);
             this.Controls.Add(this.label9);
@@ -344,9 +265,6 @@ namespace RentCar
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.Day);
-            this.Controls.Add(this.Month);
-            this.Controls.Add(this.Year);
             this.Controls.Add(this.tbLicense);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -381,9 +299,6 @@ namespace RentCar
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbLicense;
-        private System.Windows.Forms.ComboBox Year;
-        private System.Windows.Forms.ComboBox Month;
-        private System.Windows.Forms.ComboBox Day;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Label label8;
@@ -392,6 +307,7 @@ namespace RentCar
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbPasswordConfirm;
+        private System.Windows.Forms.DateTimePicker IssuedDate;
     }
 }
 
