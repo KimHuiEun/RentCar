@@ -13,6 +13,8 @@ namespace RentCar
 {
     public partial class Main : Form
     {
+        public string ReturnValue { get; set; }
+
         public Main()
         {
             InitializeComponent(); //화면에 UI랑 같게 만듦.
