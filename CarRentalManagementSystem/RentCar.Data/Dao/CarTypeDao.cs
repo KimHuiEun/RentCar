@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RentCar.Data;
 using EFLibrary;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
 
-
-
 namespace RentCar.Data
 {
-    public class CarTypeDao
+    public class CarTypeDao : SingleKeyDao<CarType, int>
     {
         internal CarTypeDao()
         {
         }
-        /*: SingleKeyDao<CarType, int>
-    {
-        
         protected override CarType ReadEntity(SqlDataReader reader)
         {
             CarType carType = new CarType();
@@ -80,7 +74,6 @@ namespace RentCar.Data
         {
             throw new NotImplementedException();
         }
-    }*/
+    }
     }
 }
-

@@ -80,7 +80,6 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="RentCarEntities.cs" />
     <Compile Include="Reserve.cs">
       <SubType>Form</SubType>
     </Compile>

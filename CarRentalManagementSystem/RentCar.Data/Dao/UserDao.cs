@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using EFLibrary;
 
 namespace RentCar.Data
-{
+{ 
     public class UserDao : SingleKeyDao<User, int>
     {
         protected override Expression<Func<User, bool>> IsKey(int key)

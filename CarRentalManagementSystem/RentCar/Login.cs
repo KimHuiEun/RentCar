@@ -19,13 +19,13 @@ namespace RentCar
             InitializeComponent();
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {/*
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
             if (tbLoginId.Text != string.Empty && tbLoginPw.Text != string.Empty)
             {
                 User user = Dao.User.GetByName(tbLoginId.Text);
 
-                if (tbLoginId.Text != null)
+                if (user != null)
                 {
                     if (user.LoginPw == tbLoginPw.Text)
                     {
@@ -46,9 +46,8 @@ namespace RentCar
             
 
             //if()
-            
-           */
             this.Close();
+           
         }
 
         private void TbLoginId_MouseHover(object sender, EventArgs e)
