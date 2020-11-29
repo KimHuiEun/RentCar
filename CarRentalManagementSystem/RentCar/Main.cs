@@ -1,5 +1,4 @@
-﻿using Mypage;
-using RentCar.Data;
+﻿using RentCar.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +13,6 @@ namespace RentCar
 {
     public partial class Main : Form
     {
-        public string ReturnValue { get; set; }
-
         public Main()
         {
             InitializeComponent(); //화면에 UI랑 같게 만듦.
@@ -39,26 +36,6 @@ namespace RentCar
             Login showform = new Login();
             //login.MdiParent = this;   //ToDoList : 부모폼 설정 (창을 안 벗어나도록)
             showform.ShowDialog(); // 로그인 창이 뜰 때 메인 폼이 선택 되지 않도록 함.
-
-            // Set the new form's desktop location so it  
-            // appears below and to the right of the current form.
-
-            // Keep the current form active by calling the Activate
-            // method.
-            this.Activate();
-            label1.Visible = true;
-            label2.Visible = true;
-            label3.Visible = true;
-            label4.Visible = true;
-            CbLocation.Visible = true;
-            Cbsize.Visible = true;
-            ReturnDate.Visible = true;
-            RentDate.Visible = true;
-            btnSrchData.Visible = true;
-            BtnLogin.Visible = false;
-            BtnCreate.Visible = false;
-            BtnMyinfo.Visible = true;
-            BtnLogout.Visible = true;
         }
 
         //
@@ -85,31 +62,6 @@ namespace RentCar
         private void Main_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void BtnLogout_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("로그아웃 되었습니다.");
-            this.Activate();
-            BtnLogin.Visible = true;
-            BtnCreate.Visible = true;
-            BtnMyinfo.Visible = false;
-            BtnLogout.Visible = false;
-            label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            CbLocation.Visible = false;
-            Cbsize.Visible = false;
-            ReturnDate.Visible = false;
-            RentDate.Visible = false;
-            btnSrchData.Visible = false;
-        }
-
-        private void BtnMyinfo_Click(object sender, EventArgs e)
-        {
-            Customer showform = new Customer();
-            showform.ShowDialog();
         }
     }
 }

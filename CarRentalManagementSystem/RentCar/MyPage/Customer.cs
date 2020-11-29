@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RentCar;
-using RentCar.Data;
-
 
 namespace Mypage
 {
@@ -33,10 +31,19 @@ namespace Mypage
             showform.ShowDialog();
         }
 
-        private void UserName_Paint(object sender, PaintEventArgs e)
+        private void SearchForCar_Click(object sender, EventArgs e)
         {
-            //User user = Dao.User.Login;
+            //User user = Login.tbLoginId.Text;//User user = Dao.User.Login;
+
+
+            //RentCar.Login.tbLoginId.Text
         }
+    }
+}
+       /* private void Customer_Load(object sender, EventArgs e)
+        {
+
+        }*/
 
 
 
@@ -45,7 +52,7 @@ namespace Mypage
             //검색된 데이터 조회 창 띄우는 것 
             CarRentform showform = new CarRentform();
             showform.ShowDialog();
-        }*/
+        }
 
     }
-}
+}*/
