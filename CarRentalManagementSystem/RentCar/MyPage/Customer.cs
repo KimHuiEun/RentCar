@@ -18,13 +18,6 @@ namespace Mypage
             InitializeComponent();
         }
 
-        private void callCarRent_Click(object sender, EventArgs e)
-        {
-            //검색된 데이터 조회 창 띄우는 것 
-            CarRentform showform = new CarRentform();
-            showform.ShowDialog();
-        }
-
         private void AccountInfo_Click(object sender, EventArgs e)
         {
             //회원 가입 창이 뜰 때 모달로 떠서 메인폼이 활성화 되지 않도록 함.
@@ -37,5 +30,13 @@ namespace Mypage
             ReservedRestn showform = new ReservedRestn();
             showform.ShowDialog();
         }
+
+        private void SearchForCar_Click(object sender, EventArgs e)
+        {
+            //검색된 데이터 조회 창 띄우는 것 
+            CarRentform showform = new CarRentform();
+            showform.ShowDialog();
+        }
+
     }
 }

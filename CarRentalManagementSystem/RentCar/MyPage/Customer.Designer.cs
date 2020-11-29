@@ -33,14 +33,16 @@ namespace Mypage
             this.lastReservForm = new System.Windows.Forms.Button();
             this.CName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLgout = new System.Windows.Forms.Button();
+            this.BtnLgout = new System.Windows.Forms.Button();
+            this.SearchForCar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AccountInfo
             // 
-            this.AccountInfo.Location = new System.Drawing.Point(19, 76);
+            this.AccountInfo.Location = new System.Drawing.Point(24, 91);
+            this.AccountInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AccountInfo.Name = "AccountInfo";
-            this.AccountInfo.Size = new System.Drawing.Size(317, 70);
+            this.AccountInfo.Size = new System.Drawing.Size(396, 84);
             this.AccountInfo.TabIndex = 2;
             this.AccountInfo.Text = "내 정보 수정";
             this.AccountInfo.UseVisualStyleBackColor = true;
@@ -48,9 +50,10 @@ namespace Mypage
             // 
             // lastReservForm
             // 
-            this.lastReservForm.Location = new System.Drawing.Point(19, 175);
+            this.lastReservForm.Location = new System.Drawing.Point(24, 348);
+            this.lastReservForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lastReservForm.Name = "lastReservForm";
-            this.lastReservForm.Size = new System.Drawing.Size(317, 70);
+            this.lastReservForm.Size = new System.Drawing.Size(396, 84);
             this.lastReservForm.TabIndex = 3;
             this.lastReservForm.Text = "예약 확인";
             this.lastReservForm.UseVisualStyleBackColor = true;
@@ -61,11 +64,11 @@ namespace Mypage
             this.CName.AutoSize = true;
             this.CName.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CName.Location = new System.Drawing.Point(12, 9);
+            this.CName.Location = new System.Drawing.Point(15, 11);
+            this.CName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CName.Name = "CName";
-            this.CName.Size = new System.Drawing.Size(93, 40);
+            this.CName.Size = new System.Drawing.Size(0, 47);
             this.CName.TabIndex = 4;
-            this.CName.Text = "Name";
             this.CName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label1
@@ -73,31 +76,46 @@ namespace Mypage
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(111, 9);
+            this.label1.Location = new System.Drawing.Point(139, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 40);
+            this.label1.Size = new System.Drawing.Size(262, 47);
             this.label1.TabIndex = 5;
             this.label1.Text = "님의 My Page";
             // 
-            // btnLgout
+            // BtnLgout
             // 
-            this.btnLgout.Location = new System.Drawing.Point(19, 409);
-            this.btnLgout.Name = "btnLgout";
-            this.btnLgout.Size = new System.Drawing.Size(317, 70);
-            this.btnLgout.TabIndex = 6;
-            this.btnLgout.Text = "로그아웃";
-            this.btnLgout.UseVisualStyleBackColor = true;
+            this.BtnLgout.Location = new System.Drawing.Point(24, 491);
+            this.BtnLgout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLgout.Name = "BtnLgout";
+            this.BtnLgout.Size = new System.Drawing.Size(396, 84);
+            this.BtnLgout.TabIndex = 6;
+            this.BtnLgout.Text = "로그아웃";
+            this.BtnLgout.UseVisualStyleBackColor = true;
+            // 
+            // SearchForCar
+            // 
+            this.SearchForCar.Location = new System.Drawing.Point(24, 217);
+            this.SearchForCar.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchForCar.Name = "SearchForCar";
+            this.SearchForCar.Size = new System.Drawing.Size(396, 84);
+            this.SearchForCar.TabIndex = 7;
+            this.SearchForCar.Text = "예약하기(차량검색)";
+            this.SearchForCar.UseVisualStyleBackColor = true;
+            this.SearchForCar.Click += new System.EventHandler(this.SearchForCar_Click);
             // 
             // Customer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 503);
-            this.Controls.Add(this.btnLgout);
+            this.ClientSize = new System.Drawing.Size(448, 604);
+            this.Controls.Add(this.SearchForCar);
+            this.Controls.Add(this.BtnLgout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CName);
             this.Controls.Add(this.lastReservForm);
             this.Controls.Add(this.AccountInfo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Customer";
             this.Text = "Customer";
             this.ResumeLayout(false);
@@ -110,6 +128,7 @@ namespace Mypage
         private System.Windows.Forms.Button lastReservForm;
         private System.Windows.Forms.Label CName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLgout;
+        private System.Windows.Forms.Button BtnLgout;
+        private System.Windows.Forms.Button SearchForCar;
     }
 }

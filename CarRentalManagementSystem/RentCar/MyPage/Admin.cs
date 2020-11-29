@@ -10,26 +10,13 @@ using System.Windows.Forms;
 
 namespace Mypage
 {
-    public partial class Admin : Form
+    public partial class Admin_Mypage : Form
     {
-        public Admin()
+        public Admin_Mypage()
         {
             InitializeComponent();
         }
 
-        private void btnshowSales_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnManage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
+
 }
