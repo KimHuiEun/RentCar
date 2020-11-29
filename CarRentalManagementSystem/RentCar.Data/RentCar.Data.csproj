@@ -53,15 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Car.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CarType.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
     <Compile Include="Dao\CarDao.cs" />
     <Compile Include="Dao\CarTypeDao.cs" />
     <Compile Include="Dao\AdminDao.cs" />
@@ -72,61 +63,13 @@
     <Compile Include="EFLibrary\DualKeyDao.cs" />
     <Compile Include="EFLibrary\SingleKeyDao.cs" />
     <Compile Include="EFLibrary\TripleKeyDao.cs" />
-    <Compile Include="Event.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dao\RentDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
-    <Compile Include="Rent.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RentCar.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RentCar.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RentCar.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Search.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="RentCar.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RentCar.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="RentCar.edmx.diagram">
-      <DependentUpon>RentCar.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="RentCar.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RentCar.Context.cs</LastGenOutput>
-      <DependentUpon>RentCar.edmx</DependentUpon>
-    </Content>
-    <Content Include="RentCar.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RentCar.edmx</DependentUpon>
-      <LastGenOutput>RentCar.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
