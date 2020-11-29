@@ -33,12 +33,27 @@ namespace Mypage
             showform.ShowDialog();
         }
 
-        private void UserName_Paint(object sender, PaintEventArgs e)
+        public Customer(string userId)
         {
-            //User user = Dao.User.Login;
+            _userId = userId;
         }
 
+        private string _userId;
 
+        
+        private void UserName_Paint(object sender, PaintEventArgs e)
+        {
+            //User user = Login.tbLoginId.Text;//User user = Dao.User.Login;
+
+
+            //RentCar.Login.tbLoginId.Text
+        }
+
+        private void TbUserName_TextChanged(object sender, EventArgs e)
+        {
+            //Login form = new Login(tbloginId.Text);
+            //form.ShowDialog();
+        }
 
         /*private void SearchForCar_Click(object sender, EventArgs e)
         {

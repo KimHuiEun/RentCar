@@ -18,8 +18,8 @@ namespace RentCar.Data
         public int UserId { get; set; }
         public int CarId { get; set; }
         public string Location { get; set; }
-        public System.DateTime RentDate { get; set; }
-        public Nullable<System.DateTime> ReturnDate { get; set; }
+        public string RentDate { get; set; }
+        public string ReturnDate { get; set; }
         public float InsuranceCoverage { get; set; }
         public int Price { get; set; }
     

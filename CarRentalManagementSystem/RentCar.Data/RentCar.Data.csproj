@@ -86,15 +86,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RentCar.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="RentCar.cs">
+    <Compile Include="RentCar.cs" />
+    <Compile Include="RentCar.Designer.cs">
+      <DependentUpon>RentCar.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RentCar1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RentCar.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.edmx</DependentUpon>
     </Compile>
     <Compile Include="Search.cs">
       <DependentUpon>RentCar.tt</DependentUpon>
@@ -104,17 +105,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="RentCar.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RentCar.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="RentCar.edmx.diagram">
       <DependentUpon>RentCar.edmx</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="RentCar.Context.tt">
@@ -125,14 +130,8 @@
     <Content Include="RentCar.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RentCar.edmx</DependentUpon>
-      <LastGenOutput>RentCar.cs</LastGenOutput>
+      <LastGenOutput>RentCar1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentCar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,10 @@ namespace Mypage
             InitializeComponent();
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        private void BtnUserManagerment_Click(object sender, EventArgs e)
         {
-
+            CustomerManagement showform = new CustomerManagement();
+            showform.ShowDialog();
         }
     }
 }

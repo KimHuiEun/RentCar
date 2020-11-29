@@ -33,14 +33,14 @@ namespace Mypage
             this.lastReservForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLgout = new System.Windows.Forms.Button();
-            this.UserName = new System.Windows.Forms.Panel();
             this.BtnWithdraw = new System.Windows.Forms.Button();
+            this.UserName = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // AccountInfo
             // 
             this.AccountInfo.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountInfo.Location = new System.Drawing.Point(17, 61);
+            this.AccountInfo.Location = new System.Drawing.Point(68, 89);
             this.AccountInfo.Name = "AccountInfo";
             this.AccountInfo.Size = new System.Drawing.Size(277, 56);
             this.AccountInfo.TabIndex = 2;
@@ -51,7 +51,7 @@ namespace Mypage
             // lastReservForm
             // 
             this.lastReservForm.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastReservForm.Location = new System.Drawing.Point(17, 144);
+            this.lastReservForm.Location = new System.Drawing.Point(68, 161);
             this.lastReservForm.Name = "lastReservForm";
             this.lastReservForm.Size = new System.Drawing.Size(277, 56);
             this.lastReservForm.TabIndex = 3;
@@ -64,21 +64,32 @@ namespace Mypage
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(97, 7);
+            this.label1.Location = new System.Drawing.Point(115, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 32);
+            this.label1.Size = new System.Drawing.Size(174, 47);
             this.label1.TabIndex = 5;
-            this.label1.Text = "님의 My Page";
+            this.label1.Text = "My Page";
             // 
             // BtnLgout
             // 
             this.BtnLgout.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLgout.Location = new System.Drawing.Point(17, 228);
+            this.BtnLgout.Location = new System.Drawing.Point(68, 237);
             this.BtnLgout.Name = "BtnLgout";
             this.BtnLgout.Size = new System.Drawing.Size(277, 56);
-            this.BtnLgout.TabIndex = 6;
+            this.BtnLgout.TabIndex = 4;
             this.BtnLgout.Text = "로그아웃";
             this.BtnLgout.UseVisualStyleBackColor = true;
+            // 
+            // BtnWithdraw
+            // 
+            this.BtnWithdraw.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnWithdraw.Location = new System.Drawing.Point(68, 311);
+            this.BtnWithdraw.Name = "BtnWithdraw";
+            this.BtnWithdraw.Size = new System.Drawing.Size(277, 56);
+            this.BtnWithdraw.TabIndex = 5;
+            this.BtnWithdraw.Text = "회원 탈퇴";
+            this.BtnWithdraw.UseVisualStyleBackColor = true;
             // 
             // UserName
             // 
@@ -88,27 +99,19 @@ namespace Mypage
             this.UserName.TabIndex = 7;
             this.UserName.Paint += new System.Windows.Forms.PaintEventHandler(this.UserName_Paint);
             // 
-            // BtnWithdraw
-            // 
-            this.BtnWithdraw.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnWithdraw.Location = new System.Drawing.Point(17, 309);
-            this.BtnWithdraw.Name = "BtnWithdraw";
-            this.BtnWithdraw.Size = new System.Drawing.Size(277, 56);
-            this.BtnWithdraw.TabIndex = 8;
-            this.BtnWithdraw.Text = "회원 탈퇴";
-            this.BtnWithdraw.UseVisualStyleBackColor = true;
-            // 
             // Customer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 386);
+            this.ClientSize = new System.Drawing.Size(417, 412);
             this.Controls.Add(this.BtnWithdraw);
+            this.ClientSize = new System.Drawing.Size(314, 339);
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.BtnLgout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lastReservForm);
             this.Controls.Add(this.AccountInfo);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer";
             this.Text = "Customer";
             this.ResumeLayout(false);
@@ -121,7 +124,7 @@ namespace Mypage
         private System.Windows.Forms.Button lastReservForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnLgout;
-        private System.Windows.Forms.Panel UserName;
         private System.Windows.Forms.Button BtnWithdraw;
+        private System.Windows.Forms.Panel UserName;
     }
 }
