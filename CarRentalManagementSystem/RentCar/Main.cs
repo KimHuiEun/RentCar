@@ -54,6 +54,8 @@ namespace RentCar
             ReturnDate.Visible = true;
             RentDate.Visible = true;
             btnSrchData.Visible = true;
+            BtnLogin.Visible = false;
+            BtnCreate.Visible = false;
         }
 
         //

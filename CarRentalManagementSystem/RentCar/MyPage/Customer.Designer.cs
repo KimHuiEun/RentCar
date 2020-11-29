@@ -31,9 +31,9 @@ namespace Mypage
         {
             this.AccountInfo = new System.Windows.Forms.Button();
             this.lastReservForm = new System.Windows.Forms.Button();
-            this.CName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLgout = new System.Windows.Forms.Button();
+            this.Tb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AccountInfo
@@ -58,18 +58,6 @@ namespace Mypage
             this.lastReservForm.UseVisualStyleBackColor = true;
             this.lastReservForm.Click += new System.EventHandler(this.lastReservForm_Click);
             // 
-            // CName
-            // 
-            this.CName.AutoSize = true;
-            this.CName.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CName.Location = new System.Drawing.Point(15, 11);
-            this.CName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.CName.Name = "CName";
-            this.CName.Size = new System.Drawing.Size(0, 47);
-            this.CName.TabIndex = 4;
-            this.CName.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -92,14 +80,23 @@ namespace Mypage
             this.BtnLgout.Text = "로그아웃";
             this.BtnLgout.UseVisualStyleBackColor = true;
             // 
+            // Tb
+            // 
+            this.Tb.Location = new System.Drawing.Point(24, 13);
+            this.Tb.Margin = new System.Windows.Forms.Padding(4);
+            this.Tb.Name = "Tb";
+            this.Tb.Size = new System.Drawing.Size(118, 45);
+            this.Tb.TabIndex = 7;
+            this.Tb.UseVisualStyleBackColor = true;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 508);
+            this.Controls.Add(this.Tb);
             this.Controls.Add(this.BtnLgout);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CName);
             this.Controls.Add(this.lastReservForm);
             this.Controls.Add(this.AccountInfo);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -113,8 +110,8 @@ namespace Mypage
         #endregion
         private System.Windows.Forms.Button AccountInfo;
         private System.Windows.Forms.Button lastReservForm;
-        private System.Windows.Forms.Label CName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnLgout;
+        private System.Windows.Forms.Button Tb;
     }
 }
