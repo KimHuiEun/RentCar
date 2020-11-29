@@ -20,20 +20,6 @@ namespace RentCar
             InitializeComponent();
         }
 
-        public Login(string Id):this()
-        {
-            _Id = Id;
-        }
-
-        private string _Id;
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            tbLoginId.Text = _Id;
-        }
-
-
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (tbLoginId.Text != string.Empty && tbLoginPw.Text != string.Empty)
@@ -110,11 +96,5 @@ namespace RentCar
             this.toolTip2.SetToolTip(this.tbLoginPw, "영문자와 숫자로 되어있는 Pw 입력");
         }
 
-        private void tbLoginId_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        
     }
 }

@@ -49,11 +49,7 @@ namespace Mypage
             //RentCar.Login.tbLoginId.Text
         }
 
-        private void TbUserName_TextChanged(object sender, EventArgs e)
-        {
-            //Login form = new Login(tbloginId.Text);
-            //form.ShowDialog();
-        }
+
 
         /*private void SearchForCar_Click(object sender, EventArgs e)
         {
