@@ -60,8 +60,8 @@ namespace RentCar
                         if (user.LoginPw == tbLoginPw.Text)
                         {
                             MessageBox.Show(tbLoginId.Text + "님, 안녕하세요!");
-                            Hide();   //창이 전부 숨겨짐.
-                            Customer showform = new Customer();
+                            //Hide();   //창이 전부 숨겨짐.
+                            //Customer showform = new Customer();
                             this.Close();
                             //showform.ShowDialog();
                         }

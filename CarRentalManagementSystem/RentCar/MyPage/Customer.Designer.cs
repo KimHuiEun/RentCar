@@ -34,13 +34,12 @@ namespace Mypage
             this.CName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLgout = new System.Windows.Forms.Button();
-            this.SearchForCar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AccountInfo
             // 
             this.AccountInfo.Location = new System.Drawing.Point(24, 91);
-            this.AccountInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AccountInfo.Margin = new System.Windows.Forms.Padding(4);
             this.AccountInfo.Name = "AccountInfo";
             this.AccountInfo.Size = new System.Drawing.Size(396, 84);
             this.AccountInfo.TabIndex = 2;
@@ -50,8 +49,8 @@ namespace Mypage
             // 
             // lastReservForm
             // 
-            this.lastReservForm.Location = new System.Drawing.Point(24, 348);
-            this.lastReservForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lastReservForm.Location = new System.Drawing.Point(23, 222);
+            this.lastReservForm.Margin = new System.Windows.Forms.Padding(4);
             this.lastReservForm.Name = "lastReservForm";
             this.lastReservForm.Size = new System.Drawing.Size(396, 84);
             this.lastReservForm.TabIndex = 3;
@@ -85,37 +84,25 @@ namespace Mypage
             // 
             // BtnLgout
             // 
-            this.BtnLgout.Location = new System.Drawing.Point(24, 491);
-            this.BtnLgout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLgout.Location = new System.Drawing.Point(23, 366);
+            this.BtnLgout.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLgout.Name = "BtnLgout";
             this.BtnLgout.Size = new System.Drawing.Size(396, 84);
             this.BtnLgout.TabIndex = 6;
             this.BtnLgout.Text = "로그아웃";
             this.BtnLgout.UseVisualStyleBackColor = true;
             // 
-            // SearchForCar
-            // 
-            this.SearchForCar.Location = new System.Drawing.Point(24, 217);
-            this.SearchForCar.Margin = new System.Windows.Forms.Padding(4);
-            this.SearchForCar.Name = "SearchForCar";
-            this.SearchForCar.Size = new System.Drawing.Size(396, 84);
-            this.SearchForCar.TabIndex = 7;
-            this.SearchForCar.Text = "예약하기(차량검색)";
-            this.SearchForCar.UseVisualStyleBackColor = true;
-            this.SearchForCar.Click += new System.EventHandler(this.SearchForCar_Click);
-            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 604);
-            this.Controls.Add(this.SearchForCar);
+            this.ClientSize = new System.Drawing.Size(448, 508);
             this.Controls.Add(this.BtnLgout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CName);
             this.Controls.Add(this.lastReservForm);
             this.Controls.Add(this.AccountInfo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer";
             this.Text = "Customer";
             this.ResumeLayout(false);
@@ -129,6 +116,5 @@ namespace Mypage
         private System.Windows.Forms.Label CName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnLgout;
-        private System.Windows.Forms.Button SearchForCar;
     }
 }

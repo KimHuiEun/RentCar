@@ -31,12 +31,12 @@ namespace Mypage
             showform.ShowDialog();
         }
 
-        private void SearchForCar_Click(object sender, EventArgs e)
+        /*private void SearchForCar_Click(object sender, EventArgs e)
         {
             //검색된 데이터 조회 창 띄우는 것 
             CarRentform showform = new CarRentform();
             showform.ShowDialog();
-        }
+        }*/
 
     }
 }
