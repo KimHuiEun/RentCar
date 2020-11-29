@@ -38,9 +38,10 @@ namespace RentCar
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(140, 44);
+            this.label1.Location = new System.Drawing.Point(194, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 32);
+            this.label1.Size = new System.Drawing.Size(147, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "매출현황";
             // 
@@ -51,10 +52,10 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDailySales.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnDailySales.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDailySales.Location = new System.Drawing.Point(18, 121);
-            this.BtnDailySales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnDailySales.Location = new System.Drawing.Point(26, 182);
+            this.BtnDailySales.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnDailySales.Name = "BtnDailySales";
-            this.BtnDailySales.Size = new System.Drawing.Size(333, 58);
+            this.BtnDailySales.Size = new System.Drawing.Size(476, 87);
             this.BtnDailySales.TabIndex = 1;
             this.BtnDailySales.Text = "일간 매출 엑셀";
             this.BtnDailySales.UseVisualStyleBackColor = true;
@@ -66,10 +67,10 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnWeeklySales.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnWeeklySales.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnWeeklySales.Location = new System.Drawing.Point(18, 197);
-            this.BtnWeeklySales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnWeeklySales.Location = new System.Drawing.Point(26, 296);
+            this.BtnWeeklySales.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnWeeklySales.Name = "BtnWeeklySales";
-            this.BtnWeeklySales.Size = new System.Drawing.Size(333, 58);
+            this.BtnWeeklySales.Size = new System.Drawing.Size(476, 87);
             this.BtnWeeklySales.TabIndex = 2;
             this.BtnWeeklySales.Text = "주간 매출 엑셀";
             this.BtnWeeklySales.UseVisualStyleBackColor = true;
@@ -81,23 +82,24 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMonthlySales.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnMonthlySales.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMonthlySales.Location = new System.Drawing.Point(18, 273);
-            this.BtnMonthlySales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnMonthlySales.Location = new System.Drawing.Point(26, 410);
+            this.BtnMonthlySales.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnMonthlySales.Name = "BtnMonthlySales";
-            this.BtnMonthlySales.Size = new System.Drawing.Size(333, 58);
+            this.BtnMonthlySales.Size = new System.Drawing.Size(476, 87);
             this.BtnMonthlySales.TabIndex = 3;
             this.BtnMonthlySales.Text = "월간 매출 엑셀";
             this.BtnMonthlySales.UseVisualStyleBackColor = true;
             // 
             // Sales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 358);
+            this.ClientSize = new System.Drawing.Size(521, 537);
             this.Controls.Add(this.BtnMonthlySales);
             this.Controls.Add(this.BtnWeeklySales);
             this.Controls.Add(this.BtnDailySales);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Sales";
             this.Text = "Sales";
             this.ResumeLayout(false);
