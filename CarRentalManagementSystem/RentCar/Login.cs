@@ -39,9 +39,10 @@ namespace RentCar
 
                         else
                         {
-                            Customer showform = new Customer();
+                            //메인 폼으로 돌아가게끔 한다.
+                            //Customer showform = new Customer();
                             this.Close();
-                            showform.ShowDialog();
+                            //showform.ShowDialog();
                         }
                     }
                     else

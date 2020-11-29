@@ -92,6 +92,7 @@ namespace RentCar
             this.CbLocation.Name = "CbLocation";
             this.CbLocation.Size = new System.Drawing.Size(199, 35);
             this.CbLocation.TabIndex = 3;
+            this.CbLocation.Visible = false;
             // 
             // label1
             // 
@@ -102,6 +103,7 @@ namespace RentCar
             this.label1.Size = new System.Drawing.Size(50, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "지점";
+            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -112,6 +114,7 @@ namespace RentCar
             this.label2.Size = new System.Drawing.Size(82, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "차 크기";
+            this.label2.Visible = false;
             // 
             // Cbsize
             // 
@@ -128,6 +131,7 @@ namespace RentCar
             this.Cbsize.Name = "Cbsize";
             this.Cbsize.Size = new System.Drawing.Size(199, 35);
             this.Cbsize.TabIndex = 5;
+            this.Cbsize.Visible = false;
             // 
             // label3
             // 
@@ -138,6 +142,7 @@ namespace RentCar
             this.label3.Size = new System.Drawing.Size(88, 28);
             this.label3.TabIndex = 7;
             this.label3.Text = "대여일자";
+            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -148,6 +153,7 @@ namespace RentCar
             this.label4.Size = new System.Drawing.Size(88, 28);
             this.label4.TabIndex = 13;
             this.label4.Text = "반납일자";
+            this.label4.Visible = false;
             // 
             // pictureBox1
             // 
@@ -166,6 +172,7 @@ namespace RentCar
             this.RentDate.Name = "RentDate";
             this.RentDate.Size = new System.Drawing.Size(200, 25);
             this.RentDate.TabIndex = 18;
+            this.RentDate.Visible = false;
             // 
             // ReturnDate
             // 
@@ -173,6 +180,7 @@ namespace RentCar
             this.ReturnDate.Name = "ReturnDate";
             this.ReturnDate.Size = new System.Drawing.Size(200, 25);
             this.ReturnDate.TabIndex = 19;
+            this.ReturnDate.Visible = false;
             // 
             // label5
             // 
@@ -192,6 +200,7 @@ namespace RentCar
             this.btnSrchData.TabIndex = 21;
             this.btnSrchData.Text = "검색";
             this.btnSrchData.UseVisualStyleBackColor = true;
+            this.btnSrchData.Visible = false;
             this.btnSrchData.Click += new System.EventHandler(this.btnSrchData_Click);
             // 
             // Main
