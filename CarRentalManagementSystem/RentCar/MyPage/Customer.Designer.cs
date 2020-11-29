@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace Mypage
 {
     partial class Customer
@@ -34,8 +37,8 @@ namespace Mypage
             this.CName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLgout = new System.Windows.Forms.Button();
+            this.UserName = new System.Windows.Forms.Panel();
             this.BtnWithdraw = new System.Windows.Forms.Button();
-            this.SearchForCar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AccountInfo
@@ -94,13 +97,11 @@ namespace Mypage
             this.BtnLgout.Text = "로그아웃";
             this.BtnLgout.UseVisualStyleBackColor = true;
             // 
-            // SearchForCar
+            // UserName
             // 
-            this.UserName.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserName.Location = new System.Drawing.Point(25, 13);
-            this.UserName.Margin = new System.Windows.Forms.Padding(4);
+            this.UserName.Location = new System.Drawing.Point(17, 7);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(106, 48);
+            this.UserName.Size = new System.Drawing.Size(74, 32);
             this.UserName.TabIndex = 7;
             this.UserName.Paint += new System.Windows.Forms.PaintEventHandler(this.UserName_Paint);
             // 
@@ -113,23 +114,14 @@ namespace Mypage
             this.BtnWithdraw.TabIndex = 8;
             this.BtnWithdraw.Text = "회원 탈퇴";
             this.BtnWithdraw.UseVisualStyleBackColor = true;
-            this.BtnWithdraw.Click += new System.EventHandler(this.BtnWithdraw_Click);
-
-            this.SearchForCar.Location = new System.Drawing.Point(24, 217);
-            this.SearchForCar.Margin = new System.Windows.Forms.Padding(4);
-            this.SearchForCar.Name = "SearchForCar";
-            this.SearchForCar.Size = new System.Drawing.Size(396, 84);
-            this.SearchForCar.TabIndex = 7;
-            this.SearchForCar.Text = "예약하기(차량검색)";
-            this.SearchForCar.UseVisualStyleBackColor = true;
-            this.SearchForCar.Click += new System.EventHandler(this.SearchForCar_Click);
             // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 604);
-            this.Controls.Add(this.SearchForCar);
+            this.Controls.Add(this.BtnWithdraw);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.BtnLgout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CName);
@@ -144,12 +136,23 @@ namespace Mypage
 
         }
 
+        private void Customer_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void UserName_Paint(object sender, PaintEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
         private System.Windows.Forms.Button AccountInfo;
         private System.Windows.Forms.Button lastReservForm;
         private System.Windows.Forms.Label CName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnLgout;
-        private System.Windows.Forms.Button SearchForCar;
+        private System.Windows.Forms.Panel UserName;
+        private System.Windows.Forms.Button BtnWithdraw;
     }
 }
