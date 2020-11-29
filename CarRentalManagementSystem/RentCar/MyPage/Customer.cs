@@ -33,9 +33,20 @@ namespace Mypage
             showform.ShowDialog();
         }
 
+        public Customer(string userId)
+        {
+            _userId = userId;
+        }
+
+        private string _userId;
+
+        
         private void UserName_Paint(object sender, PaintEventArgs e)
         {
-            //User user = Dao.User.Login;
+            //User user = Login.tbLoginId.Text;//User user = Dao.User.Login;
+
+
+            //RentCar.Login.tbLoginId.Text
         }
 
 
