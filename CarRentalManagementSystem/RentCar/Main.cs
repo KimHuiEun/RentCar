@@ -67,12 +67,6 @@ namespace RentCar
 
         private void BtnAdminLogin_Click(object sender, EventArgs e)
         {
-            //if (Application.OpenForms["Login"] is Login login)
-            //{
-            //    login.Focus();
-            //    return;
-            //}
-
             Login showform = new Login();
             showform.ShowDialog(); // 메인 폼을 클릭되지 않도록 변경
         }

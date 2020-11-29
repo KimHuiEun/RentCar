@@ -1,7 +1,7 @@
 ﻿
 namespace Mypage
 {
-    partial class Admin
+    partial class Admin_Mypage
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,6 @@ namespace Mypage
             this.btnshowSales.TabIndex = 0;
             this.btnshowSales.Text = "일별 매출 파일 저장";
             this.btnshowSales.UseVisualStyleBackColor = true;
-            this.btnshowSales.Click += new System.EventHandler(this.btnshowSales_Click);
             // 
             // btnManage
             // 
@@ -53,7 +52,6 @@ namespace Mypage
             this.btnManage.TabIndex = 1;
             this.btnManage.Text = "주간 매출 파일 저장";
             this.btnManage.UseVisualStyleBackColor = true;
-            this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             // 
             // label1
             // 
@@ -73,7 +71,6 @@ namespace Mypage
             this.button1.TabIndex = 4;
             this.button1.Text = "월별 매출 파일 저장";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Admin
             // 
