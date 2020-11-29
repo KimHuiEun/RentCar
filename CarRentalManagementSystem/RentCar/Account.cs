@@ -37,7 +37,7 @@ namespace RentCar
 
         private void OK_Click(object sender, EventArgs e)
         {
-            if (tbName.Text != "" || tbEmail.Text != "" || tbPhoneNumber.Text != "" || tbId.Text != "" || tbPassword.Text != "" || tbPasswordConfirm.Text != "" || tbLicense.Text != "")
+            if (tbName.Text != "" || tbPhoneNumber.Text != "" || tbId.Text != "" || tbPassword.Text != "" || tbPasswordConfirm.Text != "" || tbLicense.Text != "")
             {
                 if (tbPassword.Text != tbPasswordConfirm.Text)
                     MessageBox.Show("비밀번호를 다시 확인해주세요");
@@ -51,7 +51,7 @@ namespace RentCar
                     user.PhoneNumber = tbPhoneNumber.Text;
                     user.License = tbLicense.Text;
                     user.IssueDate = IssuedDate.Text;
-                    user.LoginPwConfirm = tbPasswordConfirm.Text;
+                    //user.Email = Email.Text;
                     Dao.User.Insert(user);
 
 

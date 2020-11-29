@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="AdminId" />
           </Key>
-          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminId" Type="int" Nullable="false" />
           <Property Name="CarId" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
@@ -48,8 +48,8 @@
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="CarId" Type="int" Nullable="false" />
           <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="RentDate" Type="datetime" Nullable="false" />
-          <Property Name="ReturnDate" Type="datetime" />
+          <Property Name="RentDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ReturnDate" Type="nvarchar" MaxLength="50" />
           <Property Name="InsuranceCoverage" Type="real" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
         </EntityType>
@@ -74,7 +74,6 @@
           <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="License" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IssueDate" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Email" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Admin_Car">
           <End Role="Car" Type="Self.Car" Multiplicity="1">
@@ -278,7 +277,7 @@
           <Key>
             <PropertyRef Name="AdminId" />
           </Key>
-          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminId" Type="Int32" Nullable="false" />
           <Property Name="CarId" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Car" Relationship="RentCarModel.FK_Admin_Car" FromRole="Admin" ToRole="Car" />
@@ -325,8 +324,8 @@
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="CarId" Type="Int32" Nullable="false" />
           <Property Name="Location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="RentDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ReturnDate" Type="DateTime" Precision="3" />
+          <Property Name="RentDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReturnDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="InsuranceCoverage" Type="Single" Nullable="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Car" Relationship="RentCarModel.FK_Rent_Car" FromRole="Rent" ToRole="Car" />
@@ -355,7 +354,6 @@
           <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="License" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IssueDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Admins" Relationship="RentCarModel.FK_Admin_User" FromRole="User" ToRole="Admin" />
           <NavigationProperty Name="Events" Relationship="RentCarModel.FK_Event_User" FromRole="User" ToRole="Event" />
           <NavigationProperty Name="Rents" Relationship="RentCarModel.FK_Rent_User" FromRole="User" ToRole="Rent" />
@@ -545,7 +543,6 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="RentCarModel.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
                 <ScalarProperty Name="License" ColumnName="License" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
