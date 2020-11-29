@@ -1,4 +1,5 @@
-﻿using RentCar.Data;
+﻿using Mypage;
+using RentCar.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,7 @@ namespace RentCar
 
             // Set the new form's desktop location so it  
             // appears below and to the right of the current form.
-           
+
             // Keep the current form active by calling the Activate
             // method.
             this.Activate();
@@ -56,6 +57,8 @@ namespace RentCar
             btnSrchData.Visible = true;
             BtnLogin.Visible = false;
             BtnCreate.Visible = false;
+            BtnMyinfo.Visible = true;
+            BtnLogout.Visible = true;
         }
 
         //
@@ -82,6 +85,31 @@ namespace RentCar
         private void Main_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("로그아웃 되었습니다.");
+            this.Activate();
+            BtnLogin.Visible = true;
+            BtnCreate.Visible = true;
+            BtnMyinfo.Visible = false;
+            BtnLogout.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            CbLocation.Visible = false;
+            Cbsize.Visible = false;
+            ReturnDate.Visible = false;
+            RentDate.Visible = false;
+            btnSrchData.Visible = false;
+        }
+
+        private void BtnMyinfo_Click(object sender, EventArgs e)
+        {
+            Customer showform = new Customer();
+            showform.ShowDialog();
         }
     }
 }

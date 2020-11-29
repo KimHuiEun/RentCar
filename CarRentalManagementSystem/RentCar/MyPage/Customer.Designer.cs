@@ -33,15 +33,14 @@ namespace Mypage
             this.lastReservForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLgout = new System.Windows.Forms.Button();
-            this.Tb = new System.Windows.Forms.Button();
+            this.UserName = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // AccountInfo
             // 
-            this.AccountInfo.Location = new System.Drawing.Point(24, 91);
-            this.AccountInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.AccountInfo.Location = new System.Drawing.Point(17, 61);
             this.AccountInfo.Name = "AccountInfo";
-            this.AccountInfo.Size = new System.Drawing.Size(396, 84);
+            this.AccountInfo.Size = new System.Drawing.Size(277, 56);
             this.AccountInfo.TabIndex = 2;
             this.AccountInfo.Text = "내 정보 수정";
             this.AccountInfo.UseVisualStyleBackColor = true;
@@ -49,10 +48,9 @@ namespace Mypage
             // 
             // lastReservForm
             // 
-            this.lastReservForm.Location = new System.Drawing.Point(23, 222);
-            this.lastReservForm.Margin = new System.Windows.Forms.Padding(4);
+            this.lastReservForm.Location = new System.Drawing.Point(16, 148);
             this.lastReservForm.Name = "lastReservForm";
-            this.lastReservForm.Size = new System.Drawing.Size(396, 84);
+            this.lastReservForm.Size = new System.Drawing.Size(277, 56);
             this.lastReservForm.TabIndex = 3;
             this.lastReservForm.Text = "예약 확인";
             this.lastReservForm.UseVisualStyleBackColor = true;
@@ -63,43 +61,39 @@ namespace Mypage
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(139, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(97, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 47);
+            this.label1.Size = new System.Drawing.Size(179, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "님의 My Page";
             // 
             // BtnLgout
             // 
-            this.BtnLgout.Location = new System.Drawing.Point(23, 366);
-            this.BtnLgout.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnLgout.Location = new System.Drawing.Point(16, 244);
             this.BtnLgout.Name = "BtnLgout";
-            this.BtnLgout.Size = new System.Drawing.Size(396, 84);
+            this.BtnLgout.Size = new System.Drawing.Size(277, 56);
             this.BtnLgout.TabIndex = 6;
             this.BtnLgout.Text = "로그아웃";
             this.BtnLgout.UseVisualStyleBackColor = true;
             // 
-            // Tb
+            // UserName
             // 
-            this.Tb.Location = new System.Drawing.Point(24, 13);
-            this.Tb.Margin = new System.Windows.Forms.Padding(4);
-            this.Tb.Name = "Tb";
-            this.Tb.Size = new System.Drawing.Size(118, 45);
-            this.Tb.TabIndex = 7;
-            this.Tb.UseVisualStyleBackColor = true;
+            this.UserName.Location = new System.Drawing.Point(17, 7);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(74, 32);
+            this.UserName.TabIndex = 7;
+            this.UserName.Paint += new System.Windows.Forms.PaintEventHandler(this.UserName_Paint);
             // 
             // Customer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 508);
-            this.Controls.Add(this.Tb);
+            this.ClientSize = new System.Drawing.Size(314, 339);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.BtnLgout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lastReservForm);
             this.Controls.Add(this.AccountInfo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer";
             this.Text = "Customer";
             this.ResumeLayout(false);
@@ -112,6 +106,6 @@ namespace Mypage
         private System.Windows.Forms.Button lastReservForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnLgout;
-        private System.Windows.Forms.Button Tb;
+        private System.Windows.Forms.Panel UserName;
     }
 }

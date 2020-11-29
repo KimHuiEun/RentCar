@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RentCar;
+using RentCar.Data;
+
 
 namespace Mypage
 {
@@ -30,6 +32,13 @@ namespace Mypage
             ReservedRestn showform = new ReservedRestn();
             showform.ShowDialog();
         }
+
+        private void UserName_Paint(object sender, PaintEventArgs e)
+        {
+            //User user = Dao.User.Login;
+        }
+
+
 
         /*private void SearchForCar_Click(object sender, EventArgs e)
         {

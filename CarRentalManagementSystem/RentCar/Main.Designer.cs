@@ -45,6 +45,7 @@ namespace RentCar
             this.label5 = new System.Windows.Forms.Label();
             this.btnSrchData = new System.Windows.Forms.Button();
             this.BtnMyinfo = new System.Windows.Forms.Button();
+            this.BtnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,18 +208,33 @@ namespace RentCar
             // BtnMyinfo
             // 
             this.BtnMyinfo.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMyinfo.Location = new System.Drawing.Point(538, 67);
+            this.BtnMyinfo.Location = new System.Drawing.Point(392, 67);
             this.BtnMyinfo.Name = "BtnMyinfo";
             this.BtnMyinfo.Size = new System.Drawing.Size(132, 32);
             this.BtnMyinfo.TabIndex = 22;
             this.BtnMyinfo.Text = "내 정보";
             this.BtnMyinfo.UseVisualStyleBackColor = true;
+            this.BtnMyinfo.Visible = false;
+            this.BtnMyinfo.Click += new System.EventHandler(this.BtnMyinfo_Click);
+            // 
+            // BtnLogout
+            // 
+            this.BtnLogout.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogout.Location = new System.Drawing.Point(537, 67);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(132, 32);
+            this.BtnLogout.TabIndex = 23;
+            this.BtnLogout.Text = "로그아웃";
+            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Visible = false;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 367);
+            this.Controls.Add(this.BtnLogout);
             this.Controls.Add(this.BtnMyinfo);
             this.Controls.Add(this.btnSrchData);
             this.Controls.Add(this.label5);
@@ -260,5 +276,6 @@ namespace RentCar
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSrchData;
         private System.Windows.Forms.Button BtnMyinfo;
+        private System.Windows.Forms.Button BtnLogout;
     }
 }
