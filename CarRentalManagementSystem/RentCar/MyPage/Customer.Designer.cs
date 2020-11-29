@@ -34,6 +34,7 @@ namespace Mypage
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLgout = new System.Windows.Forms.Button();
             this.BtnWithdraw = new System.Windows.Forms.Button();
+            this.UserName = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // AccountInfo
@@ -90,12 +91,22 @@ namespace Mypage
             this.BtnWithdraw.Text = "회원 탈퇴";
             this.BtnWithdraw.UseVisualStyleBackColor = true;
             // 
+            // UserName
+            // 
+            this.UserName.Location = new System.Drawing.Point(17, 7);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(74, 32);
+            this.UserName.TabIndex = 7;
+            this.UserName.Paint += new System.Windows.Forms.PaintEventHandler(this.UserName_Paint);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 412);
             this.Controls.Add(this.BtnWithdraw);
+            this.ClientSize = new System.Drawing.Size(314, 339);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.BtnLgout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lastReservForm);
@@ -114,5 +125,6 @@ namespace Mypage
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnLgout;
         private System.Windows.Forms.Button BtnWithdraw;
+        private System.Windows.Forms.Panel UserName;
     }
 }

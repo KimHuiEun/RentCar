@@ -33,6 +33,9 @@ namespace Mypage
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnUserManagerment = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
@@ -43,7 +46,7 @@ namespace Mypage
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(397, 96);
             this.button3.TabIndex = 2;
-            this.button3.Text = "차량 대여 현황";
+            this.button3.Text = "차량 예약 조회";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -54,8 +57,26 @@ namespace Mypage
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(397, 96);
             this.button1.TabIndex = 3;
-            this.button1.Text = "차량 조회";
+            this.button1.Text = "차량 예약 등록";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(49, 271);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(439, 46);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "차량 예약 삭제";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(49, 343);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(439, 46);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "차량 이력 조회";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -87,6 +108,10 @@ namespace Mypage
             this.ClientSize = new System.Drawing.Size(440, 544);
             this.Controls.Add(this.BtnUserManagerment);
             this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(546, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -101,6 +126,8 @@ namespace Mypage
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnUserManagerment;
     }
