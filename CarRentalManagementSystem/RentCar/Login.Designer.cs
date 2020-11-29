@@ -49,7 +49,7 @@ namespace RentCar
             this.label1.Location = new System.Drawing.Point(55, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 24);
+            this.label1.Size = new System.Drawing.Size(24, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "ID";
             // 
@@ -60,10 +60,9 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(23, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 24);
+            this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "패스워드";
             // 
@@ -74,10 +73,10 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tbLogin.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLogin.Location = new System.Drawing.Point(282, 140);
-            this.tbLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.tbLogin.Location = new System.Drawing.Point(198, 94);
+            this.tbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(102, 43);
+            this.tbLogin.Size = new System.Drawing.Size(88, 37);
             this.tbLogin.TabIndex = 4;
             this.tbLogin.Text = "확인";
             this.tbLogin.UseVisualStyleBackColor = true;
@@ -86,35 +85,35 @@ namespace RentCar
             // tbLoginId
             // 
             this.tbLoginId.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLoginId.Location = new System.Drawing.Point(131, 20);
-            this.tbLoginId.Margin = new System.Windows.Forms.Padding(4);
+            this.tbLoginId.Location = new System.Drawing.Point(92, 14);
+            this.tbLoginId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLoginId.Name = "tbLoginId";
-            this.tbLoginId.Size = new System.Drawing.Size(193, 31);
+            this.tbLoginId.Size = new System.Drawing.Size(136, 23);
             this.tbLoginId.TabIndex = 7;
             this.tbLoginId.MouseHover += new System.EventHandler(this.tbLoginId_MouseHover);
             // 
             // tbLoginPw
             // 
             this.tbLoginPw.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLoginPw.Location = new System.Drawing.Point(131, 84);
-            this.tbLoginPw.Margin = new System.Windows.Forms.Padding(4);
+            this.tbLoginPw.Location = new System.Drawing.Point(92, 56);
+            this.tbLoginPw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLoginPw.Name = "tbLoginPw";
             this.tbLoginPw.PasswordChar = '*';
-            this.tbLoginPw.Size = new System.Drawing.Size(193, 31);
+            this.tbLoginPw.Size = new System.Drawing.Size(136, 23);
             this.tbLoginPw.TabIndex = 8;
             this.tbLoginPw.MouseHover += new System.EventHandler(this.tbLoginPw_MouseHover);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 212);
+            this.ClientSize = new System.Drawing.Size(307, 150);
             this.Controls.Add(this.tbLoginPw);
             this.Controls.Add(this.tbLoginId);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
