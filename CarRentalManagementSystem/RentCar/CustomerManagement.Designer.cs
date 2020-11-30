@@ -35,7 +35,6 @@ namespace RentCar
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TbUserNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TbUserPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,10 +42,6 @@ namespace RentCar
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.DgvUser = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this._RentCarDataSet1 = new RentCar._RentCarDataSet();
-            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableAdapter1 = new RentCar._RentCarDataSetTableAdapters.UserTableAdapter();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginPwDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,19 +49,28 @@ namespace RentCar
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.licenseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issueDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._RentCarDataSet1 = new RentCar._RentCarDataSet();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.userTableAdapter1 = new RentCar._RentCarDataSetTableAdapters.UserTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.MtbLicense = new System.Windows.Forms.MaskedTextBox();
+            this.MtbPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.DtIssueDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._RentCarDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._RentCarDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSave
             // 
             this.BtnSave.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSave.Location = new System.Drawing.Point(30, 278);
+            this.BtnSave.Location = new System.Drawing.Point(32, 400);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 34);
+            this.BtnSave.Size = new System.Drawing.Size(83, 34);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "등록";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -76,7 +80,7 @@ namespace RentCar
             // 
             this.TbUserName.Location = new System.Drawing.Point(121, 53);
             this.TbUserName.Name = "TbUserName";
-            this.TbUserName.Size = new System.Drawing.Size(181, 28);
+            this.TbUserName.Size = new System.Drawing.Size(200, 28);
             this.TbUserName.TabIndex = 1;
             // 
             // userBindingSource
@@ -103,13 +107,6 @@ namespace RentCar
             this.label2.TabIndex = 5;
             this.label2.Text = "전화번호";
             // 
-            // TbUserNumber
-            // 
-            this.TbUserNumber.Location = new System.Drawing.Point(121, 106);
-            this.TbUserNumber.Name = "TbUserNumber";
-            this.TbUserNumber.Size = new System.Drawing.Size(181, 28);
-            this.TbUserNumber.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -124,7 +121,7 @@ namespace RentCar
             // 
             this.TbUserPassword.Location = new System.Drawing.Point(121, 215);
             this.TbUserPassword.Name = "TbUserPassword";
-            this.TbUserPassword.Size = new System.Drawing.Size(181, 28);
+            this.TbUserPassword.Size = new System.Drawing.Size(200, 28);
             this.TbUserPassword.TabIndex = 8;
             // 
             // label4
@@ -141,15 +138,15 @@ namespace RentCar
             // 
             this.TbUserId.Location = new System.Drawing.Point(121, 162);
             this.TbUserId.Name = "TbUserId";
-            this.TbUserId.Size = new System.Drawing.Size(181, 28);
+            this.TbUserId.Size = new System.Drawing.Size(200, 28);
             this.TbUserId.TabIndex = 6;
             // 
             // BtnDelete
             // 
             this.BtnDelete.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.Location = new System.Drawing.Point(121, 278);
+            this.BtnDelete.Location = new System.Drawing.Point(129, 400);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(75, 34);
+            this.BtnDelete.Size = new System.Drawing.Size(83, 34);
             this.BtnDelete.TabIndex = 10;
             this.BtnDelete.Text = "삭제";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -157,9 +154,9 @@ namespace RentCar
             // BtnCancel
             // 
             this.BtnCancel.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.Location = new System.Drawing.Point(215, 278);
+            this.BtnCancel.Location = new System.Drawing.Point(229, 400);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(75, 34);
+            this.BtnCancel.Size = new System.Drawing.Size(82, 34);
             this.BtnCancel.TabIndex = 11;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -186,31 +183,6 @@ namespace RentCar
             this.DgvUser.RowTemplate.Height = 30;
             this.DgvUser.Size = new System.Drawing.Size(1176, 411);
             this.DgvUser.TabIndex = 12;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(328, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(1176, 411);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // _RentCarDataSet1
-            // 
-            this._RentCarDataSet1.DataSetName = "_RentCarDataSet";
-            this._RentCarDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // userBindingSource1
-            // 
-            this.userBindingSource1.DataMember = "User";
-            this.userBindingSource1.DataSource = this._RentCarDataSet1;
-            // 
-            // userTableAdapter1
-            // 
-            this.userTableAdapter1.ClearBeforeFill = true;
             // 
             // userIdDataGridViewTextBoxColumn
             // 
@@ -269,12 +241,85 @@ namespace RentCar
             this.issueDateDataGridViewTextBoxColumn.Name = "issueDateDataGridViewTextBoxColumn";
             this.issueDateDataGridViewTextBoxColumn.Width = 150;
             // 
+            // userBindingSource1
+            // 
+            this.userBindingSource1.DataMember = "User";
+            this.userBindingSource1.DataSource = this._RentCarDataSet1;
+            // 
+            // _RentCarDataSet1
+            // 
+            this._RentCarDataSet1.DataSetName = "_RentCarDataSet";
+            this._RentCarDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(328, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.Size = new System.Drawing.Size(1176, 411);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // userTableAdapter1
+            // 
+            this.userTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 271);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 23);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "면허번호";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 323);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 23);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "발급일자";
+            // 
+            // MtbLicense
+            // 
+            this.MtbLicense.Location = new System.Drawing.Point(121, 271);
+            this.MtbLicense.Mask = "00-00-00000-00";
+            this.MtbLicense.Name = "MtbLicense";
+            this.MtbLicense.Size = new System.Drawing.Size(200, 28);
+            this.MtbLicense.TabIndex = 17;
+            // 
+            // MtbPhoneNumber
+            // 
+            this.MtbPhoneNumber.Location = new System.Drawing.Point(121, 109);
+            this.MtbPhoneNumber.Mask = "000-9000-0000";
+            this.MtbPhoneNumber.Name = "MtbPhoneNumber";
+            this.MtbPhoneNumber.Size = new System.Drawing.Size(200, 28);
+            this.MtbPhoneNumber.TabIndex = 18;
+            // 
+            // DtIssueDate
+            // 
+            this.DtIssueDate.Location = new System.Drawing.Point(121, 323);
+            this.DtIssueDate.Name = "DtIssueDate";
+            this.DtIssueDate.Size = new System.Drawing.Size(200, 28);
+            this.DtIssueDate.TabIndex = 19;
+            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1527, 445);
+            this.ClientSize = new System.Drawing.Size(1527, 494);
+            this.Controls.Add(this.DtIssueDate);
+            this.Controls.Add(this.MtbPhoneNumber);
+            this.Controls.Add(this.MtbLicense);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.DgvUser);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnDelete);
@@ -283,7 +328,6 @@ namespace RentCar
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TbUserId);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TbUserNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TbUserName);
             this.Controls.Add(this.BtnSave);
@@ -291,9 +335,9 @@ namespace RentCar
             this.Load += new System.EventHandler(this.CustomerManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._RentCarDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._RentCarDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,7 +349,6 @@ namespace RentCar
         private System.Windows.Forms.TextBox TbUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TbUserNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TbUserPassword;
         private System.Windows.Forms.Label label4;
@@ -327,5 +370,10 @@ namespace RentCar
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn licenseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox MtbLicense;
+        private System.Windows.Forms.MaskedTextBox MtbPhoneNumber;
+        private System.Windows.Forms.DateTimePicker DtIssueDate;
     }
 }

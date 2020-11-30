@@ -13,10 +13,10 @@ namespace RentCar.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class RentCarEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public RentCarEntities()
+            : base("name=RentCarEntities")
         {
         }
     

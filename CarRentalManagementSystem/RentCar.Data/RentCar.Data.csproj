@@ -88,9 +88,9 @@
     </Compile>
     <Compile Include="RentCar.cs" />
     <Compile Include="RentCar.Designer.cs">
-      <DependentUpon>RentCar.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>RentCar.edmx</DependentUpon>
     </Compile>
     <Compile Include="RentCar1.cs">
       <AutoGen>True</AutoGen>
@@ -124,8 +124,8 @@
   <ItemGroup>
     <Content Include="RentCar.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RentCar.Context.cs</LastGenOutput>
       <DependentUpon>RentCar.edmx</DependentUpon>
+      <LastGenOutput>RentCar.Context.cs</LastGenOutput>
     </Content>
     <Content Include="RentCar.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

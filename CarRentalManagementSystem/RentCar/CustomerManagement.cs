@@ -27,7 +27,7 @@ namespace RentCar
 
         void Clear()
         {
-            TbUserId.Text = TbUserName .Text= TbUserNumber.Text = TbUserPassword.Text = "";
+            TbUserId.Text = TbUserName .Text= MtbPhoneNumber.Text = TbUserPassword.Text = MtbLicense.Text = DtIssueDate.CustomFormat = "";
             BtnSave.Text = "Save";
             BtnDelete.Enabled = false;
             model.UserId = 0;
@@ -45,10 +45,15 @@ namespace RentCar
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            model.Name = TbUserName.Text.Trim();
-            model.PhoneNumber = TbUserNumber.Text.Trim();
+            
             model.LoginId = TbUserId.Text.Trim();
             model.LoginPw = TbUserPassword.Text.Trim();
+            model.Name = TbUserName.Text.Trim();
+            model.PhoneNumber = MtbPhoneNumber.Text.Trim();
+            model.License = MtbLicense.Text.Trim();
+            model.IssueDate = DtIssueDate.CustomFormat.Trim();
+
+
             using (RentCarEntities db = new RentCarEntities())
             {
                 db.Users.Add(model);
