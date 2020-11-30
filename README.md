@@ -148,6 +148,7 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 
 1.
 
+<img src="https://user-images.githubusercontent.com/74526718/100595320-1a781b80-333e-11eb-8b6b-ab49961d11c6.PNG" width="900" height="450">
 오류: App.config에 MSSM과 연결 관계에 대한 문구를 넣지 않음.
 
 해결방안 : <connectionStrings>
@@ -156,17 +157,20 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
   
   
   
-  
+---
  2.
  
+ <img src="https://user-images.githubusercontent.com/74526718/100595682-970afa00-333e-11eb-83b3-f1b1296c463e.PNG" width="900" height="450">
  오류 : 주 진입 프로젝트를 중단점으로 몇 개의 코드만 실행했을 때 생기는 디버깅 오류
  
  해결방안 : 디버깅을 할 때의 설정에 내 코드만 되어 있어 외부 코드 참조한 것이 디버깅이 되지 않아 생기는 오류라 설정에서 고쳤다.
  
  https://docs.microsoft.com/ko-kr/visualstudio/debugger/just-my-code?view=vs-2019 참조.
 
-
+---
 3.
+
+<img src="https://user-images.githubusercontent.com/74526718/100595862-d2a5c400-333e-11eb-99ca-26e510fdb213.PNG" width="900" height="450">
 오류 : text 파일 읽어들이는 과정에서 오류가 생김. System.Windows.Forms.MaskedTextBox., Text: aa님, 안녕하세요!
 
 해결방안 : 입력된 텍스트를 읽어오는 것이 아니라 텍스트 파일 자체를 읽으려고 했기 때문에. 
@@ -186,28 +190,35 @@ if(tbLoginId.Text != "admin" && tbLoginId.Text != "manager")
 }
 </code></pre>
 
-
+---
 4. 
+
+<img src="https://user-images.githubusercontent.com/74526718/100595951-ef41fc00-333e-11eb-84dd-d4b7e9aa3fef.PNG" width="900" height="450">
 오류 : 데이터 엔터티 모델 수정 오류
 
 해결방안 : RentCar.edmx에서 전부 삭제 했다가 데이터베이스 모델 업데이트 하기.
 
-
+---
 5.
+
+<img src="https://user-images.githubusercontent.com/74526718/100595974-fa952780-333e-11eb-853c-4095d358563d.png" width="900" height="450">
 오류 : 깃 허브 중복 소스 충돌 해결방안
 
 해결방안 : 소스를 비교하면서 현재 파일을 선택하고 받아들이는 소스 부분부분을 복사 붙여넣기함.
 
-
+---
 6.
+
+<img src="https://user-images.githubusercontent.com/74526718/100596029-0680e980-333f-11eb-88a4-afeba396e66d.PNG" width="900" height="450">
 오류 : 메타데이터 파일 오류
+
 
 해결방안 : Add.config에서 메타데이터에 관한 connectionString="metadata=res: 부분의 서버연결 확인하였음.
 <connectionStrings>
     <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
   </connectionStrings>
 
-
+---
 7.
 오류 : 데이터베이스 저장하려고 DataGridView 사용하였으나 사용법을 모름.
 
