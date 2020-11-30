@@ -62,7 +62,7 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 1. 
 [
 
-오류: App.config에 MySQL과 연결 관계에 대한 문구를 넣지 않음.
+오류: App.config에 MSSM과 연결 관계에 대한 문구를 넣지 않음.
 
 해결방안 : <connectionStrings>
     <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
