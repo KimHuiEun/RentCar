@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentCar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,11 @@ namespace Mypage
             InitializeComponent();
         }
 
+        private void btnshowSales_Click(object sender, EventArgs e)
+        {
+            Sales show = new Sales();
+            show.ShowDialog();
+        }
     }
 
 }

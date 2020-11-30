@@ -23,5 +23,16 @@ namespace Mypage
             CustomerManagement showform = new CustomerManagement();
             showform.ShowDialog();
         }
+
+        private void Manager_Mypage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCarCreate_Click(object sender, EventArgs e)
+        {
+            CarManagement show = new CarManagement();
+            show.ShowDialog();
+        }
     }
 }

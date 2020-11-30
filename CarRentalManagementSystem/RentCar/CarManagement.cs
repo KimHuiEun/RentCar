@@ -50,7 +50,7 @@ namespace RentCar
             using (RentCarEntities db = new RentCarEntities())
             {
                 db.Cars.Add(model);
-                db.CarTypes(model2);
+                db.CarTypes.Add(model2);
                 db.SaveChanges();
                 db.SaveChanges();
             }
@@ -64,8 +64,8 @@ namespace RentCar
         {
             using (RentCarEntities db = new RentCarEntities())
             {
-                DgvCar.DataSource = db.Car.ToList<Car>();
-                DgvCar.DataSource = db.CarType.ToList<CarType>();
+                DgvCar.DataSource = db.Cars.ToList<Car>();
+                DgvCar.DataSource = db.CarTypes.ToList<CarType>();
 
             }
         }

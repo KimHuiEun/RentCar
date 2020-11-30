@@ -67,6 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarManagement.Designer.cs">
+      <DependentUpon>CarManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="Reserve.Designer.cs">
       <DependentUpon>Reserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="Selection.cs">
       <SubType>Form</SubType>
@@ -134,6 +146,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CarManagement.resx">
+      <DependentUpon>CarManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reserve.resx">
       <DependentUpon>Reserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Selection.resx">
       <DependentUpon>Selection.cs</DependentUpon>
@@ -174,6 +192,18 @@
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Account.datasource" />
+    <None Include="Properties\DataSources\CarManagement.datasource" />
+    <None Include="Properties\DataSources\CarRentform.datasource" />
+    <None Include="Properties\DataSources\CustomerManagement.datasource" />
+    <None Include="Properties\DataSources\Login.datasource" />
+    <None Include="Properties\DataSources\Main.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\_RentCarDataSet.datasource" />
+    <None Include="Properties\DataSources\_RentCarDataSet.UserDataTable.datasource" />
+    <None Include="Properties\DataSources\_RentCarDataSet.UserRow.datasource" />
+    <None Include="Properties\DataSources\_RentCarDataSet.UserRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\_RentCarDataSet.UserRowChangeEventHandler.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
