@@ -1,12 +1,11 @@
-# Project : RentCar
+# Project : RentCar(렌트카 관리 프로그램)
 
 ## 개요
 
-ThreeRentCar : 렌트카 관리 프로그램
-
 고객이 기간 설정 후 차량을 선택하여 렌트하는 기능과 직원의 차량 관리 프로그램을 C# .NET Framework 및 EntityFramework를 이용하여 구현하였다.
 
-
+## 팀 이름
+Three
 
 ## 개발기간
 2020년 11월 23일 ~ 2020년 11월 29일
