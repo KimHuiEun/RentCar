@@ -59,7 +59,8 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 ----------------------------------------------------------
 #오류
 
-1.
+1. 
+[
 
 오류: App.config에 MySQL과 연결 관계에 대한 문구를 넣지 않음.
 
