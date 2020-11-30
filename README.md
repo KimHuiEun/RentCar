@@ -1,13 +1,35 @@
-# project : RentCar
+# Project : RentCar
 
-## 
+## 개요
 고객이 기간과 차 모델을 검색후 빌리고 싶은 차량을 렌트하는 프로그램 구현.
 
-#사용한 프로젝트
+
+## 개발기간
+2020년 11월 23일 ~ 2020년 11월 29일
+
+
+## 사용한 프로젝트
+
+### 언어
+---
 C# 8.0
+
+### 프레임워크
+---
 .Net Framework 4.8
 EntityFramework 6.4
+Winform
+
+### 데이터베이스
+---
 MSSQL Server 2019
+
+### 기타개발환경
+---
+Windows10
+Microsoft Visual Studio Community 2019 v16.8
+Microsoft SQL Server Management Studio v18.6
+
 -----------------------------------
 DB
 
