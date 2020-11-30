@@ -33,95 +33,83 @@ Windows10
 Microsoft Visual Studio Community 2019 v16.8
 Microsoft SQL Server Management Studio v18.6
 
------------------------------------
+## 프로젝트관리
+Github.com
+
 
 
 # 다이어그램
-<img src="https://user-images.githubusercontent.com/74527086/100572721-8bf1a300-3319-11eb-9f42-ee45f28e6aed.jpg" width="700" height="370">
+
+### UseCaseDiagram
+
+<img src="https://user-images.githubusercontent.com/74527086/100572721-8bf1a300-3319-11eb-9f42-ee45f28e6aed.jpg" width="500" height="250">
 
 ---
 
-<img src="https://user-images.githubusercontent.com/74527286/100579479-a7fc4100-3327-11eb-91b3-0009c8fae2b0.PNG" width="700" height="370">
+### FlowChartDiagram
+
+<img src="https://user-images.githubusercontent.com/74527286/100579479-a7fc4100-3327-11eb-91b3-0009c8fae2b0.PNG" width="500" height="250">
 
 ---
 
-<img src="https://user-images.githubusercontent.com/74527086/100578923-8ea6c500-3326-11eb-954e-843897c020d4.jpg" width="700" height="370">
+### ClassDiagram
+
+<img src="https://user-images.githubusercontent.com/74526718/100585213-8a7fa500-3330-11eb-8614-75461b35616f.png" width="500" height="250">
+
+---
+
+### SequenceDiagram
+
+<img src="https://user-images.githubusercontent.com/74527086/100578923-8ea6c500-3326-11eb-954e-843897c020d4.jpg" width="500" height="250">
 
 ---
 
 
 ### DB
 
--서버 : kimpro
-
--파일명 : RentCar
-
--테이블명 규칙 : 첫글자대문자, 간결성유지.
-
--Rent(Main) ---연결---User, Car
-
--User (= Account) ---연결---Event
-
--Event
-
--Car ---연결--- CarType, IsRent의 변수로 렌트중인지아닌지 구분(bit)
-
--CarType
-
--Admin ---연결--- User, Car
-
--Search ---연결--- User, CarType
+- 서버 : kimpro
+- 파일명 : RentCar
+- 테이블명 규칙 : 첫글자대문자, 간결성유지.
+- Rent(Main) ---연결---User, Car
+- User (= Account) ---연결---Event
+- Event
+- Car ---연결--- CarType, IsRent의 변수로 렌트중인지아닌지 구분(bit)
+- CarType
+- Admin ---연결--- User, Car
+- Search ---연결--- User, CarType
 
 
 ### visual studio C#
 
--C:git
-
--솔루션이름 : CarRentalManagementSystem
-
--프로젝트 이름 : CarRent, CarRent.Data, CarRent.UnitTest
+- C:git
+- 솔루션이름 : CarRentalManagementSystem
+- 프로젝트 이름 : CarRent, CarRent.Data, CarRent.UnitTest
 
 ### CarRent의 폼.
 
--Login
+- Login
+- Account
+- Selection
+- Payment
+- Customer
+- Manager
+- Admin
 
--Account
+# 구현
+## 구현 완성
+- 스키마 : 제3 정규화까지 완성함.
+- 비정규화 항목 : 이벤트
 
--Selection
-
--Payment
-
--Customer
-
--Manager
-
--Admin
-
----------------------------------------------------
-
-                              
-                                       
-                                
-
-
-
---------------------------------------------------------
-#구현
-구현 완성
--스키마 : 제3 정규화까지 완성함.
-
-
-구현 미완성
+## 구현 미완성
 -Event와 Search의 구현
 -관리자 폼에서 매출현황차트와 엑셀 파일 저장
 -지점 여러개 만들기
 https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 
-----------------------------------------------------------
-#오류
 
-1. 
-[
+# 오류
+
+1.
 
 오류: App.config에 MSSM과 연결 관계에 대한 문구를 넣지 않음.
 
