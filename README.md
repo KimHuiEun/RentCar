@@ -36,38 +36,69 @@ Microsoft SQL Server Management Studio v18.6
 -----------------------------------
 
 
+# 다이어그램
 <img src="https://user-images.githubusercontent.com/74527086/100572721-8bf1a300-3319-11eb-9f42-ee45f28e6aed.jpg" width="700" height="370">
 
+---
+
+<img src="https://user-images.githubusercontent.com/74527286/100579479-a7fc4100-3327-11eb-91b3-0009c8fae2b0.PNG" width="700" height="370">
+
+---
+
 <img src="https://user-images.githubusercontent.com/74527086/100578923-8ea6c500-3326-11eb-954e-843897c020d4.jpg" width="700" height="370">
-DB
+
+---
+
+
+### DB
 
 -서버 : kimpro
+
 -파일명 : RentCar
+
 -테이블명 규칙 : 첫글자대문자, 간결성유지.
+
 -Rent(Main) ---연결---User, Car
+
 -User (= Account) ---연결---Event
+
 -Event
+
 -Car ---연결--- CarType, IsRent의 변수로 렌트중인지아닌지 구분(bit)
+
 -CarType
+
 -Admin ---연결--- User, Car
+
 -Search ---연결--- User, CarType
 
-visual studio C#
+
+### visual studio C#
+
 -C:git
+
 -솔루션이름 : CarRentalManagementSystem
+
 -프로젝트 이름 : CarRent, CarRent.Data, CarRent.UnitTest
--CarRent의 폼.
+
+### CarRent의 폼.
+
 -Login
+
 -Account
+
 -Selection
+
 -Payment
-<<>>>
+
 -Customer
+
 -Manager
+
 -Admin
 
 ---------------------------------------------------
-#다이어그램
+
                               
                                        
                                 
