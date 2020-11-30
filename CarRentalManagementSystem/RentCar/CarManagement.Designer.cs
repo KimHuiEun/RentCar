@@ -43,6 +43,10 @@ namespace RentCar
             this.CbIsRent = new System.Windows.Forms.ComboBox();
             this.DgvCar = new System.Windows.Forms.DataGridView();
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.크기 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.모델명 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.가격 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.렌트여부 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +55,7 @@ namespace RentCar
             // 
             this.BtnSave.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.Location = new System.Drawing.Point(26, 264);
-            this.BtnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(60, 29);
             this.BtnSave.TabIndex = 0;
@@ -63,7 +67,7 @@ namespace RentCar
             // 
             this.BtnDelete.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDelete.Location = new System.Drawing.Point(102, 264);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(60, 29);
             this.BtnDelete.TabIndex = 1;
@@ -74,7 +78,7 @@ namespace RentCar
             // 
             this.BtnCancel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancel.Location = new System.Drawing.Point(178, 263);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(60, 30);
             this.BtnCancel.TabIndex = 2;
@@ -97,7 +101,7 @@ namespace RentCar
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 108);
+            this.label2.Location = new System.Drawing.Point(26, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 23);
@@ -108,7 +112,7 @@ namespace RentCar
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 148);
+            this.label3.Location = new System.Drawing.Point(26, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 23);
@@ -119,7 +123,7 @@ namespace RentCar
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 183);
+            this.label4.Location = new System.Drawing.Point(26, 194);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 23);
@@ -130,8 +134,15 @@ namespace RentCar
             // 
             this.CbCarSize.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbCarSize.FormattingEnabled = true;
+            this.CbCarSize.Items.AddRange(new object[] {
+            "경형",
+            "소형",
+            "준중형",
+            "중형",
+            "준대형",
+            "대형"});
             this.CbCarSize.Location = new System.Drawing.Point(102, 73);
-            this.CbCarSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbCarSize.Margin = new System.Windows.Forms.Padding(2);
             this.CbCarSize.Name = "CbCarSize";
             this.CbCarSize.Size = new System.Drawing.Size(138, 31);
             this.CbCarSize.TabIndex = 7;
@@ -139,8 +150,8 @@ namespace RentCar
             // TbModel
             // 
             this.TbModel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbModel.Location = new System.Drawing.Point(102, 108);
-            this.TbModel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbModel.Location = new System.Drawing.Point(102, 114);
+            this.TbModel.Margin = new System.Windows.Forms.Padding(2);
             this.TbModel.Name = "TbModel";
             this.TbModel.Size = new System.Drawing.Size(138, 31);
             this.TbModel.TabIndex = 8;
@@ -148,8 +159,8 @@ namespace RentCar
             // TbPrice
             // 
             this.TbPrice.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbPrice.Location = new System.Drawing.Point(102, 148);
-            this.TbPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TbPrice.Location = new System.Drawing.Point(102, 154);
+            this.TbPrice.Margin = new System.Windows.Forms.Padding(2);
             this.TbPrice.Name = "TbPrice";
             this.TbPrice.Size = new System.Drawing.Size(138, 31);
             this.TbPrice.TabIndex = 9;
@@ -158,8 +169,11 @@ namespace RentCar
             // 
             this.CbIsRent.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbIsRent.FormattingEnabled = true;
-            this.CbIsRent.Location = new System.Drawing.Point(102, 183);
-            this.CbIsRent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbIsRent.Items.AddRange(new object[] {
+            "유",
+            "무"});
+            this.CbIsRent.Location = new System.Drawing.Point(102, 194);
+            this.CbIsRent.Margin = new System.Windows.Forms.Padding(2);
             this.CbIsRent.Name = "CbIsRent";
             this.CbIsRent.Size = new System.Drawing.Size(138, 31);
             this.CbIsRent.TabIndex = 10;
@@ -170,9 +184,14 @@ namespace RentCar
             this.DgvCar.AutoGenerateColumns = false;
             this.DgvCar.BackgroundColor = System.Drawing.Color.White;
             this.DgvCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.크기,
+            this.모델명,
+            this.가격,
+            this.렌트여부});
             this.DgvCar.DataSource = this.programBindingSource;
             this.DgvCar.Location = new System.Drawing.Point(255, 66);
-            this.DgvCar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvCar.Margin = new System.Windows.Forms.Padding(2);
             this.DgvCar.Name = "DgvCar";
             this.DgvCar.RowHeadersWidth = 62;
             this.DgvCar.RowTemplate.Height = 30;
@@ -182,6 +201,34 @@ namespace RentCar
             // programBindingSource
             // 
             this.programBindingSource.DataSource = typeof(RentCar.Program);
+            // 
+            // 크기
+            // 
+            this.크기.HeaderText = "크기";
+            this.크기.MinimumWidth = 6;
+            this.크기.Name = "크기";
+            this.크기.Width = 125;
+            // 
+            // 모델명
+            // 
+            this.모델명.HeaderText = "모델명";
+            this.모델명.MinimumWidth = 6;
+            this.모델명.Name = "모델명";
+            this.모델명.Width = 125;
+            // 
+            // 가격
+            // 
+            this.가격.HeaderText = "가격";
+            this.가격.MinimumWidth = 6;
+            this.가격.Name = "가격";
+            this.가격.Width = 125;
+            // 
+            // 렌트여부
+            // 
+            this.렌트여부.HeaderText = "렌트여부";
+            this.렌트여부.MinimumWidth = 6;
+            this.렌트여부.Name = "렌트여부";
+            this.렌트여부.Width = 125;
             // 
             // CarManagement
             // 
@@ -201,7 +248,7 @@ namespace RentCar
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnSave);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CarManagement";
             this.Text = "CarManagement";
             this.Load += new System.EventHandler(this.CarManagement_Load);
@@ -227,5 +274,9 @@ namespace RentCar
         private System.Windows.Forms.ComboBox CbIsRent;
         private System.Windows.Forms.DataGridView DgvCar;
         private System.Windows.Forms.BindingSource programBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 크기;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 모델명;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 가격;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 렌트여부;
     }
 }
