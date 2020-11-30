@@ -52,26 +52,26 @@ ThreeRentCar : 렌트카 관리 프로그램
 
 ## 언어
 
-C# 8.0
+- C# 8.0
 
 ## 프레임워크
 
-.Net Framework 4.8
-EntityFramework 6.4
-Winform
+- .Net Framework 4.8
+- EntityFramework 6.4
+- Winform
 
 ## 데이터베이스
 
-MSSQL Server 2019
+- MSSQL Server 2019
 
 ## 기타개발환경
 
-Windows10
-Microsoft Visual Studio Community 2019 v16.8
-Microsoft SQL Server Management Studio v18.6
+- Windows10
+- Microsoft Visual Studio Community 2019 v16.8
+- Microsoft SQL Server Management Studio v18.6
 
 ## 프로젝트관리
-Github.com
+- Github.com (버전 관리용)
 
 
 
@@ -104,38 +104,28 @@ Github.com
 
 ### DB
 
-- 서버 : kimpro
+<img src="https://user-images.githubusercontent.com/74526718/100597015-3d0b3400-3340-11eb-9b43-5349a6c8de24.PNG" width="900" height="450">
+
 - 파일명 : RentCar
+
 - 테이블명 규칙 : 첫글자대문자, 간결성유지.
-- Rent(Main) ---연결---User, Car
-- User (= Account) ---연결---Event
-- Event
-- Car ---연결--- CarType, IsRent의 변수로 렌트중인지아닌지 구분(bit)
-- CarType
-- Admin ---연결--- User, Car
-- Search ---연결--- User, CarType
+
 
 
 ### visual studio C#
 
 - C:git
 - 솔루션이름 : CarRentalManagementSystem
-- 프로젝트 이름 : CarRent, CarRent.Data, CarRent.UnitTest
+- 프로젝트 이름 : RentCar, RentCar.Data, RentCar.UnitTest
 
-### CarRent의 폼.
+### RentCar의 폼.
 
-- Login
-- Account
-- Selection
-- Payment
-- Customer
-- Manager
-- Admin
+- Customer -> Login, Account, Selection, Payment, Customer_Mypage
+- Admin -> Login, Reserve, Customer, Manager_Mypage, Admin_Mypage, Manager, Admin, CarManagement, CustomerManagement
 
 # 구현
 ## 구현 완성
 - 스키마 : 제3 정규화까지 완성함.
-- 비정규화 항목 : 이벤트
 
 ## 구현 미완성
 -Event와 Search의 구현
