@@ -36,13 +36,9 @@ Microsoft SQL Server Management Studio v18.6
 -----------------------------------
 
 
+<img src="https://user-images.githubusercontent.com/74527086/100572721-8bf1a300-3319-11eb-9f42-ee45f28e6aed.jpg" width="700" height="370">
 
-
-
-
-
-
-<img src="C:\Users\kccict\Desktop" width="700" height="370">
+<img src="https://user-images.githubusercontent.com/74527086/100578923-8ea6c500-3326-11eb-954e-843897c020d4.jpg" width="700" height="370">
 DB
 
 -서버 : kimpro
