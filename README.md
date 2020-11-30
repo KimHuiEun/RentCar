@@ -38,6 +38,13 @@ ThreeRentCar : 렌트카 관리 프로그램
  
  ### 2. 마이페이지
  
+ 
+<img src="https://user-images.githubusercontent.com/74526718/100595038-c10fec80-333d-11eb-8fc1-975344a952bb.png" width="400" height="250">
+ 
+<img src="https://user-images.githubusercontent.com/74526718/100595040-c1a88300-333d-11eb-8549-d9a6313f8e11.png" width="400" height="250">  <img src="https://user-images.githubusercontent.com/74526718/100595032-c0775600-333d-11eb-88c3-9f05dca80f42.png" width="400" height="250">
+ 
+ 
+ 
   차량 예약 조회, 차량 등록 및 삭제, 회원관리, 직원관리
 
 
@@ -166,6 +173,7 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
      수정 후 
      -Text: aa님, 안녕하세요!
 
+<pre><code>
 if(tbLoginId.Text != "admin" && tbLoginId.Text != "manager")
 {
      if (user.LoginPw == tbLoginPw.Text)     
@@ -176,6 +184,7 @@ if(tbLoginId.Text != "admin" && tbLoginId.Text != "manager")
      else
      MessageBox.Show("잘못된 비밀번호입니다.");
 }
+</code></pre>
 
 
 4. 
@@ -203,6 +212,7 @@ if(tbLoginId.Text != "admin" && tbLoginId.Text != "manager")
 오류 : 데이터베이스 저장하려고 DataGridView 사용하였으나 사용법을 모름.
 
 해결방안 : 
+<pre><code>
 private void CustomerManagement_Load(object sender, EventArgs e)
 {
     this.userTableAdapter1.Fill(this._RentCarDataSet1.User);
@@ -213,14 +223,12 @@ private void CustomerManagement_Load(object sender, EventArgs e)
 
 private void BtnSave_Click(object sender, EventArgs e)
 {
-
     model.LoginId = TbUserId.Text.Trim();
     model.LoginPw = TbUserPassword.Text.Trim();
     model.Name = TbUserName.Text.Trim();
     model.PhoneNumber = MtbPhoneNumber.Text.Trim();
     model.License = MtbLicense.Text.Trim();
     model.IssueDate = DtIssueDate.CustomFormat.Trim();
-
 
     using (RentCarEntities db = new RentCarEntities())
     {
@@ -230,9 +238,8 @@ private void BtnSave_Click(object sender, EventArgs e)
     Clear();
     PopulateDataGridView();
     MessageBox.Show("추가되었습니다.");
-
 }
-'''
+
 void PopulateDataGridView()
 {
     using(RentCarEntities db = new RentCarEntities())
@@ -240,7 +247,7 @@ void PopulateDataGridView()
         DgvUser.DataSource = db.Users.ToList<User>();
     }
 }
-'''
+</code></pre>
   
   
   
