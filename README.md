@@ -1,5 +1,11 @@
 # project : RentCar
 
+사용한 프로젝트
+C# 8.0
+.Net Framework 4.8
+EntityFramework 6.4
+MSSQL Server 2019
+
 DB
 
 -서버 : kimpro
@@ -29,10 +35,11 @@ visual studio C#
 
 
 
+구현 완성
+-스키마 : 제3 정규화까지 완성함.
 
-
-
-
+구현 미완성
+-Event와 Search의 구현은 아직 미완성
 
 구현
 1.
@@ -56,3 +63,11 @@ visual studio C#
 
 
 3.
+오류 : text 파일 읽어들이는 과정에서 오류가 생김. System.Windows.Forms.MaskedTextBox., Text: aa님, 안녕하세요!
+
+해결방안 : 입력된 텍스트를 읽어오는 것이 아니라 텍스트 파일 자체를 읽으려고 했기 때문에. 
+     수정 후 
+     -Text: aa님, 안녕하세요!
+
+
+4.
