@@ -149,7 +149,7 @@ private void BtnSave_Click(object sender, EventArgs e)
     MessageBox.Show("추가되었습니다.");
 
 }
-
+'''
 void PopulateDataGridView()
 {
     using(RentCarEntities db = new RentCarEntities())
@@ -157,3 +157,4 @@ void PopulateDataGridView()
         DgvUser.DataSource = db.Users.ToList<User>();
     }
 }
+'''
