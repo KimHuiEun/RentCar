@@ -55,6 +55,7 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 
 ----------------------------------------------------------
 #오류
+
 1.
 
 오류: App.config에 MySQL과 연결 관계에 대한 문구를 넣지 않음.
@@ -82,11 +83,23 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
      수정 후 
      -Text: aa님, 안녕하세요!
 
+if(tbLoginId.Text != "admin" && tbLoginId.Text != "manager")
+{
+     if (user.LoginPw == tbLoginPw.Text)     
+     {
+           MessageBox.Show(tbLoginId.Text + "님, 안녕하세요!");     ----->원래소스 : textbox 이름인 tbLoginId 를 불러오는 것. 
+           this.Close();
+     }
+     else
+     MessageBox.Show("잘못된 비밀번호입니다.");
+}
+
 
 4. 
 오류 : 데이터 엔터티 모델 수정 오류
 
 해결방안 : RentCar.edmx에서 전부 삭제 했다가 데이터베이스 모델 업데이트 하기.
+
 
 5.
 오류 : 깃 허브 중복 소스 충돌 해결방안
@@ -98,3 +111,49 @@ https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 오류 : 메타데이터 파일 오류
 
 해결방안 : Add.config에서 메타데이터에 관한 connectionString="metadata=res: 부분의 서버연결 확인하였음.
+<connectionStrings>
+    <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+
+7.
+오류 : 데이터베이스 저장하려고 DataGridView 사용하였으나 사용법을 모름.
+
+해결방안 : 
+private void CustomerManagement_Load(object sender, EventArgs e)
+{
+    this.userTableAdapter1.Fill(this._RentCarDataSet1.User);
+    this.userTableAdapter.Fill(this._RentCarDataSet.User);
+    Clear();
+    PopulateDataGridView();
+}
+
+private void BtnSave_Click(object sender, EventArgs e)
+{
+
+    model.LoginId = TbUserId.Text.Trim();
+    model.LoginPw = TbUserPassword.Text.Trim();
+    model.Name = TbUserName.Text.Trim();
+    model.PhoneNumber = MtbPhoneNumber.Text.Trim();
+    model.License = MtbLicense.Text.Trim();
+    model.IssueDate = DtIssueDate.CustomFormat.Trim();
+
+
+    using (RentCarEntities db = new RentCarEntities())
+    {
+        db.Users.Add(model);
+        db.SaveChanges();
+    }
+    Clear();
+    PopulateDataGridView();
+    MessageBox.Show("추가되었습니다.");
+
+}
+
+void PopulateDataGridView()
+{
+    using(RentCarEntities db = new RentCarEntities())
+    {
+        DgvUser.DataSource = db.Users.ToList<User>();
+    }
+}
