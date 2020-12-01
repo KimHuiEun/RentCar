@@ -19,24 +19,33 @@ Three
 ## 고객용
 
 ### 1. 회원가입 및 로그인
-
+ 
+ 고객이 회원가입 후 로그인을 하면 차량검색란이 나타난다. 이후 나오는 차량 검색 폼에서 다시 차량선택가능
+ 
 ### 2. 차량 검색
 
- 지점, 차 크기, 대여일자, 반납일자를 선택한 후 검색버튼을 누르면 해당되는 차량이 리스트화 된다.
+ 지점, 차 크기, 대여일자, 반납일자를 선택한 후 검색버튼을 누르면 해당되는 차량이 리스트화.
 
 ### 3. 예약
-
+  
+  선택한 사항에 대해서 확인 후 결제 진행 / 이후 취소가능
+ 
 ### 4. 마이페이지
 
- 내 정보 수정, 예약확인, 로그아웃, 회원탈퇴
+ 내 정보(ID제외) 수정, 예약 확인, 회원탈퇴 기능
  
  
  ## 직원용
  
  ### 1. 로그인
  
+  매니저와 관리자용 아이디를 부여받은 후 접속
+ 
  ### 2. 마이페이지
  
+  직원과 관리자의 권한을 분리함.
+  직원 : 차량예약조회, 차량예약등록, 회원관리
+  관리자 : 매출현황(일간, 주간, 월간), 직원관리 
  
 <img src="https://user-images.githubusercontent.com/74526718/100595038-c10fec80-333d-11eb-8fc1-975344a952bb.png" width="400" height="250">
  
@@ -122,10 +131,11 @@ Three
 
 1.
 
-<img src="https://user-images.githubusercontent.com/74526718/100595320-1a781b80-333e-11eb-8b6b-ab49961d11c6.PNG" width="500" height="450"> <img src="https://user-images.githubusercontent.com/74526718/100596029-0680e980-333f-11eb-88a4-afeba396e66d.PNG" width="500" height="450">
-오류: App.config에 MSSQL과 연결 관계에 대한 문구를 넣지 않음.
+<img src="https://user-images.githubusercontent.com/74526718/100596029-0680e980-333f-11eb-88a4-afeba396e66d.PNG" width="900" height="450">
+
 
 해결방안 : Add.config에서 메타데이터에 관한 connectionString="metadata=res: 부분의 서버연결 확인하였음.
+
 <pre><code>
 <connectionStrings>
     <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
@@ -225,6 +235,17 @@ void PopulateDataGridView()
 }
 </code></pre>
   
+  
+---
+7.
+<img src="https://user-images.githubusercontent.com/74527086/100710308-dd219580-33f2-11eb-9e9b-f81c5ddc6b19.png" width="900" height="450">
+
+
+오류 : 하나의 프로세스가 진행중에 또 다른 프로세스가 진행되어 오류가 발생하였다.
+
+
+해결방안 : BackGroundWorker를 사용했더니 UI가 정상적으로 작동하였다.
+
   
   
   
