@@ -42,12 +42,18 @@ namespace RentCar
             this.TbPrice = new System.Windows.Forms.TextBox();
             this.CbIsRent = new System.Windows.Forms.ComboBox();
             this.DgvCar = new System.Windows.Forms.DataGridView();
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.크기 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.모델명 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.가격 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.렌트여부 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rentCarDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._RentCarDataSet = new RentCar._RentCarDataSet();
+            this.rentCarDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentCarDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._RentCarDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentCarDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +63,7 @@ namespace RentCar
             this.BtnSave.Location = new System.Drawing.Point(26, 264);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(60, 29);
+            this.BtnSave.Size = new System.Drawing.Size(72, 29);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "등록";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -69,7 +75,7 @@ namespace RentCar
             this.BtnDelete.Location = new System.Drawing.Point(102, 264);
             this.BtnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(60, 29);
+            this.BtnDelete.Size = new System.Drawing.Size(72, 29);
             this.BtnDelete.TabIndex = 1;
             this.BtnDelete.Text = "삭제";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -80,7 +86,7 @@ namespace RentCar
             this.BtnCancel.Location = new System.Drawing.Point(178, 263);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(60, 30);
+            this.BtnCancel.Size = new System.Drawing.Size(73, 30);
             this.BtnCancel.TabIndex = 2;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -189,7 +195,7 @@ namespace RentCar
             this.모델명,
             this.가격,
             this.렌트여부});
-            this.DgvCar.DataSource = this.programBindingSource;
+            this.DgvCar.DataSource = this.rentCarDataSetBindingSource1;
             this.DgvCar.Location = new System.Drawing.Point(255, 66);
             this.DgvCar.Margin = new System.Windows.Forms.Padding(2);
             this.DgvCar.Name = "DgvCar";
@@ -197,10 +203,6 @@ namespace RentCar
             this.DgvCar.RowTemplate.Height = 30;
             this.DgvCar.Size = new System.Drawing.Size(702, 227);
             this.DgvCar.TabIndex = 11;
-            // 
-            // programBindingSource
-            // 
-            this.programBindingSource.DataSource = typeof(RentCar.Program);
             // 
             // 크기
             // 
@@ -230,6 +232,25 @@ namespace RentCar
             this.렌트여부.Name = "렌트여부";
             this.렌트여부.Width = 125;
             // 
+            // rentCarDataSetBindingSource
+            // 
+            this.rentCarDataSetBindingSource.DataSource = typeof(RentCar._RentCarDataSet);
+            this.rentCarDataSetBindingSource.Position = 0;
+            // 
+            // _RentCarDataSet
+            // 
+            this._RentCarDataSet.DataSetName = "_RentCarDataSet";
+            this._RentCarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rentCarDataSetBindingSource1
+            // 
+            this.rentCarDataSetBindingSource1.DataSource = this._RentCarDataSet;
+            this.rentCarDataSetBindingSource1.Position = 0;
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataSource = typeof(RentCar.Program);
+            // 
             // CarManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -253,6 +274,9 @@ namespace RentCar
             this.Text = "CarManagement";
             this.Load += new System.EventHandler(this.CarManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentCarDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._RentCarDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentCarDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,5 +302,8 @@ namespace RentCar
         private System.Windows.Forms.DataGridViewTextBoxColumn 모델명;
         private System.Windows.Forms.DataGridViewTextBoxColumn 가격;
         private System.Windows.Forms.DataGridViewTextBoxColumn 렌트여부;
+        private System.Windows.Forms.BindingSource rentCarDataSetBindingSource1;
+        private _RentCarDataSet _RentCarDataSet;
+        private System.Windows.Forms.BindingSource rentCarDataSetBindingSource;
     }
 }

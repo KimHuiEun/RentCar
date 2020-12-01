@@ -11,6 +11,21 @@ namespace RentCar.Data
             return x => x.CarTypeId == key;
         }
 
+        public void Update()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Insert()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Remove()
+        {
+            throw new System.NotImplementedException();
+        }
+
         protected override Expression<Func<CarType, int>> KeySelector
         {
             get

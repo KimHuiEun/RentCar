@@ -29,5 +29,15 @@ namespace RentCar.Data
                 return context.Users.FirstOrDefault(x => x.LoginId == loginId);
             }
         }
+
+        public void Insert()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void GetAll()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

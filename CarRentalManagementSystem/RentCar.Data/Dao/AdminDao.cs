@@ -12,6 +12,26 @@ namespace RentCar.Data
             return x => x.AdminId == key;
         }
 
+        public void Method()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Insert()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Remove()
+        {
+            throw new System.NotImplementedException();
+        }
+
         protected override Expression<Func<Admin, int>> KeySelector
         {
             get

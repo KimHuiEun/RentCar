@@ -42,9 +42,9 @@ namespace RentCar
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            //model2.Size = CbCarSize.Text.Trim();
-            //model2.Model = TbModel.Text.Trim();
-            //model.Price = TbPrice.Text.Trim();
+            model2.Size = CbCarSize.Text.Trim();
+            model2.Model = TbModel.Text.Trim();
+            //model.Price = TbPrice.
             //model.IsRent = CbIsRent.Text.Trim();
 
             using (RentCarEntities db = new RentCarEntities())

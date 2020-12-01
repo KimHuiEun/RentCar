@@ -5,21 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a876606600a54f908b70cc5975fc7c62" Name="Diagram1">
-        <EntityTypeShape EntityType="RentCarModel.Admin" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCarModel.Car" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCarModel.CarType" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCarModel.Event" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCarModel.Rent" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCarModel.Search" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCarModel.User" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <AssociationConnector Association="RentCarModel.FK_Admin_Car" ManuallyRouted="false" />
-        <AssociationConnector Association="RentCarModel.FK_Admin_User" ManuallyRouted="false" />
-        <AssociationConnector Association="RentCarModel.FK_Car_CarType" ManuallyRouted="false" />
-        <AssociationConnector Association="RentCarModel.FK_Rent_Car" ManuallyRouted="false" />
-        <AssociationConnector Association="RentCarModel.FK_Search_CarType" ManuallyRouted="false" />
-        <AssociationConnector Association="RentCarModel.FK_Event_User" ManuallyRouted="false" />
-        <AssociationConnector Association="RentCarModel.FK_Rent_User" ManuallyRouted="false" />
-        <AssociationConnector Association="RentCarModel.FK_Search_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RentCarModel.Admin" Width="1.5" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="RentCarModel.Car" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="RentCarModel.CarType" Width="1.5" PointX="1.5" PointY="10" />
+        <EntityTypeShape EntityType="RentCarModel.Event" Width="1.5" PointX="3" PointY="15.375" />
+        <EntityTypeShape EntityType="RentCarModel.Rent" Width="1.5" PointX="6" PointY="5.625" />
+        <EntityTypeShape EntityType="RentCarModel.Search" Width="1.5" PointX="3" PointY="6" />
+        <EntityTypeShape EntityType="RentCarModel.User" Width="1.5" PointX="0.75" PointY="5.25" />
+        <AssociationConnector Association="RentCarModel.FK_Admin_Car" />
+        <AssociationConnector Association="RentCarModel.FK_Admin_User" />
+        <AssociationConnector Association="RentCarModel.FK_Car_CarType" />
+        <AssociationConnector Association="RentCarModel.FK_Rent_Car" />
+        <AssociationConnector Association="RentCarModel.FK_Search_CarType" />
+        <AssociationConnector Association="RentCarModel.FK_Event_User" />
+        <AssociationConnector Association="RentCarModel.FK_Rent_User" />
+        <AssociationConnector Association="RentCarModel.FK_Search_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
