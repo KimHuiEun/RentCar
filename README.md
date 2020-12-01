@@ -109,41 +109,28 @@ Three
 
 - 테이블명 규칙 : 첫글자대문자, 간결성유지.
 
-
-
-### visual studio C#
-
-- C:git
-- 솔루션이름 : CarRentalManagementSystem
-- 프로젝트 이름 : RentCar, RentCar.Data, RentCar.UnitTest
-
-### RentCar의 폼.
-
-- Customer -> Login, Account, Selection, Payment, Customer_Mypage
-- Admin -> Login, Reserve, Customer, Manager_Mypage, Admin_Mypage, Manager, Admin, CarManagement, CustomerManagement
-
-# 구현
-## 구현 완성
 - 스키마 : 제3 정규화까지 완성함.
 
-## 구현 미완성
--Event와 Search의 구현
--관리자 폼에서 매출현황차트와 엑셀 파일 저장
--지점 여러개 만들기
-https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
+
+
+
+
+
 
 
 # 오류
 
 1.
 
-<img src="https://user-images.githubusercontent.com/74526718/100595320-1a781b80-333e-11eb-8b6b-ab49961d11c6.PNG" width="900" height="450">
-오류: App.config에 MSSM과 연결 관계에 대한 문구를 넣지 않음.
+<img src="https://user-images.githubusercontent.com/74526718/100595320-1a781b80-333e-11eb-8b6b-ab49961d11c6.PNG" width="500" height="450"> <img src="https://user-images.githubusercontent.com/74526718/100596029-0680e980-333f-11eb-88a4-afeba396e66d.PNG" width="500" height="450">
+오류: App.config에 MSSQL과 연결 관계에 대한 문구를 넣지 않음.
 
-해결방안 : <connectionStrings>
+해결방안 : Add.config에서 메타데이터에 관한 connectionString="metadata=res: 부분의 서버연결 확인하였음.
+<pre><code>
+<connectionStrings>
     <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
   </connectionStrings>
-  
+</code></pre>
   
   
 ---
@@ -198,17 +185,6 @@ if(tbLoginId.Text != "admin" && tbLoginId.Text != "manager")
 ---
 6.
 
-<img src="https://user-images.githubusercontent.com/74526718/100596029-0680e980-333f-11eb-88a4-afeba396e66d.PNG" width="900" height="450">
-오류 : 메타데이터 파일 오류
-
-
-해결방안 : Add.config에서 메타데이터에 관한 connectionString="metadata=res: 부분의 서버연결 확인하였음.
-<connectionStrings>
-    <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
-  </connectionStrings>
-
----
-7.
 오류 : 데이터베이스 저장하려고 DataGridView 사용하였으나 사용법을 모름.
 
 해결방안 : 
@@ -253,5 +229,9 @@ void PopulateDataGridView()
   
   
 
-
+## 구현 미완성
+-Event와 Search의 구현
+-관리자 폼에서 매출현황차트와 엑셀 파일 저장
+-지점 여러개 만들기
+https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 
