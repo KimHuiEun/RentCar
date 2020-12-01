@@ -74,7 +74,7 @@ Three
 
 
 
-# 다이어그램
+# UML
 
 ### UseCaseDiagram
 
