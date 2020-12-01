@@ -104,11 +104,22 @@ namespace RentCar
             ReturnDate.Visible = false;
             RentDate.Visible = false;
             btnSrchData.Visible = false;
+
+            DialogResult dialogResult = MessageBox.Show("프로그램을 종료하시겠습니까?", "종료확인메세지박스", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                Activate();
+            }
         }
 
         private void BtnMyinfo_Click(object sender, EventArgs e)
         {
-            Customer showform = new Customer();
+            AccountInfo showform = new AccountInfo();
             showform.ShowDialog();
         }
     }
