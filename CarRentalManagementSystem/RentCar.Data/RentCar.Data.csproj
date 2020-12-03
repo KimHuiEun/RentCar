@@ -54,15 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Car.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CarType.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
     <Compile Include="Dao\CarDao.cs" />
     <Compile Include="Dao\CarTypeDao.cs" />
     <Compile Include="Dao\AdminDao.cs" />
@@ -73,48 +64,39 @@
     <Compile Include="EFLibrary\DualKeyDao.cs" />
     <Compile Include="EFLibrary\SingleKeyDao.cs" />
     <Compile Include="EFLibrary\TripleKeyDao.cs" />
-    <Compile Include="Event.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dao\RentDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
-    <Compile Include="Rent.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RentCar.Context.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.Context.tt</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="RentCar.cs" />
-    <Compile Include="RentCar.Designer.cs">
+    <Compile Include="_RentCarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="RentCar1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Search.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>RentCar.tt</DependentUpon>
+      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="Dao.cd" />
     <None Include="packages.config" />
-    <EntityDeploy Include="RentCar.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RentCar.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="RentCar.edmx.diagram">
-      <DependentUpon>RentCar.edmx</DependentUpon>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_RentCarDataSet.xsc">
+      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_RentCarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_RentCarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_RentCarDataSet.xss">
+      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -122,18 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="RentCar.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RentCar.edmx</DependentUpon>
-      <LastGenOutput>RentCar.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="RentCar.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RentCar.edmx</DependentUpon>
-      <LastGenOutput>RentCar1.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

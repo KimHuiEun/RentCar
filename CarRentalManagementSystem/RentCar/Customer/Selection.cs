@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EFLibrary;
-using RentCar.Data;
+//using EFLibrary;
+//using RentCar.Data;
 
 namespace Customer
 {

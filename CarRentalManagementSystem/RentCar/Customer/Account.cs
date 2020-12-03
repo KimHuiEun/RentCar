@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using EFLibrary;
-using RentCar.Data;
+//using EFLibrary;
+//using RentCar.Data;
 
 namespace Customer
 {
@@ -44,15 +44,15 @@ namespace Customer
                 else
                 {
                     //DB에 넣는 소스
-                    User user = new User();
-                    user.LoginId = tbId.Text;
-                    user.LoginPw = tbPassword.Text;
-                    user.Name = tbName.Text;
-                    user.PhoneNumber = tbPhoneNumber.Text;
-                    user.License = tbLicense.Text;
-                    user.IssueDate = IssuedDate.Text;
+                    //User user = new User();
+                   //user.LoginId = tbId.Text;
+                    //user.LoginPw = tbPassword.Text;
+                    //user.Name = tbName.Text;
+                    //user.PhoneNumber = tbPhoneNumber.Text;
+                    //user.License = tbLicense.Text;
+                    //user.IssueDate = IssuedDate.Text;
                     //user.Email = Email.Text;
-                    Dao.User.Insert(user);
+                    //Dao.User.Insert(user);
 
 
                     MessageBox.Show("회원가입이 완료되었습니다.");

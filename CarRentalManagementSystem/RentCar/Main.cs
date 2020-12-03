@@ -1,5 +1,5 @@
 ﻿using Customer;
-using RentCar.Data;
+//using RentCar.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ namespace RentCar
 {
     public partial class Main : Form
     {
-        public string ReturnValue { get; set; }
+        //public string ReturnValue { get; set; }
 
         public Main()
         {
@@ -30,7 +30,7 @@ namespace RentCar
             showform.ShowDialog(); 
             
             this.Activate();
-            //if (loginer is customer)
+            //if ()
             {
                 label1.Visible = true;
                 label2.Visible = true;
@@ -74,14 +74,11 @@ namespace RentCar
 
         private void btnSrchData_Click(object sender, EventArgs e)
         {
-            Panel pl = new Panel();
-                
-            pl.Visible = true;
-                
-            if (pl.Visible == true)
+            panel1.Visible = true;
+
+            if (panel1.Visible == true)
             {
-                Button btn = new Button();
-                btn.Visible = true;
+                panel1.Dock = DockStyle.Fill;
                 label1.Visible = false;
                 label2.Visible = false;
                 label3.Visible = false;
@@ -92,6 +89,13 @@ namespace RentCar
                 RentDate.Visible = false;
                 btnSrchData.Visible = false;
                 pictureBox1.Visible = false;
+
+                CarRentform showform = new CarRentform();
+                showform.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                showform.TopLevel = false;
+                panel1.Controls.Add(showform);
+                showform.Show();
+                showform.Dock = DockStyle.Fill;
             }
             //CarRentform showform = new CarRentform();
             //showform.ShowDialog();
@@ -143,6 +147,25 @@ namespace RentCar
         private void toolStripContainer1_LeftToolStripPanel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            CbLocation.Visible = true;
+            Cbsize.Visible = true;
+            ReturnDate.Visible = true;
+            RentDate.Visible = true;
+            btnSrchData.Visible = true;
+            BtnLogin.Visible = false;
+            BtnCreate.Visible = false;
+            BtnMyinfo.Visible = true;
+            BtnLogout.Visible = true;
+            pictureBox1.Visible = false;
+            panel1.Visible = false;
         }
     }
 }

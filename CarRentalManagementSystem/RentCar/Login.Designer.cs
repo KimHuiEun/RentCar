@@ -73,7 +73,7 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tbLogin.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLogin.Location = new System.Drawing.Point(222, 122);
+            this.tbLogin.Location = new System.Drawing.Point(225, 123);
             this.tbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(67, 31);
@@ -90,7 +90,6 @@ namespace RentCar
             this.tbLoginId.Name = "tbLoginId";
             this.tbLoginId.Size = new System.Drawing.Size(155, 27);
             this.tbLoginId.TabIndex = 7;
-            this.tbLoginId.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tbLoginId_MaskInputRejected);
             this.tbLoginId.MouseHover += new System.EventHandler(this.tbLoginId_MouseHover);
             // 
             // tbLoginPw

@@ -147,11 +147,6 @@
     <Compile Include="Manager\CustomerManagement.Designer.cs">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="_RentCarDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Manager\CarManagement.resx">
       <DependentUpon>CarManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,30 +214,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_RentCarDataSet.xsc">
-      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_RentCarDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_RentCarDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_RentCarDataSet.xss">
-      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RentCar.Data\RentCar.Data.csproj">
-      <Project>{eeb2ae90-0b08-41f1-8595-4329322e27cf}</Project>
-      <Name>RentCar.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RentCar.UnitTest1\RentCar.UnitTest1.csproj">
-      <Project>{51adf28f-02fb-420f-bfda-307ddf3c8a7c}</Project>
-      <Name>RentCar.UnitTest1</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
