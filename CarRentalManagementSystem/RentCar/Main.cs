@@ -1,13 +1,5 @@
-﻿using Customer;
-//using RentCar.Data;
+using Customer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RentCar
@@ -28,7 +20,6 @@ namespace RentCar
         {
             Login showform = new Login();
             showform.ShowDialog(); 
-            
             this.Activate();
             //if ()
             {
@@ -74,7 +65,8 @@ namespace RentCar
 
         private void btnSrchData_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
+            Panel panel1 = new Panel();
+            panel1.Show();
 
             if (panel1.Visible == true)
             {
@@ -123,7 +115,6 @@ namespace RentCar
             ReturnDate.Visible = false;
             RentDate.Visible = false;
             btnSrchData.Visible = false;
-            btnCtlMenu.Visible = false;
 
 
             DialogResult dialogResult = MessageBox.Show("프로그램을 종료하시겠습니까?", "종료확인메세지박스", MessageBoxButtons.YesNo);
@@ -165,7 +156,6 @@ namespace RentCar
             BtnMyinfo.Visible = true;
             BtnLogout.Visible = true;
             pictureBox1.Visible = false;
-            panel1.Visible = false;
         }
     }
 }

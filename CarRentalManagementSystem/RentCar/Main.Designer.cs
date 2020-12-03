@@ -47,7 +47,6 @@ namespace RentCar
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCtlMenu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -251,7 +250,7 @@ namespace RentCar
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnCreate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -259,23 +258,11 @@ namespace RentCar
             this.panel1.TabIndex = 26;
             this.panel1.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1074, 626);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "돌아가기";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 673);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSrchData);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ReturnDate);
@@ -287,11 +274,11 @@ namespace RentCar
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CbLocation);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.btnCtlMenu);
             this.Controls.Add(this.BtnMyinfo);
-            this.Controls.Add(this.BtnCreate);
             this.Controls.Add(this.BtnLogout);
-            this.Controls.Add(this.BtnLogin);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main";
             this.Text = "RentCar";
@@ -322,6 +309,5 @@ namespace RentCar
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCtlMenu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
     }
 }
