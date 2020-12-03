@@ -1,5 +1,4 @@
-﻿using Mypage;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,14 +25,12 @@ namespace RentCar
         }
 
         private string _Id;
-        internal static object Button;
+        private readonly object btnLogin;
 
         private void Login_Load(object sender, EventArgs e)
         {
             tbLoginId.Text = _Id;
         }
-
-
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -48,10 +45,8 @@ namespace RentCar
                         if (user.LoginPw == tbLoginPw.Text)
                         {   
                             MessageBox.Show("관리자님, 안녕하세요!");
-                            //Hide();   //창이 전부 숨겨짐.
-                            //Admin_Mypage show = new Admin_Mypage();
-                            //show.ShowDialog();
-                            //Close();
+
+                            //btnLogin.(sender, e);
                         }
                         else
                             MessageBox.Show("잘못된 비밀번호입니다.");
@@ -62,9 +57,6 @@ namespace RentCar
                         if (user.LoginPw == tbLoginPw.Text)
                         {
                             MessageBox.Show("매니저님, 안녕하세요!");
-                            //Hide();   //창이 전부 숨겨짐.
-                            //Manager_Mypage show = new Manager_Mypage();
-                            //show.ShowDialog();
                         }
                         else
                             MessageBox.Show("잘못된 비밀번호입니다.");
@@ -75,10 +67,7 @@ namespace RentCar
                         if (user.LoginPw == tbLoginPw.Text)
                         {
                             MessageBox.Show(tbLoginId.Text + "님, 안녕하세요!");
-                            //Hide();   //창이 전부 숨겨짐.
-                            //Customer showform = new Customer();
                             this.Close();
-                            //showform.ShowDialog();
                         }
                         else
                             MessageBox.Show("잘못된 비밀번호입니다.");
@@ -91,10 +80,6 @@ namespace RentCar
              else
                 MessageBox.Show("아이디 혹은 비밀번호를 입력하세요.");   
         }
-        
-
-            
-    
 
         private void tbLoginId_MouseHover(object sender, EventArgs e)
         {

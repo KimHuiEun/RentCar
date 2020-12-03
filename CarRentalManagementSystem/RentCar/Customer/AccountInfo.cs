@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using EFLibrary;
 using RentCar;
 
-namespace Mypage
+namespace Customer
 {
     public partial class AccountInfo : Form
     {
@@ -32,9 +32,9 @@ namespace Mypage
 
         private void AccountInfo_Load(object sender, EventArgs e)
         {
+            Login log = new Login();
             //다른 폼의 버튼 이벤트 가져와서 변수에 할당하기.
-            string click = Login.Button.ToString(btnLogin);
-            Console.WriteLine(click);
+            //string click = Login.Button.ToString(btnLogin);
             //User user = Dao.User.GetByName(loginId);
             //string strUserID = user.UserId.ToString();
 

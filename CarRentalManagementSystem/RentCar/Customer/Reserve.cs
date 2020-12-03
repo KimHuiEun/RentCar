@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mypage
+namespace Customer
 {
     public partial class ReservedRestn : Form
     {

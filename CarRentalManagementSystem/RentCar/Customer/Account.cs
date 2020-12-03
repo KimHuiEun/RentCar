@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using EFLibrary;
 using RentCar.Data;
 
-namespace RentCar
+namespace Customer
 {
     public partial class Account : Form
     {

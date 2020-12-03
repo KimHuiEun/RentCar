@@ -11,7 +11,7 @@ using RentCar;
 using RentCar.Data;
 
 
-namespace Mypage
+namespace Customer
 {
     public partial class Customer : Form
     {

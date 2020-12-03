@@ -1,5 +1,5 @@
 ﻿
-namespace Mypage
+namespace Customer
 {
     partial class AccountInfo
     {

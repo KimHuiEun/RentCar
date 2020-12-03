@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using EFLibrary;
 using RentCar.Data;
 
-namespace RentCar
+namespace Customer
 {
     public partial class CarRentform : Form
     {
