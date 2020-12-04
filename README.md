@@ -20,31 +20,64 @@ Three
 
 ### 1. 회원가입 및 로그인
 
+<로그인>
+
+ 사용자로 로그인을 하면 로그인, 회원가입 버튼이 사라지고, 로그아웃, 내 정보, 예약조회 버튼이 나옴.  
+	내 정보 -> 단위테스트를 진행하여 로그인이 폼에 저장되어 있는지에 대한 체크를 한다. 폼에 들어가면 원래 저장되어있던 데이터가 떠오르게 구현.
+  		 수정과 탈퇴가 진행되도록 함. 완료라는 버튼을 누르면 폼이 Close됨
+	예약조회 -> 예약했던 DB가 회원id에 부여있으므로 데이터베이스가 뜨게 함.
+ 
+ 
+ <회원가입>
+ 
+ 회원가입폼에서 사용자가 회원가입을 하였을 때 User테이블에 DB가 입력되어야한다.
+회원가입폼에는 이름, 전화번호, 이메일, 아이디, 비밀번호, 비밀번호확인, 면허번호, 발급일자가 존재해야하고.
+이메일은 null값 허용. 전화번호와 아이디, 면허번호는 이미 존재하는지에 대한 체크를 해야한다.
+전화번호, 면허번호는 maskedText, 발급일자는 DateTimePicker 도구를 사용.
+완료버튼을 누르면 창이 꺼지고 User테이블에 DB추가.
+-사용자는 직접
+-관리자는 버튼 클릭시 자동 생성 되도록 만들기 -> 아이디는 manager + 번호 , Admin + 번호 , 비밀번호는 password로 자동부여
+
+검색가능하게 하는 패널이 나오게 함. 차타입과 대여일자와 반납일자에 대해서 검색.(지점은 없애기)
+ 
 ### 2. 차량 검색
 
- 지점, 차 크기, 대여일자, 반납일자를 선택한 후 검색버튼을 누르면 해당되는 차량이 리스트화 된다.
+사용자가 Main폼에서 차크기, 대여일자, 반납일자를 검색하면 나타나는 폼.
+폼에 차크기, 대여일자, 반납일자가 자동으로 입력이되지만, 다시 선택이라는 버튼을 넣어 검색을 다시 할 수 있도록 만듦.
+검색이 되면 해당되는 리스트화.
+필요한 차량에 대해 선택 후 예약이 되게 하는 구현.
 
 ### 3. 예약
+  
+사용자가 예약을 진행하는 폼
+예약자 정보랑 차량을 잘 선택했는지 다시 확인할수있음.
+확인버튼을 눌렀을 경우 예약이 잘 되었다는 메시지창이 뜨게 하고, 예약확인을 다시 확인할 수 있게 패널을 뜨게 하고 예약취소라는 버튼을 눌러 다시
+진행할 수 있도록 함.
 
-### 4. 마이페이지
-
- 내 정보 수정, 예약확인, 로그아웃, 회원탈퇴
  
  
  ## 직원용
  
- ### 1. 로그인
- 
- ### 2. 마이페이지
- 
+  매니저와 관리자용 아이디를 부여받은 후 접속
+  
+  <매니저>
+  
+  매니저로 로그인을 하면 패널이 떠올라와 세 개의 버튼으로 진행.
+ 	차량 관리 -> Car테이블 불러오는 패널과 CarType테이블 불러오는 패널을 따로 진행하여 등록, 수정, 삭제, 완료 버튼으로 진행하게 함.
+ 	회원 관리 -> User테이블을 불러와 등록,수정,삭제,완료 버튼으로 진행하게 함.
+ 	차트 기입 -> 데이터베이스로 자동 속성 뜨게함.
+  
+  
+  <관리자>
+  
+  매니저 패널에 한 개의 버튼이 더 추가된 속성.
+  직원 관리 -> Admin 테이블을 불러와 등록, 수정, 삭제, 완료 버튼으로 진행하게 함.
+  
  
 <img src="https://user-images.githubusercontent.com/74526718/100595038-c10fec80-333d-11eb-8fc1-975344a952bb.png" width="400" height="250">
  
 <img src="https://user-images.githubusercontent.com/74526718/100595040-c1a88300-333d-11eb-8549-d9a6313f8e11.png" width="400" height="250">  <img src="https://user-images.githubusercontent.com/74526718/100595032-c0775600-333d-11eb-88c3-9f05dca80f42.png" width="400" height="250">
  
- 
- 
-  차량 예약 조회, 차량 등록 및 삭제, 회원관리, 직원관리
 
 
 # 사용한 기술
@@ -109,41 +142,29 @@ Three
 
 - 테이블명 규칙 : 첫글자대문자, 간결성유지.
 
-
-
-### visual studio C#
-
-- C:git
-- 솔루션이름 : CarRentalManagementSystem
-- 프로젝트 이름 : RentCar, RentCar.Data, RentCar.UnitTest
-
-### RentCar의 폼.
-
-- Customer -> Login, Account, Selection, Payment, Customer_Mypage
-- Admin -> Login, Reserve, Customer, Manager_Mypage, Admin_Mypage, Manager, Admin, CarManagement, CustomerManagement
-
-# 구현
-## 구현 완성
 - 스키마 : 제3 정규화까지 완성함.
 
-## 구현 미완성
--Event와 Search의 구현
--관리자 폼에서 매출현황차트와 엑셀 파일 저장
--지점 여러개 만들기
-https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
+
+
+
+
+
 
 
 # 오류
 
 1.
 
-<img src="https://user-images.githubusercontent.com/74526718/100595320-1a781b80-333e-11eb-8b6b-ab49961d11c6.PNG" width="900" height="450">
-오류: App.config에 MSSM과 연결 관계에 대한 문구를 넣지 않음.
+<img src="https://user-images.githubusercontent.com/74526718/100596029-0680e980-333f-11eb-88a4-afeba396e66d.PNG" width="900" height="450">
 
-해결방안 : <connectionStrings>
+
+해결방안 : Add.config에서 메타데이터에 관한 connectionString="metadata=res: 부분의 서버연결 확인하였음.
+
+<pre><code>
+<connectionStrings>
     <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
   </connectionStrings>
-  
+</code></pre>
   
   
 ---
@@ -198,17 +219,6 @@ if(tbLoginId.Text != "admin" && tbLoginId.Text != "manager")
 ---
 6.
 
-<img src="https://user-images.githubusercontent.com/74526718/100596029-0680e980-333f-11eb-88a4-afeba396e66d.PNG" width="900" height="450">
-오류 : 메타데이터 파일 오류
-
-
-해결방안 : Add.config에서 메타데이터에 관한 connectionString="metadata=res: 부분의 서버연결 확인하였음.
-<connectionStrings>
-    <add name="RentCarEntities" connectionString="metadata=res://*/RentCar.csdl|res://*/RentCar.ssdl|res://*/RentCar.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kimpro;initial catalog=_RentCar;user id=sa;password=3512;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
-  </connectionStrings>
-
----
-7.
 오류 : 데이터베이스 저장하려고 DataGridView 사용하였으나 사용법을 모름.
 
 해결방안 : 
@@ -250,8 +260,23 @@ void PopulateDataGridView()
 </code></pre>
   
   
+---
+7.
+<img src="https://user-images.githubusercontent.com/74527086/100710308-dd219580-33f2-11eb-9e9b-f81c5ddc6b19.png" width="900" height="450">
+
+
+오류 : 하나의 프로세스가 진행중에 또 다른 프로세스가 진행되어 오류가 발생하였다.
+
+
+해결방안 : BackGroundWorker를 사용했더니 UI가 정상적으로 작동하였다.
+
+  
   
   
 
-
+## 구현 미완성
+-Event와 Search의 구현
+-관리자 폼에서 매출현황차트와 엑셀 파일 저장
+-지점 여러개 만들기
+https://github.com/KimHuiEun/RentCar/issues/10#issue-752119211
 
