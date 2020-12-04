@@ -46,12 +46,12 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 32);
+            this.label1.Location = new System.Drawing.Point(58, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 20);
+            this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ID";
+            this.label1.Text = "아이디";
             // 
             // label2
             // 
@@ -60,11 +60,11 @@ namespace RentCar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 74);
+            this.label2.Location = new System.Drawing.Point(58, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "패스워드";
+            this.label2.Text = "비밀번호";
             // 
             // tbLogin
             // 
@@ -77,10 +77,11 @@ namespace RentCar
             this.tbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(67, 31);
-            this.tbLogin.TabIndex = 4;
+            this.tbLogin.TabIndex = 2;
             this.tbLogin.Text = "확인";
             this.tbLogin.UseVisualStyleBackColor = true;
-            this.tbLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            //this.tbLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            //this.tbLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbLogin_KeyDown);
             // 
             // tbLoginId
             // 
@@ -89,9 +90,9 @@ namespace RentCar
             this.tbLoginId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLoginId.Name = "tbLoginId";
             this.tbLoginId.Size = new System.Drawing.Size(155, 27);
-            this.tbLoginId.TabIndex = 7;
-            this.tbLoginId.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tbLoginId_MaskInputRejected);
-            this.tbLoginId.MouseHover += new System.EventHandler(this.tbLoginId_MouseHover);
+            this.tbLoginId.TabIndex = 0;
+            //this.tbLoginId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbLoginId_KeyDown);
+            //this.tbLoginId.MouseHover += new System.EventHandler(this.tbLoginId_MouseHover);
             // 
             // tbLoginPw
             // 
@@ -101,8 +102,9 @@ namespace RentCar
             this.tbLoginPw.Name = "tbLoginPw";
             this.tbLoginPw.PasswordChar = '*';
             this.tbLoginPw.Size = new System.Drawing.Size(155, 27);
-            this.tbLoginPw.TabIndex = 8;
-            this.tbLoginPw.MouseHover += new System.EventHandler(this.tbLoginPw_MouseHover);
+            this.tbLoginPw.TabIndex = 1;
+            //this.tbLoginPw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbLoginPw_KeyDown);
+            //this.tbLoginPw.MouseHover += new System.EventHandler(this.tbLoginPw_MouseHover);
             // 
             // Login
             // 

@@ -46,7 +46,7 @@ namespace Mypage
             this.AccountInfo.TabIndex = 2;
             this.AccountInfo.Text = "내 정보 수정";
             this.AccountInfo.UseVisualStyleBackColor = true;
-            this.AccountInfo.Click += new System.EventHandler(this.AccountInfo_Click);
+//            this.AccountInfo.Click += new System.EventHandler(this.AccountInfo_Click);
             // 
             // lastReservForm
             // 
@@ -58,7 +58,7 @@ namespace Mypage
             this.lastReservForm.TabIndex = 3;
             this.lastReservForm.Text = "예약 확인";
             this.lastReservForm.UseVisualStyleBackColor = true;
-            this.lastReservForm.Click += new System.EventHandler(this.lastReservForm_Click);
+//            this.lastReservForm.Click += new System.EventHandler(this.lastReservForm_Click);
             // 
             // label1
             // 
@@ -92,6 +92,7 @@ namespace Mypage
             this.BtnWithdraw.TabIndex = 5;
             this.BtnWithdraw.Text = "회원 탈퇴";
             this.BtnWithdraw.UseVisualStyleBackColor = true;
+//            this.BtnWithdraw.Click += new System.EventHandler(this.BtnWithdraw_Click);
             // 
             // Customer
             // 

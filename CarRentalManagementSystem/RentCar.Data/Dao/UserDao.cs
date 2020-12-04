@@ -1,43 +1,15 @@
 ﻿using EFLibrary;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace RentCar.Data
 {
-    public class UserDao : SingleKeyDao<User, int>
+    class UserDao
     {
-        protected override Expression<Func<User, bool>> IsKey(int key)
-        {
-            return x => x.UserId == key;
-        }
-
-        protected override Expression<Func<User, int>> KeySelector
-        {
-            get
-            {
-                return x => x.UserId;
-            }
-        }
-
-         
-
-        public User GetByName(string loginId)
-        {
-            using (var context = new RentCarEntities())
-            {
-                return context.Users.FirstOrDefault(x => x.LoginId == loginId);
-            }
-        }
-
-        public void Insert()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void GetAll()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

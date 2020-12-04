@@ -18,11 +18,11 @@ namespace Mypage
             InitializeComponent();
         }
 
-        private void btnshowSales_Click(object sender, EventArgs e)
+   /*     private void btnshowSales_Click(object sender, EventArgs e)
         {
             Sales show = new Sales();
             show.ShowDialog();
-        }
+        }*/
     }
 
 }

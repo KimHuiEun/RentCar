@@ -1,17 +1,19 @@
-﻿using EFLibrary;
-using System;
-using System.Linq.Expressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace RentCar.Data
+namespace RentCar.Data.Dao
 {
-    public class AdminDao : SingleKeyDao<Admin, int>
+    class AdminDao
     {
         protected override Expression<Func<Admin, bool>> IsKey(int key)
         {
-            return x => x.AdminId == key;
+            return x => x.AlbumId == key;
         }
 
+<<<<<<< Updated upstream
         public void Method()
         {
             throw new System.NotImplementedException();
@@ -39,5 +41,9 @@ namespace RentCar.Data
                 return x => x.AdminId;
             }
         }
+=======
+        protected override Expression<Func<Album, int>> KeySelector =>
+            x => x.AlbumId;
+>>>>>>> Stashed changes
     }
 }

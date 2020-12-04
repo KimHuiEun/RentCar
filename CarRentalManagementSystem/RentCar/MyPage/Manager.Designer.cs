@@ -56,7 +56,7 @@ namespace Mypage
             this.BtnCarCreate.TabIndex = 3;
             this.BtnCarCreate.Text = "차량 예약 등록";
             this.BtnCarCreate.UseVisualStyleBackColor = true;
-            this.BtnCarCreate.Click += new System.EventHandler(this.BtnCarCreate_Click);
+            //this.BtnCarCreate.Click += new System.EventHandler(this.BtnCarCreate_Click);
             // 
             // label1
             // 
@@ -78,7 +78,7 @@ namespace Mypage
             this.BtnUserManagerment.TabIndex = 7;
             this.BtnUserManagerment.Text = "회원 관리";
             this.BtnUserManagerment.UseVisualStyleBackColor = true;
-            this.BtnUserManagerment.Click += new System.EventHandler(this.BtnUserManagerment_Click);
+            //this.BtnUserManagerment.Click += new System.EventHandler(this.BtnUserManagerment_Click);
             // 
             // Manager_Mypage
             // 

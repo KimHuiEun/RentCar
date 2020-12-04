@@ -8,8 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EFLibrary;
-using RentCar.Data;
+
 
 namespace RentCar
 {
@@ -33,14 +32,14 @@ namespace RentCar
         }
 
 
-
+/*
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (tbLoginId.Text != string.Empty && tbLoginPw.Text != string.Empty)
             {
                 User user = Dao.User.GetByName(tbLoginId.Text);
 
-                if (user != null)
+                if (user.LoginId == tbLoginId.Text && user.LoginPw == tbLoginPw.Text)
                 {
                     if (tbLoginId.Text == "admin")
                     {
@@ -83,17 +82,12 @@ namespace RentCar
                             MessageBox.Show("잘못된 비밀번호입니다.");
                     }
                    
+                    else
+                        MessageBox.Show("아이디 혹은 비밀번호를 입력하세요.");
                 }
-                else
-                    MessageBox.Show("잘못된 아이디입니다.");  
             }
-             else
-                MessageBox.Show("아이디 혹은 비밀번호를 입력하세요.");   
         }
         
-
-            
-    
 
         private void tbLoginId_MouseHover(object sender, EventArgs e)
         {
@@ -110,11 +104,26 @@ namespace RentCar
             this.toolTip2.SetToolTip(this.tbLoginPw, "영문자와 숫자로 되어있는 Pw 입력");
         }
 
-        private void tbLoginId_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void tbLoginId_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+                tbLoginPw.Focus();
         }
 
-        
+        private void tbLoginPw_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                tbLogin.Focus();
+        }
+
+        private void tbLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
+*/
     }
 }

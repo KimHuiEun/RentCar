@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RentCar;
-using RentCar.Data;
-
 
 namespace Mypage
 {
@@ -19,7 +16,7 @@ namespace Mypage
         {
             InitializeComponent();
         }
-
+/*
         private void AccountInfo_Click(object sender, EventArgs e)
         {
             //회원 가입 창이 뜰 때 모달로 떠서 메인폼이 활성화 되지 않도록 함.
@@ -54,6 +51,20 @@ namespace Mypage
             //Login form = new Login(tbloginId.Text);
             //form.ShowDialog();
         }
+
+        private void BtnWithdraw_Click(object sender, EventArgs e)
+        {
+            if (WinformUtility.AskSureToDelete() == false)
+                    return;
+
+                Album album = bdsAlbum.Current as Album;
+
+                if (album == null)
+                    return;
+
+                Dao.Album.DeleteByPK(album.AlbumId);
+            
+        }*/
 
         /*private void SearchForCar_Click(object sender, EventArgs e)
         {

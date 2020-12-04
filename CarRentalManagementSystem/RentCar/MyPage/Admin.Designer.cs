@@ -43,7 +43,7 @@ namespace Mypage
             this.btnshowSales.TabIndex = 0;
             this.btnshowSales.Text = "매출현황";
             this.btnshowSales.UseVisualStyleBackColor = true;
-            this.btnshowSales.Click += new System.EventHandler(this.btnshowSales_Click);
+            //this.btnshowSales.Click += new System.EventHandler(this.btnshowSales_Click);
             // 
             // btnManage
             // 
@@ -59,7 +59,7 @@ namespace Mypage
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 52);
+            this.label1.Location = new System.Drawing.Point(85, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 38);
             this.label1.TabIndex = 3;

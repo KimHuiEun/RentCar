@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EEB2AE90-0B08-41F1-8595-4329322E27CF}</ProjectGuid>
+    <ProjectGuid>{6D711800-24BE-4E9E-9C4E-DA764A292065}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RentCar.Data</RootNamespace>
@@ -13,8 +12,6 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -62,22 +59,20 @@
     <Compile Include="CarType.cs">
       <DependentUpon>RentCar.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Dao\AdminDao.cs" />
     <Compile Include="Dao\CarDao.cs" />
     <Compile Include="Dao\CarTypeDao.cs" />
-    <Compile Include="Dao\AdminDao.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Dao\Dao.cs" />
+    <Compile Include="Dao\RentDao.cs" />
+    <Compile Include="Dao\UserDao.cs" />
     <Compile Include="EFLibrary\BaseDao.cs" />
     <Compile Include="EFLibrary\DbContextCreator.cs" />
-    <Compile Include="EFLibrary\DualKeyDao.cs" />
     <Compile Include="EFLibrary\SingleKeyDao.cs" />
-    <Compile Include="EFLibrary\TripleKeyDao.cs" />
     <Compile Include="Event.cs">
       <DependentUpon>RentCar.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Dao\RentDao.cs" />
-    <Compile Include="Dao\UserDao.cs" />
     <Compile Include="Rent.cs">
       <DependentUpon>RentCar.tt</DependentUpon>
     </Compile>
@@ -86,16 +81,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RentCar.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="RentCar.cs" />
+    <Compile Include="RentCar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
     <Compile Include="RentCar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RentCar.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="RentCar1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RentCar.tt</DependentUpon>
     </Compile>
     <Compile Include="Search.cs">
       <DependentUpon>RentCar.tt</DependentUpon>
@@ -105,42 +99,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="Dao.cd" />
-    <None Include="packages.config" />
     <EntityDeploy Include="RentCar.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RentCar.Designer.cs</LastGenOutput>
     </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <None Include="RentCar.edmx.diagram">
       <DependentUpon>RentCar.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="RentCar.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RentCar.edmx</DependentUpon>
       <LastGenOutput>RentCar.Context.cs</LastGenOutput>
+      <DependentUpon>RentCar.edmx</DependentUpon>
     </Content>
     <Content Include="RentCar.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RentCar.edmx</DependentUpon>
-      <LastGenOutput>RentCar1.cs</LastGenOutput>
+      <LastGenOutput>RentCar.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

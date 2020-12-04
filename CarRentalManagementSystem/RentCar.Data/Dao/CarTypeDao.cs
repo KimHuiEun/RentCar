@@ -1,11 +1,14 @@
-﻿using EFLibrary;
-using System;
-using System.Linq.Expressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace RentCar.Data
+namespace RentCar.Data.Dao
 {
-    public class CarTypeDao : SingleKeyDao<CarType, int>
+    class CarTypeDao
     {
+<<<<<<< Updated upstream
         protected override Expression<Func<CarType, bool>> IsKey(int key)
         {
             return x => x.CarTypeId == key;
@@ -34,5 +37,7 @@ namespace RentCar.Data
             }
         }
 
+=======
+>>>>>>> Stashed changes
     }
 }

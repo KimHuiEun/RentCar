@@ -1,32 +1,12 @@
-﻿using EFLibrary;
-using System;
-using System.Linq.Expressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace RentCar.Data
+namespace RentCar.Data.Dao
 {
-    public class RentDao : SingleKeyDao<Rent, int>
+    class RentDao
     {
-        protected override Expression<Func<Rent, bool>> IsKey(int key1)
-        {
-            return x => x.RentId == key1;
-        }
-
-        public void GetAll()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Update()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        protected override Expression<Func<Rent, int>> KeySelector
-        {
-            get
-            {
-                return x => x.RentId;
-            }
-        }
     }
 }

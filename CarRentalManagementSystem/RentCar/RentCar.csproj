@@ -67,11 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarManagement.cs">
+    <Compile Include="Exception\FakeVirtualMemberException.cs" />
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CarManagement.Designer.cs">
-      <DependentUpon>CarManagement.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -79,29 +80,17 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reserve.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reserve.Designer.cs">
       <DependentUpon>Reserve.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales.cs">
+    <Compile Include="Seletion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales.Designer.cs">
-      <DependentUpon>Sales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Selection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Selection.Designer.cs">
-      <DependentUpon>Selection.cs</DependentUpon>
+    <Compile Include="Seletion.Designer.cs">
+      <DependentUpon>Seletion.cs</DependentUpon>
     </Compile>
     <Compile Include="MyPage\AccountInfo.cs">
       <SubType>Form</SubType>
@@ -135,34 +124,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CustomerManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerManagement.Designer.cs">
-      <DependentUpon>CustomerManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="_RentCarDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="CarManagement.resx">
-      <DependentUpon>CarManagement.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reserve.resx">
       <DependentUpon>Reserve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales.resx">
-      <DependentUpon>Sales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Selection.resx">
-      <DependentUpon>Selection.cs</DependentUpon>
+    <EmbeddedResource Include="Seletion.resx">
+      <DependentUpon>Seletion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyPage\AccountInfo.resx">
       <DependentUpon>AccountInfo.cs</DependentUpon>
@@ -188,9 +160,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomerManagement.resx">
-      <DependentUpon>CustomerManagement.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Account.datasource" />
     <None Include="Properties\DataSources\CarManagement.datasource" />
@@ -213,29 +182,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_RentCarDataSet.xsc">
-      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_RentCarDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_RentCarDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_RentCarDataSet.xss">
-      <DependentUpon>_RentCarDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\RentCar.Data\RentCar.Data.csproj">
-      <Project>{eeb2ae90-0b08-41f1-8595-4329322e27cf}</Project>
+      <Project>{6d711800-24be-4e9e-9c4e-da764a292065}</Project>
       <Name>RentCar.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RentCar.UnitTest1\RentCar.UnitTest1.csproj">
-      <Project>{51adf28f-02fb-420f-bfda-307ddf3c8a7c}</Project>
-      <Name>RentCar.UnitTest1</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

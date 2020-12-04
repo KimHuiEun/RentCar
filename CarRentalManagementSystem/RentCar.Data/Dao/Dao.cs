@@ -1,22 +1,44 @@
-﻿namespace RentCar.Data
+﻿using RentCar.Data.Dao;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RentCar.Data
 {
     public class Dao
     {
-        public static CarDao Car = new CarDao();
+        public static UserDao User { get; } = new UserDao();
+        public static ArtistDao Artist { get; } = new ArtistDao();
+        public static PlaylistTrackDao PlaylistTrack { get; } = new PlaylistTrackDao();
+        public static TrackDao Track { get; } = new TrackDao();
+        public static PlaylistDao Playlist { get; } = new PlaylistDao();
 
-        public static CarTypeDao CarType = new CarTypeDao();
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
 
-        public static RentDao Rent = new RentDao();
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
 
-        public static UserDao User = new UserDao();
-
-        public static AdminDao Admin = new AdminDao();
-
+<<<<<<< Updated upstream
         public void Method()
         {
             throw new System.NotImplementedException();
         }
 
         //public static AdminDao Admin = new AdminDao();
+=======
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+>>>>>>> Stashed changes
     }
+    }
+}
 }

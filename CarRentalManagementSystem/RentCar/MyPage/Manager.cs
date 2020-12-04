@@ -17,22 +17,23 @@ namespace Mypage
         {
             InitializeComponent();
         }
-
-        private void BtnUserManagerment_Click(object sender, EventArgs e)
+/*
+        public void BtnUserManagerment_Click(object sender, EventArgs e)
         {
             CustomerManagement showform = new CustomerManagement();
             showform.ShowDialog();
-        }
+        }*/
 
         private void Manager_Mypage_Load(object sender, EventArgs e)
         {
 
         }
-
+/*
         private void BtnCarCreate_Click(object sender, EventArgs e)
         {
-            CarManagement show = new CarManagement();
+            //CarManagement show = new CarManagement();
+            CarListForm show = new CarListForm();
             show.ShowDialog();
-        }
+        }*/
     }
 }
