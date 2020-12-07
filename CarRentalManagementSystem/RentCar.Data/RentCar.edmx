@@ -81,6 +81,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LoginId" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LoginPw" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoginPwConfirm" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="License" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IssueDate" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SupportRepId" Type="int" />
@@ -390,6 +391,7 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LoginId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LoginPw" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LoginPwConfirm" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="License" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IssueDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SupportRepId" Type="Int32" />
@@ -515,7 +517,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -600,6 +602,7 @@
                 <ScalarProperty Name="SupportRepId" ColumnName="SupportRepId" />
                 <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
                 <ScalarProperty Name="License" ColumnName="License" />
+                <ScalarProperty Name="LoginPwConfirm" ColumnName="LoginPwConfirm" />
                 <ScalarProperty Name="LoginPw" ColumnName="LoginPw" />
                 <ScalarProperty Name="LoginId" ColumnName="LoginId" />
                 <ScalarProperty Name="Email" ColumnName="Email" />

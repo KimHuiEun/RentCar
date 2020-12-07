@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="RentCarModel.PaymentLine" Width="1.5" PointX="10.5" PointY="4.5" />
         <EntityTypeShape EntityType="RentCarModel.Rent" Width="1.5" PointX="8.25" PointY="4.125" />
         <EntityTypeShape EntityType="RentCarModel.Search" Width="1.5" PointX="5.25" PointY="4.5" />
-        <EntityTypeShape EntityType="RentCarModel.User" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="RentCarModel.User" Width="1.5" PointX="3" PointY="3.875" />
         <AssociationConnector Association="RentCarModel.FK_Admin_Admin" />
         <AssociationConnector Association="RentCarModel.FK_User_Admin1" />
         <AssociationConnector Association="RentCarModel.FK_CarState_CarInfo" />

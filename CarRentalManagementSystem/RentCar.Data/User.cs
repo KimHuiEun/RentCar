@@ -27,6 +27,7 @@ namespace RentCar.Data
         public string Email { get; set; }
         public string LoginId { get; set; }
         public string LoginPw { get; set; }
+        public string LoginPwConfirm { get; set; }
         public string License { get; set; }
         public string IssueDate { get; set; }
         public Nullable<int> SupportRepId { get; set; }

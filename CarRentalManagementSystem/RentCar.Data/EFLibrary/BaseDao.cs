@@ -26,7 +26,7 @@ namespace EFLibrary
         }
 
         public void Insert(T entity)
-        {
+        {            
             using (var context = DbContextCreator.Context())
             {
                 context.Set<T>().Add(entity);
