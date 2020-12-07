@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RentCarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BirthDate" Type="datetime" Nullable="false" />
+          <Property Name="LoginId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoginPw" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ReportsTo" Type="int" />
+        </EntityType>
+        <EntityType Name="CarInfo">
+          <Key>
+            <PropertyRef Name="CarInfoId" />
+          </Key>
+          <Property Name="CarInfoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsAuto" Type="bit" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CarState">
+          <Key>
+            <PropertyRef Name="CarStateId" />
+          </Key>
+          <Property Name="CarStateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IsRent" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="PaymentId" />
+          </Key>
+          <Property Name="PaymentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="PaymentDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PaymentLine">
+          <Key>
+            <PropertyRef Name="PaymentLineId" />
+          </Key>
+          <Property Name="PaymentLineId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PaymentId" Type="int" Nullable="false" />
+          <Property Name="RentId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rent">
+          <Key>
+            <PropertyRef Name="RentId" />
+          </Key>
+          <Property Name="RentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarStateId" Type="int" Nullable="false" />
+          <Property Name="RentDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ReturnDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="InsuranceCoverage" Type="real" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Search">
+          <Key>
+            <PropertyRef Name="SearchId" />
+          </Key>
+          <Property Name="SearchId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="When" Type="datetime" Nullable="false" />
+          <Property Name="CarInfoId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoginId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoginPw" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="License" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IssueDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SupportRepId" Type="int" />
+        </EntityType>
+        <Association Name="FK_Admin_Admin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Admin1" Type="Self.Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="AdminId" />
+            </Principal>
+            <Dependent Role="Admin1">
+              <PropertyRef Name="ReportsTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarState_CarInfo">
+          <End Role="CarInfo" Type="Self.CarInfo" Multiplicity="1" />
+          <End Role="CarState" Type="Self.CarState" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CarInfo">
+              <PropertyRef Name="CarInfoId" />
+            </Principal>
+            <Dependent Role="CarState">
+              <PropertyRef Name="CarStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PaymentLine_Payment">
+          <End Role="Payment" Type="Self.Payment" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PaymentLine" Type="Self.PaymentLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payment">
+              <PropertyRef Name="PaymentId" />
+            </Principal>
+            <Dependent Role="PaymentLine">
+              <PropertyRef Name="PaymentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PaymentLine_Rent">
+          <End Role="Rent" Type="Self.Rent" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PaymentLine" Type="Self.PaymentLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rent">
+              <PropertyRef Name="RentId" />
+            </Principal>
+            <Dependent Role="PaymentLine">
+              <PropertyRef Name="RentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rent_Car">
+          <End Role="CarState" Type="Self.CarState" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Rent" Type="Self.Rent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarState">
+              <PropertyRef Name="CarStateId" />
+            </Principal>
+            <Dependent Role="Rent">
+              <PropertyRef Name="CarStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rent_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Rent" Type="Self.Rent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Rent">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Search_CarInfo">
+          <End Role="CarInfo" Type="Self.CarInfo" Multiplicity="1" />
+          <End Role="Search" Type="Self.Search" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarInfo">
+              <PropertyRef Name="CarInfoId" />
+            </Principal>
+            <Dependent Role="Search">
+              <PropertyRef Name="CarInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Search_User">
+          <End Role="User" Type="Self.User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Search" Type="Self.Search" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Search">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Admin1">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="AdminId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="SupportRepId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RentCarModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarInfo" EntityType="Self.CarInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarState" EntityType="Self.CarState" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentLine" EntityType="Self.PaymentLine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rent" EntityType="Self.Rent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Search" EntityType="Self.Search" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Admin_Admin" Association="Self.FK_Admin_Admin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Admin1" EntitySet="Admin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarState_CarInfo" Association="Self.FK_CarState_CarInfo">
+            <End Role="CarInfo" EntitySet="CarInfo" />
+            <End Role="CarState" EntitySet="CarState" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PaymentLine_Payment" Association="Self.FK_PaymentLine_Payment">
+            <End Role="Payment" EntitySet="Payment" />
+            <End Role="PaymentLine" EntitySet="PaymentLine" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PaymentLine_Rent" Association="Self.FK_PaymentLine_Rent">
+            <End Role="Rent" EntitySet="Rent" />
+            <End Role="PaymentLine" EntitySet="PaymentLine" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rent_Car" Association="Self.FK_Rent_Car">
+            <End Role="CarState" EntitySet="CarState" />
+            <End Role="Rent" EntitySet="Rent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rent_User" Association="Self.FK_Rent_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Rent" EntitySet="Rent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Search_CarInfo" Association="Self.FK_Search_CarInfo">
+            <End Role="CarInfo" EntitySet="CarInfo" />
+            <End Role="Search" EntitySet="Search" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Search_User" Association="Self.FK_Search_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Search" EntitySet="Search" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Admin1" Association="Self.FK_User_Admin1">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RentCarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="RentCarEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="RentCarModel.Admin" />
+          <EntitySet Name="CarInfoes" EntityType="RentCarModel.CarInfo" />
+          <EntitySet Name="CarStates" EntityType="RentCarModel.CarState" />
+          <EntitySet Name="Payments" EntityType="RentCarModel.Payment" />
+          <EntitySet Name="PaymentLines" EntityType="RentCarModel.PaymentLine" />
+          <EntitySet Name="Rents" EntityType="RentCarModel.Rent" />
+          <EntitySet Name="Searches" EntityType="RentCarModel.Search" />
+          <EntitySet Name="Users" EntityType="RentCarModel.User" />
+          <AssociationSet Name="FK_Admin_Admin" Association="RentCarModel.FK_Admin_Admin">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Admin1" EntitySet="Admins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Admin1" Association="RentCarModel.FK_User_Admin1">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarState_CarInfo" Association="RentCarModel.FK_CarState_CarInfo">
+            <End Role="CarInfo" EntitySet="CarInfoes" />
+            <End Role="CarState" EntitySet="CarStates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Search_CarInfo" Association="RentCarModel.FK_Search_CarInfo">
+            <End Role="CarInfo" EntitySet="CarInfoes" />
+            <End Role="Search" EntitySet="Searches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rent_Car" Association="RentCarModel.FK_Rent_Car">
+            <End Role="CarState" EntitySet="CarStates" />
+            <End Role="Rent" EntitySet="Rents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PaymentLine_Payment" Association="RentCarModel.FK_PaymentLine_Payment">
+            <End Role="Payment" EntitySet="Payments" />
+            <End Role="PaymentLine" EntitySet="PaymentLines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PaymentLine_Rent" Association="RentCarModel.FK_PaymentLine_Rent">
+            <End Role="Rent" EntitySet="Rents" />
+            <End Role="PaymentLine" EntitySet="PaymentLines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rent_User" Association="RentCarModel.FK_Rent_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Rent" EntitySet="Rents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Search_User" Association="RentCarModel.FK_Search_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Search" EntitySet="Searches" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LoginId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LoginPw" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReportsTo" Type="Int32" />
+          <NavigationProperty Name="Admin1" Relationship="RentCarModel.FK_Admin_Admin" FromRole="Admin" ToRole="Admin1" />
+          <NavigationProperty Name="Admin2" Relationship="RentCarModel.FK_Admin_Admin" FromRole="Admin1" ToRole="Admin" />
+          <NavigationProperty Name="Users" Relationship="RentCarModel.FK_User_Admin1" FromRole="Admin" ToRole="User" />
+        </EntityType>
+        <EntityType Name="CarInfo">
+          <Key>
+            <PropertyRef Name="CarInfoId" />
+          </Key>
+          <Property Name="CarInfoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Size" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAuto" Type="Boolean" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="CarState" Relationship="RentCarModel.FK_CarState_CarInfo" FromRole="CarInfo" ToRole="CarState" />
+          <NavigationProperty Name="Searches" Relationship="RentCarModel.FK_Search_CarInfo" FromRole="CarInfo" ToRole="Search" />
+        </EntityType>
+        <EntityType Name="CarState">
+          <Key>
+            <PropertyRef Name="CarStateId" />
+          </Key>
+          <Property Name="CarStateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsRent" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CarInfo" Relationship="RentCarModel.FK_CarState_CarInfo" FromRole="CarState" ToRole="CarInfo" />
+          <NavigationProperty Name="Rents" Relationship="RentCarModel.FK_Rent_Car" FromRole="CarState" ToRole="Rent" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="PaymentId" />
+          </Key>
+          <Property Name="PaymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="PaymentDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="PaymentLines" Relationship="RentCarModel.FK_PaymentLine_Payment" FromRole="Payment" ToRole="PaymentLine" />
+        </EntityType>
+        <EntityType Name="PaymentLine">
+          <Key>
+            <PropertyRef Name="PaymentLineId" />
+          </Key>
+          <Property Name="PaymentLineId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PaymentId" Type="Int32" Nullable="false" />
+          <Property Name="RentId" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="Payment" Relationship="RentCarModel.FK_PaymentLine_Payment" FromRole="PaymentLine" ToRole="Payment" />
+          <NavigationProperty Name="Rent" Relationship="RentCarModel.FK_PaymentLine_Rent" FromRole="PaymentLine" ToRole="Rent" />
+        </EntityType>
+        <EntityType Name="Rent">
+          <Key>
+            <PropertyRef Name="RentId" />
+          </Key>
+          <Property Name="RentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarStateId" Type="Int32" Nullable="false" />
+          <Property Name="RentDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReturnDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InsuranceCoverage" Type="Single" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CarState" Relationship="RentCarModel.FK_Rent_Car" FromRole="Rent" ToRole="CarState" />
+          <NavigationProperty Name="PaymentLines" Relationship="RentCarModel.FK_PaymentLine_Rent" FromRole="Rent" ToRole="PaymentLine" />
+          <NavigationProperty Name="User" Relationship="RentCarModel.FK_Rent_User" FromRole="Rent" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Search">
+          <Key>
+            <PropertyRef Name="SearchId" />
+          </Key>
+          <Property Name="SearchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="When" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CarInfoId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CarInfo" Relationship="RentCarModel.FK_Search_CarInfo" FromRole="Search" ToRole="CarInfo" />
+          <NavigationProperty Name="User" Relationship="RentCarModel.FK_Search_User" FromRole="Search" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LoginId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LoginPw" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="License" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IssueDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SupportRepId" Type="Int32" />
+          <NavigationProperty Name="Admin" Relationship="RentCarModel.FK_User_Admin1" FromRole="User" ToRole="Admin" />
+          <NavigationProperty Name="Rents" Relationship="RentCarModel.FK_Rent_User" FromRole="User" ToRole="Rent" />
+          <NavigationProperty Name="Searches" Relationship="RentCarModel.FK_Search_User" FromRole="User" ToRole="Search" />
+        </EntityType>
+        <Association Name="FK_Admin_Admin">
+          <End Type="RentCarModel.Admin" Role="Admin" Multiplicity="0..1" />
+          <End Type="RentCarModel.Admin" Role="Admin1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="AdminId" />
+            </Principal>
+            <Dependent Role="Admin1">
+              <PropertyRef Name="ReportsTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Admin1">
+          <End Type="RentCarModel.Admin" Role="Admin" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="RentCarModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="AdminId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="SupportRepId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarState_CarInfo">
+          <End Type="RentCarModel.CarInfo" Role="CarInfo" Multiplicity="1" />
+          <End Type="RentCarModel.CarState" Role="CarState" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CarInfo">
+              <PropertyRef Name="CarInfoId" />
+            </Principal>
+            <Dependent Role="CarState">
+              <PropertyRef Name="CarStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Search_CarInfo">
+          <End Type="RentCarModel.CarInfo" Role="CarInfo" Multiplicity="1" />
+          <End Type="RentCarModel.Search" Role="Search" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarInfo">
+              <PropertyRef Name="CarInfoId" />
+            </Principal>
+            <Dependent Role="Search">
+              <PropertyRef Name="CarInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rent_Car">
+          <End Type="RentCarModel.CarState" Role="CarState" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="RentCarModel.Rent" Role="Rent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarState">
+              <PropertyRef Name="CarStateId" />
+            </Principal>
+            <Dependent Role="Rent">
+              <PropertyRef Name="CarStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PaymentLine_Payment">
+          <End Type="RentCarModel.Payment" Role="Payment" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="RentCarModel.PaymentLine" Role="PaymentLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payment">
+              <PropertyRef Name="PaymentId" />
+            </Principal>
+            <Dependent Role="PaymentLine">
+              <PropertyRef Name="PaymentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PaymentLine_Rent">
+          <End Type="RentCarModel.Rent" Role="Rent" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="RentCarModel.PaymentLine" Role="PaymentLine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rent">
+              <PropertyRef Name="RentId" />
+            </Principal>
+            <Dependent Role="PaymentLine">
+              <PropertyRef Name="RentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rent_User">
+          <End Type="RentCarModel.User" Role="User" Multiplicity="1" />
+          <End Type="RentCarModel.Rent" Role="Rent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Rent">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Search_User">
+          <End Type="RentCarModel.User" Role="User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="RentCarModel.Search" Role="Search" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Search">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RentCarModelStoreContainer" CdmEntityContainer="RentCarEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="RentCarModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="ReportsTo" ColumnName="ReportsTo" />
+                <ScalarProperty Name="LoginPw" ColumnName="LoginPw" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarInfoes">
+            <EntityTypeMapping TypeName="RentCarModel.CarInfo">
+              <MappingFragment StoreEntitySet="CarInfo">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="IsAuto" ColumnName="IsAuto" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="CarInfoId" ColumnName="CarInfoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarStates">
+            <EntityTypeMapping TypeName="RentCarModel.CarState">
+              <MappingFragment StoreEntitySet="CarState">
+                <ScalarProperty Name="IsRent" ColumnName="IsRent" />
+                <ScalarProperty Name="CarStateId" ColumnName="CarStateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="RentCarModel.Payment">
+              <MappingFragment StoreEntitySet="Payment">
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentLines">
+            <EntityTypeMapping TypeName="RentCarModel.PaymentLine">
+              <MappingFragment StoreEntitySet="PaymentLine">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="RentId" ColumnName="RentId" />
+                <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+                <ScalarProperty Name="PaymentLineId" ColumnName="PaymentLineId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rents">
+            <EntityTypeMapping TypeName="RentCarModel.Rent">
+              <MappingFragment StoreEntitySet="Rent">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="InsuranceCoverage" ColumnName="InsuranceCoverage" />
+                <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+                <ScalarProperty Name="RentDate" ColumnName="RentDate" />
+                <ScalarProperty Name="CarStateId" ColumnName="CarStateId" />
+                <ScalarProperty Name="RentId" ColumnName="RentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Searches">
+            <EntityTypeMapping TypeName="RentCarModel.Search">
+              <MappingFragment StoreEntitySet="Search">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CarInfoId" ColumnName="CarInfoId" />
+                <ScalarProperty Name="When" ColumnName="When" />
+                <ScalarProperty Name="SearchId" ColumnName="SearchId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="RentCarModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="SupportRepId" ColumnName="SupportRepId" />
+                <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+                <ScalarProperty Name="License" ColumnName="License" />
+                <ScalarProperty Name="LoginPw" ColumnName="LoginPw" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

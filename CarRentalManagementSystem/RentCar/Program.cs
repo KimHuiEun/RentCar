@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentCarDevExpress
+namespace RentCar
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace RentCarDevExpress
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CarChartForm());
+            Application.Run(new MainForm());
         }
     }
 }

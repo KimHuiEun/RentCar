@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +52,87 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarInfo.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarState.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\AdminDao.cs" />
+    <Compile Include="Dao\CarStateDao.cs" />
+    <Compile Include="Dao\CarInfoDao.cs" />
+    <Compile Include="Dao\Dao.cs" />
+    <Compile Include="Dao\RentDao.cs" />
+    <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="EFLibrary\BaseDao.cs" />
+    <Compile Include="EFLibrary\DbContextCreator.cs" />
+    <Compile Include="EFLibrary\SingleKeyDao.cs" />
+    <Compile Include="Entities\Admin.cs" />
+    <Compile Include="Entities\CarState.cs" />
+    <Compile Include="Entities\CarInfo.cs" />
+    <Compile Include="Entities\Rent.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Payment.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentLine.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rent.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RentCar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentCar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RentCar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RentCar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentCar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>RentCar.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="RentCar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RentCar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="RentCar.edmx.diagram">
+      <DependentUpon>RentCar.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RentCar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RentCar.Context.cs</LastGenOutput>
+      <DependentUpon>RentCar.edmx</DependentUpon>
+    </Content>
+    <Content Include="RentCar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RentCar.edmx</DependentUpon>
+      <LastGenOutput>RentCar.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

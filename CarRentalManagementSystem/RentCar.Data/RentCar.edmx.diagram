@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="edddd3e4316c4cad92e285e0ecdaf6ac" Name="Diagram1">
+        <EntityTypeShape EntityType="RentCarModel.Admin" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="RentCarModel.CarInfo" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RentCarModel.CarState" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="RentCarModel.Payment" Width="1.5" PointX="8.25" PointY="0.75" />
+        <EntityTypeShape EntityType="RentCarModel.PaymentLine" Width="1.5" PointX="10.5" PointY="4.5" />
+        <EntityTypeShape EntityType="RentCarModel.Rent" Width="1.5" PointX="8.25" PointY="4.125" />
+        <EntityTypeShape EntityType="RentCarModel.Search" Width="1.5" PointX="5.25" PointY="4.5" />
+        <EntityTypeShape EntityType="RentCarModel.User" Width="1.5" PointX="3" PointY="4" />
+        <AssociationConnector Association="RentCarModel.FK_Admin_Admin" />
+        <AssociationConnector Association="RentCarModel.FK_User_Admin1" />
+        <AssociationConnector Association="RentCarModel.FK_CarState_CarInfo" />
+        <AssociationConnector Association="RentCarModel.FK_Search_CarInfo" />
+        <AssociationConnector Association="RentCarModel.FK_Rent_Car" />
+        <AssociationConnector Association="RentCarModel.FK_PaymentLine_Payment" />
+        <AssociationConnector Association="RentCarModel.FK_PaymentLine_Rent" />
+        <AssociationConnector Association="RentCarModel.FK_Rent_User" />
+        <AssociationConnector Association="RentCarModel.FK_Search_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
