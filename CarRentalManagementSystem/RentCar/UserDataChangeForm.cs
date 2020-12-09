@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace RentCar
 {
-    public partial class EntityForm : Form
+    public partial class UserDataChangeForm : Form
     {
-        public EntityForm()
+        public UserDataChangeForm()
         {
             InitializeComponent();
         }
-
     }
 }

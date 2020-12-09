@@ -27,5 +27,7 @@ namespace RentCar.Data
                 return context.Users.FirstOrDefault(x => x.LoginId == loginId);
             }
         }
+
+
     }
 }

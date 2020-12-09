@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentCar.Data.Entities
+namespace RentCar.Data
 {
-    class CarInfo
+    public partial class CarInfo
     {
     }
 }

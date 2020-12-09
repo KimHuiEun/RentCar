@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EFLibrary;
+using RentCar.Data;
+using System;
 using System.Windows.Forms;
 
 namespace RentCar
@@ -16,6 +15,9 @@ namespace RentCar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            DbContextCreator.Context = () => new RentCarEntities();
+
             Application.Run(new MainForm());
         }
     }

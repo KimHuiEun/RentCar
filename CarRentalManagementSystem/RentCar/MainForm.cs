@@ -13,11 +13,11 @@ using System.Windows.Forms;
 namespace RentCar
 {
     public partial class MainForm : Form
-    { 
+    {
         public MainForm()
         {
             InitializeComponent();
-        }    
+        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -45,6 +45,30 @@ namespace RentCar
             //LoginButton.Click += LoginButton_Click;
         }
 
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            AccountForm showform = new AccountForm();
+            showform.ShowDialog(); // 회원 가입 창 눌렀을 때 메인 폼 선택 안되게 변경.
+        }
+
+        private void tbLoginId_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbLoginId.Text != null)
+                {
+                    User user = Dao.User.GetByName(tbLoginId.Text);
+
+                }
+
+            }
+           
+            catch
+            {
+
+            }
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -114,10 +138,11 @@ namespace RentCar
             }
         }
 
-        private void btnAccount_Click(object sender, EventArgs e)
+        private void btnMyinfo_Click(object sender, EventArgs e)
         {
-            AccountForm showform = new AccountForm();
-            showform.ShowDialog(); // 회원 가입 창 눌렀을 때 메인 폼 선택 안되게 변경.
+            UserDataChangeForm showform = new UserDataChangeForm();
+            showform.Show();
         }
     }
+
 }

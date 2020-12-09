@@ -34,7 +34,6 @@ namespace RentCar
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
-            this.gbLogin = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.tbLoginPw = new System.Windows.Forms.TextBox();
@@ -52,7 +51,6 @@ namespace RentCar
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.gbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -94,7 +92,11 @@ namespace RentCar
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.splitContainer1.Panel2.Controls.Add(this.gbLogin);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
+            this.splitContainer1.Panel2.Controls.Add(this.btnLogin);
+            this.splitContainer1.Panel2.Controls.Add(this.tbLoginPw);
+            this.splitContainer1.Panel2.Controls.Add(this.label6);
+            this.splitContainer1.Panel2.Controls.Add(this.tbLoginId);
             this.splitContainer1.Panel2.Controls.Add(this.btnManagerList);
             this.splitContainer1.Panel2.Controls.Add(this.btnUserList);
             this.splitContainer1.Panel2.Controls.Add(this.btnStats);
@@ -117,29 +119,15 @@ namespace RentCar
             this.label3.TabIndex = 0;
             this.label3.Text = "Three Rent Car";
             // 
-            // gbLogin
-            // 
-            this.gbLogin.BackColor = System.Drawing.Color.Transparent;
-            this.gbLogin.Controls.Add(this.label4);
-            this.gbLogin.Controls.Add(this.btnLogin);
-            this.gbLogin.Controls.Add(this.tbLoginPw);
-            this.gbLogin.Controls.Add(this.label6);
-            this.gbLogin.Controls.Add(this.tbLoginId);
-            this.gbLogin.Location = new System.Drawing.Point(66, 77);
-            this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Size = new System.Drawing.Size(366, 121);
-            this.gbLogin.TabIndex = 34;
-            this.gbLogin.TabStop = false;
-            // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(17, 21);
+            this.label4.Location = new System.Drawing.Point(83, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 25);
-            this.label4.TabIndex = 21;
+            this.label4.TabIndex = 36;
             this.label4.Text = "아이디";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -148,11 +136,11 @@ namespace RentCar
             this.btnLogin.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnLogin.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(318, 15);
+            this.btnLogin.Location = new System.Drawing.Point(384, 98);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(40, 95);
-            this.btnLogin.TabIndex = 3;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "로그인";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -160,30 +148,31 @@ namespace RentCar
             // tbLoginPw
             // 
             this.tbLoginPw.ForeColor = System.Drawing.Color.Black;
-            this.tbLoginPw.Location = new System.Drawing.Point(121, 82);
+            this.tbLoginPw.Location = new System.Drawing.Point(187, 165);
             this.tbLoginPw.Name = "tbLoginPw";
             this.tbLoginPw.Size = new System.Drawing.Size(191, 25);
-            this.tbLoginPw.TabIndex = 2;
+            this.tbLoginPw.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label6.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(17, 82);
+            this.label6.Location = new System.Drawing.Point(83, 165);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 25);
-            this.label6.TabIndex = 22;
+            this.label6.TabIndex = 37;
             this.label6.Text = "비밀번호";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbLoginId
             // 
             this.tbLoginId.ForeColor = System.Drawing.Color.Black;
-            this.tbLoginId.Location = new System.Drawing.Point(121, 21);
+            this.tbLoginId.Location = new System.Drawing.Point(187, 104);
             this.tbLoginId.Name = "tbLoginId";
             this.tbLoginId.Size = new System.Drawing.Size(191, 25);
-            this.tbLoginId.TabIndex = 1;
+            this.tbLoginId.TabIndex = 0;
+            this.tbLoginId.TextChanged += new System.EventHandler(this.tbLoginId_TextChanged);
             // 
             // btnManagerList
             // 
@@ -268,6 +257,7 @@ namespace RentCar
             this.btnMyinfo.Text = "내 정보";
             this.btnMyinfo.UseVisualStyleBackColor = false;
             this.btnMyinfo.Visible = false;
+            this.btnMyinfo.Click += new System.EventHandler(this.btnMyinfo_Click);
             // 
             // btnAccount
             // 
@@ -309,10 +299,9 @@ namespace RentCar
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.gbLogin.ResumeLayout(false);
-            this.gbLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,12 +313,6 @@ namespace RentCar
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Splitter sptAdmin;
-        private System.Windows.Forms.GroupBox gbLogin;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox tbLoginPw;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbLoginId;
         private System.Windows.Forms.Button btnManagerList;
         private System.Windows.Forms.Button btnUserList;
         private System.Windows.Forms.Button btnStats;
@@ -337,5 +320,10 @@ namespace RentCar
         private System.Windows.Forms.Button btnCarList;
         private System.Windows.Forms.Button btnMyinfo;
         private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox tbLoginPw;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbLoginId;
     }
 }

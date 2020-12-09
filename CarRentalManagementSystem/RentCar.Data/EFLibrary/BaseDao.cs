@@ -39,7 +39,7 @@ namespace EFLibrary
         {
             using (var context = DbContextCreator.Context())
             {
-                context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+                context.Entry(entity).State = EntityState.Modified;
 
                 context.SaveChanges();
             }
@@ -49,7 +49,7 @@ namespace EFLibrary
         {
             using (var context = DbContextCreator.Context())
             {
-                context.Entry(entity).State = System.Data.Entity.EntityState.Deleted;
+                context.Entry(entity).State = EntityState.Deleted;
 
                 context.SaveChanges();
             }

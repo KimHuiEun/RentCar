@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevexpressLibrary", "Devexp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar", "RentCar\RentCar.csproj", "{F2592165-563A-42FF-A159-62C59C866B48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCarUnitTest", "RentCarUnitTest\RentCarUnitTest.csproj", "{C753A97A-6053-49A7-9C3E-53AA9A3D2E32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F2592165-563A-42FF-A159-62C59C866B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2592165-563A-42FF-A159-62C59C866B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2592165-563A-42FF-A159-62C59C866B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C753A97A-6053-49A7-9C3E-53AA9A3D2E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C753A97A-6053-49A7-9C3E-53AA9A3D2E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C753A97A-6053-49A7-9C3E-53AA9A3D2E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C753A97A-6053-49A7-9C3E-53AA9A3D2E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

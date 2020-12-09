@@ -22,5 +22,6 @@ namespace RentCar.Data
                 return x => x.AdminId;
             }
         }
+
     }
 }
