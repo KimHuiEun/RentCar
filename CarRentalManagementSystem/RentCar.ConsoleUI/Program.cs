@@ -11,8 +11,9 @@ namespace RentCar.ConsoleUI
     {
         static void Main(string[] args)
         {
-            RentCarEntities context = new RentCarEntities();
-            int count = context.Users.Count();
+            /*RentCarEntities context = new RentCarEntities();
+            int count = context.Users.Count();*/
+            int count = Dao.User.GetCount();
             Console.WriteLine(count);
 
         }

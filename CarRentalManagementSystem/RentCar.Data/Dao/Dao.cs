@@ -2,6 +2,10 @@
 {
     public class Dao
     {
+        //public int MyProperty { get; set; }
+        //public static UserDao User { get; } = new UserDao();
+        
+
         public static CarStateDao CarState = new CarStateDao();
 
         public static CarInfoDao CarInfo = new CarInfoDao();
