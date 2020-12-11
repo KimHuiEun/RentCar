@@ -19,7 +19,13 @@ namespace EFLibrary
             }
         }
 
+        //protected abstract Func<T, bool> IsKey(K key);
+        //protected abstract Func<T, bool> IsKey { get; }
+        //Func<int T,out TResult> TResult : 매서드의 반환 값 형식  
+
+
         protected abstract Expression<Func<T, bool>> IsKey(K key);
+        //Expression<TDelegate>
 
         public void DeleteByPK(K key)
         {
@@ -29,13 +35,16 @@ namespace EFLibrary
                 Delete(entity);
         }
 
-        public K GetMaxKey()
+        public K GetMaxKey()  //GetMaxUserId
         {
             using (var context = DbContextCreator.Context())
             {
                 var query = context.Set<T>()
-                    .OrderByDescending(KeySelector)
+                    .OrderByDescending(KeySelector)  //KeySelector = (x => x.UserId)
                     .Select(KeySelector);
+                    //from x in context.Users
+                            //orderby x.UserId descending
+                            //select x.UserId;
 
                 return query.FirstOrDefault();
             }
