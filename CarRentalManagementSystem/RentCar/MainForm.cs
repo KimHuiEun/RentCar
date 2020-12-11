@@ -19,7 +19,20 @@ namespace RentCar
             InitializeComponent();
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Activate();
+            label4.Visible = true;
+            label6.Visible = true;
+            tbLoginId.Visible = true;
+            tbLoginPw.Visible = true;
+            btnLogin.Visible = true;
+            btnAccount.Visible = true;
+            btnMyinfo.Visible = false;
+            btnLogout.Visible = false;
 
+            MessageBox.Show("로그아웃 되었습니다.");
+        }
 
 
         protected override void OnLoad(EventArgs e)
@@ -38,7 +51,7 @@ namespace RentCar
             AccountForm showform = new AccountForm();
             showform.ShowDialog(); // 회원 가입 창 눌렀을 때 메인 폼 선택 안되게 변경.
         }
-/*
+
         private void tbLoginId_TextChanged(object sender, EventArgs e)
         {
             try
@@ -55,7 +68,7 @@ namespace RentCar
             {
 
             }
-        }*/
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -130,29 +143,6 @@ namespace RentCar
             UserDataChangeForm showform = new UserDataChangeForm();
             showform.Show();
         }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            this.Activate();
-            label4.Visible = true;
-            label6.Visible = true;
-            tbLoginId.Visible = true;
-            tbLoginPw.Visible = true;
-            btnLogin.Visible = true;
-            btnAccount.Visible = true;
-            btnMyinfo.Visible = false;
-            btnLogout.Visible = false;
-
-            MessageBox.Show("로그아웃 되었습니다.");
-
-            Clear();
-        }
-
-        private void Clear()
-        {
-            tbLoginId.Text = tbLoginPw.Text = "";
-        }
-
     }
 
 }

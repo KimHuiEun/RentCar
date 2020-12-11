@@ -172,6 +172,7 @@ namespace RentCar
             this.tbLoginId.Name = "tbLoginId";
             this.tbLoginId.Size = new System.Drawing.Size(191, 25);
             this.tbLoginId.TabIndex = 0;
+            this.tbLoginId.TextChanged += new System.EventHandler(this.tbLoginId_TextChanged);
             // 
             // btnManagerList
             // 
@@ -228,7 +229,6 @@ namespace RentCar
             this.btnLogout.Text = "로그아웃";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Visible = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCarList
             // 
